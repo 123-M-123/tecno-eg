@@ -13,19 +13,19 @@ export interface Product {
 export async function getProducts(): Promise<Product[]> {
   try {
     const contentDir = path.join(process.cwd(), 'content', 'productos');
-    
+
     if (!fs.existsSync(contentDir)) {
       console.log('Content directory does not exist');
       return [];
     }
 
     const files = fs.readdirSync(contentDir).filter(file => file.endsWith('.json'));
-    
+
     const products: Product[] = files.map(file => {
       const filePath = path.join(contentDir, file);
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const data = JSON.parse(fileContent);
-      
+
       return {
         id: file.replace('.json', ''),
         titulo: data.titulo,
@@ -42,3 +42,5 @@ export async function getProducts(): Promise<Product[]> {
     return [];
   }
 }
+
+export const PRODUCTS = await getProducts();
