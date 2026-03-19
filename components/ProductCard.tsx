@@ -11,7 +11,7 @@ interface Product {
 }
 
 export default function ProductCard({ product }: { product: Product }) {
-  const [preferenceId, setPreferenceId] = useState<string>('');
+  const [preferenceId, setPreferenceId] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,9 +31,17 @@ export default function ProductCard({ product }: { product: Product }) {
         });
 
         const data = await response.json();
+        console.log('Preference response:', data);
+        
+        if (!response.ok) {
+          console.error('API Error:', data);
+          throw new Error(data.error || 'Error creating preference');
+        }
+        
         setPreferenceId(data.id);
       } catch (error) {
         console.error('Error creating preference:', error);
+        console.log('Error details:', error);
       } finally {
         setLoading(false);
       }
@@ -43,38 +51,34 @@ export default function ProductCard({ product }: { product: Product }) {
   }, [product]);
 
   return (
-    <div className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
+    <div className="border rounded-lg p-4 shadow-md">
       {product.imagen && (
-        <img 
-          src={product.imagen} 
-          alt={product.titulo}
-          className="w-full h-48 object-cover rounded-md mb-4"
-        />
+        <img src={product.imagen} alt={product.titulo} className="w-full h-48 object-cover rounded" />
       )}
-      <h3 className="text-xl font-bold mb-2">{product.titulo}</h3>
+      <h3 className="font-bold mt-2">{product.titulo}</h3>
       {product.categoria && (
-        <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2">
+        <span className="text-sm text-gray-500">
           {product.categoria}
         </span>
       )}
-      <p className="text-gray-600 mb-2 line-clamp-2">{product.descripcion}</p>
-      <p className="text-green-600 font-bold text-lg mb-4">
-        ${product.precio.toLocaleString('es-AR')}
-      </p>
-      
+      <p className="text-gray-600 text-sm mt-1">{product.descripcion}</p>
+
+      <div className="mt-4">
+        <p className="text-lg font-bold">
+          ${product.precio.toLocaleString('es-AR')}
+        </p>
+      </div>
+
       {loading ? (
-        <button className="w-full bg-gray-300 text-white py-2 rounded-md cursor-not-allowed">
+        <button disabled className="w-full bg-gray-300 text-white py-2 rounded mt-4">
           Cargando...
         </button>
       ) : preferenceId ? (
-        <a
-          href={`https://www.mercadopago.com.ar/checkout/v1/redirect?preference-id=${preferenceId}`}
-          className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md text-center transition-colors"
-        >
+        <a href={`https://mercadopago.com/checkout/v1/redirect?pref_id=${preferenceId}`} className="w-full bg-blue-600 text-white py-2 rounded mt-4 block text-center">
           Comprar Ahora
         </a>
       ) : (
-        <button className="w-full bg-red-300 text-white py-2 rounded-md cursor-not-allowed">
+        <button disabled className="w-full bg-red-400 text-white py-2 rounded mt-4">
           Error al cargar
         </button>
       )}

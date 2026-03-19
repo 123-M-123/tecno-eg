@@ -42,5 +42,3 @@ export async function getProducts(): Promise<Product[]> {
     return [];
   }
 }
-
-export const PRODUCTS = await getProducts();

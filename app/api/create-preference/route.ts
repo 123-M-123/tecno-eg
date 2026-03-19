@@ -6,6 +6,8 @@ export async function POST(request: NextRequest) {
   try {
     const { title, price, quantity, description } = await request.json();
 
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+
     const preference = {
       items: [
         {
@@ -17,11 +19,11 @@ export async function POST(request: NextRequest) {
         },
       ],
       back_urls: {
-        success: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/success`,
-        failure: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/failure`,
-        pending: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/pending`,
+        success: `${baseUrl}/success`,
+        failure: `${baseUrl}/failure`,
+        pending: `${baseUrl}/pending`,
       },
-      auto_return: 'approved',
+      notification_url: `${baseUrl}/api/webhook`,
     };
 
     const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
@@ -34,6 +36,11 @@ export async function POST(request: NextRequest) {
     });
 
     const data = await response.json();
+
+    if (!response.ok) {
+      console.error('Mercado Pago API Error:', data);
+      return NextResponse.json(data, { status: response.status });
+    }
 
     return NextResponse.json(data);
   } catch (error) {
