@@ -5,9 +5,9 @@ export default defineConfig({
   clientId: "YOUR_CLIENT_ID",
   token: "YOUR_TOKEN",
   build: {
-  outputFolder: "admin",
-  publicFolder: "public",
-},
+    outputFolder: "admin",
+    publicFolder: "public",
+  },
   media: {
     tina: {
       mediaRoot: "uploads",
@@ -22,6 +22,12 @@ export default defineConfig({
         path: "content/productos",
         format: "json",
         fields: [
+          {
+            type: "string",
+            label: "ID de Producto",
+            name: "id_producto",
+            required: true,
+          },
           {
             type: "string",
             label: "Título",
@@ -42,6 +48,11 @@ export default defineConfig({
           },
           {
             type: "string",
+            label: "Etiqueta",
+            name: "etiqueta",
+          },
+          {
+            type: "string",
             label: "Descripción",
             name: "descripcion",
           },
@@ -49,6 +60,11 @@ export default defineConfig({
             type: "image",
             label: "Imagen",
             name: "imagen",
+          },
+          {
+            type: "number",
+            label: "Stock",
+            name: "stock",
           },
         ],
       },

@@ -62,12 +62,13 @@ function CheckoutContent() {
               preferenceId: preferenceId,
             },
             customization: {
-              paymentMethods: {
-                creditCard: 'all',
-                debitCard: 'all',
-                mercadoPago: 'all',
-              },
-            },
+  paymentMethods: {
+    creditCard: 'all',
+    debitCard: 'all',
+    mercadoPago: 'all',
+    ticket: 'all',
+  },
+},
             callbacks: {
               onReady: () => setLoading(false),
               onSubmit: async ({ formData, selectedPaymentMethod }: any) => {
