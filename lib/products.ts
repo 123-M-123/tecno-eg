@@ -2,41 +2,22 @@ import fs from 'fs';
 import path from 'path';
 
 export interface Product {
-  id: string
-  titulo: string
-  precio: number
-  descripcion: string
-  imagen?: string
-  categoria?: string
+  id_producto: string;
+  titulo: string;
+  precio: number;
+  descripcion: string;
+  imagen?: string;
+  categoria?: string;
+  etiqueta?: string;
+  stock?: number;
 }
 
 export async function getProducts(): Promise<Product[]> {
   try {
-    const contentDir = path.join(process.cwd(), 'content', 'productos');
-
-    if (!fs.existsSync(contentDir)) {
-      console.log('Content directory does not exist');
-      return [];
-    }
-
-    const files = fs.readdirSync(contentDir).filter(file => file.endsWith('.json'));
-
-    const products: Product[] = files.map(file => {
-      const filePath = path.join(contentDir, file);
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const data = JSON.parse(fileContent);
-
-      return {
-        id: file.replace('.json', ''),
-        titulo: data.titulo,
-        precio: data.precio,
-        descripcion: data.descripcion,
-        imagen: data.imagen,
-        categoria: data.categoria,
-      };
-    });
-
-    return products;
+    const filePath = path.join(process.cwd(), 'content', 'productos', 'productos.json');
+    if (!fs.existsSync(filePath)) return [];
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(fileContent);
   } catch (error) {
     console.error('Error fetching products:', error);
     return [];

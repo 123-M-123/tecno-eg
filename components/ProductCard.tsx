@@ -37,7 +37,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <p className="text-gray-600 text-sm mt-1">{product.descripcion}</p>
       <div className="mt-4">
         <p className="text-lg font-bold">
-          ${product.precio.toLocaleString('es-AR')}
+          $ {product.precio.toLocaleString('es-AR')}
         </p>
       </div>
       <button
