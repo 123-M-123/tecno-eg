@@ -39,7 +39,7 @@ export default function HomePage() {
       <main className="max-w-7xl mx-auto px-4 py-12">
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2">Nuestros Productos</h2>
-          <p className="text-gray-600">Descubrí nuestra selección de productos disponibles</p>
+          <p className="text-gray-600">Descubre nuestra selección de productos disponibles</p>
         </div>
 
         {/* Filtros por categoría */}
