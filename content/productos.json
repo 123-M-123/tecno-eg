@@ -1,0 +1,52 @@
+{
+  "secciones": [
+    {
+      "id": "novedades",
+      "nombre": "🔥 Novedades y Ofertas",
+      "productos": [
+        {
+          "id_producto": "nov-001",
+          "titulo": "Set Matero Stanley Goat",
+          "precio": 41000,
+          "categoria": "novedades",
+          "etiqueta": "🔥 Oferta",
+          "descripcion": "Set matero completo con termo 1.2L",
+          "imagen": "https://d22fxaf9t8d39k.cloudfront.net/0159ed630203fa3b8abb949ebbc645f7281dc1016c08f856e7e8c0c9ff25437d48043.jpg",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "id": "bolsos",
+      "nombre": "Bolsos y Materas",
+      "productos": [
+        {
+          "id_producto": "bol-001",
+          "titulo": "Mochila Matera Cordura",
+          "precio": 27300,
+          "categoria": "bolsos",
+          "etiqueta": "Bolsos",
+          "descripcion": "Mochila matera con división de cordura",
+          "imagen": "https://d22fxaf9t8d39k.cloudfront.net/bdf499fa3105b9c69a5b332e44151f5d4edbc22ce4e44ea9af6e16e64639e85848043.jpg",
+          "stock": 3
+        }
+      ]
+    },
+    {
+      "id": "bazar",
+      "nombre": "Bazar",
+      "productos": [
+        {
+          "id_producto": "baz-001",
+          "titulo": "Set de Baño Premium",
+          "precio": 19500,
+          "categoria": "bazar",
+          "etiqueta": "Baño",
+          "descripcion": "Set de baño cortina PEVA con ganchos y alfombra",
+          "imagen": "https://d22fxaf9t8d39k.cloudfront.net/cda5a1b0ec37c1d35789043b287bd03787698f0de28038a4b5f8be68dc596eb548043.jpg",
+          "stock": 8
+        }
+      ]
+    }
+  ]
+}

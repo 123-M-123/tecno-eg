@@ -1,0 +1,4 @@
+/* Ocultar scrollbar carrusel */
+.carrusel-track::-webkit-scrollbar {
+  display: none;
+}

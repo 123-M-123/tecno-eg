@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { label: 'Bolsos',      id: 'bolsos'    },
   { label: 'Bazar',       id: 'bazar'     },
   { label: 'Cuencos',     id: 'cuencos'   },
-  { label: 'Deco',        id: 'deco'      },
+  { label: 'Decoración',  id: 'deco'      },
   { label: 'Cerámica',    id: 'ceramica'  },
   { label: 'Envíos',      id: 'envios'    },
 ]
