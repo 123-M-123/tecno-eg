@@ -1,10 +1,10 @@
 {
-  "workbench.colorTheme": "Red",
+  "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vs-minimal",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#550423",
-    "sideBar.background": "#550423",
-    "titleBar.activeBackground": "#550423"
+    "activityBar.background": "#008496",
+    "sideBar.background": "#008496",
+    "titleBar.activeBackground": "#008496"
   },
-  "window.title": "MB-COMPRAS"
+  "window.title": "TECNO-EG"
 }

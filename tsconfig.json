@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/demo/blog/[filename].tsx.bak"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/demo/blog/[filename].tsx.bak", "lib/getProducts.js"],
   "exclude": ["node_modules"]
 }
