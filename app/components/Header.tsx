@@ -113,7 +113,7 @@ export default function Header() {
 
         {/* Instagram */}
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-          <a href="https://www.instagram.com/_" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/tecnoeg" target="_blank" rel="noopener noreferrer"
             style={{ color: C.white, display: 'flex', alignItems: 'center', gap: '0.3rem',
               fontSize: '0.78rem', textDecoration: 'none', fontWeight: 600 }}>
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
