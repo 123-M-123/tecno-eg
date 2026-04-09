@@ -169,8 +169,8 @@ export default function Header() {
             style={{
               width: '100%', padding: '0.45rem 0.75rem 0.45rem 2.2rem',
               borderRadius: 20, border: 'none', outline: 'none',
-              background: 'rgba(230,230,230,0.89)', color: C.vino,
-              fontSize: '0.85rem',
+              background: 'rgba(230,230,230,0.89)', color: C.grisOscuro,
+              fontSize: '0.95rem',
             }}
           />
 

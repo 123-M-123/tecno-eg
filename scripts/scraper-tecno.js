@@ -5,11 +5,7 @@ const path = require('path')
 const BASE = 'https://www.integradosargentinos.com'
 
 const SECCIONES = [
-  {
-    id: 'novedades',
-    nombre: '🔥 Más Vendidos',
-    urls: [`${BASE}/productos/`],
-  },
+ 
   {
     id: 'notebooks',
     nombre: 'Notebooks',
@@ -29,6 +25,18 @@ const SECCIONES = [
     ],
   },
   {
+    id: 'componentes',
+    nombre: 'Componentes',
+    urls: [
+      `${BASE}/procesadores/amd2/`,
+      `${BASE}/procesadores/intel2/`,
+      `${BASE}/mothers/amd/`,
+      `${BASE}/mothers/intel/`,
+      `${BASE}/memorias-ram/`,
+      `${BASE}/placas-de-video/`,
+    ],
+  },
+  {
     id: 'perifericos',
     nombre: 'Periféricos',
     urls: [
@@ -38,94 +46,113 @@ const SECCIONES = [
     ],
   },
   {
-    id: 'componentes',
-    nombre: 'Componentes',
+    id: 'redes',
+    nombre: 'Redes y Conectividad',
     urls: [
-      `${BASE}/memorias-ram/`,
-      `${BASE}/almacenamiento/discos-solidos-ssd/`,
-      `${BASE}/placas-de-video/`,
+      `${BASE}/conectividad-y-redes/routers/`,
+      `${BASE}/conectividad-y-redes/cables/`,
+      `${BASE}/conectividad-y-redes/adaptadores-wifi/`,
+      `${BASE}/conectividad-y-redes/switches/`,
     ],
   },
   {
-    id: 'electrodomesticos',
-    nombre: 'Electrodomésticos',
+    id: 'cables',
+    nombre: 'Cables y Adaptadores',
     urls: [
-      `${BASE}/electrodomesticos/freidoras-de-aire/`,
-      `${BASE}/electrodomesticos/ventiladores/`,
-      `${BASE}/electrodomesticos/aspiradoras/`,
+      `${BASE}/cables-y-adaptadores/usb-c/`,
+      `${BASE}/cables-y-adaptadores/video/`,
+      `${BASE}/cables-y-adaptadores/usb/`,
+      `${BASE}/cables-y-adaptadores/adaptadores/`,
+    ],
+  },
+  {
+    id: 'almacenamiento',
+    nombre: 'Almacenamiento',
+    urls: [
+      `${BASE}/almacenamiento/discos-solidos-ssd/`,
+      `${BASE}/almacenamiento/discos-externos/`,
     ],
   },
 ]
 
-const LIMITE = 20
+const LIMITE = 50
 
 async function scrapearPagina(page, url, categoriaId) {
   console.log(`  Scrapeando: ${url}`)
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await new Promise(resolve => setTimeout(resolve, 6000))
-
-  // DEBUG
-  const html = await page.content()
-  fs.writeFileSync('debug-tecno.html', html)
-  console.log('HTML guardado en debug-tecno.html')
-  return []
-
+  // Forzar carga de imágenes lazy
+await page.evaluate(() => {
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    img.src = img.dataset.src
+  })
+  document.querySelectorAll('img[data-nimg]').forEach(img => {
+    if (img.dataset.src) img.src = img.dataset.src
+  })
+})
+await new Promise(resolve => setTimeout(resolve, 2000))
 
   const productos = await page.evaluate((categoriaId) => {
     const items = []
-    const cards = document.querySelectorAll('.item-list .item')
 
-    cards.forEach(card => {
-      const imgEl = card.querySelector('img.photo')
-      const tituloEl = card.querySelector('.item-name')
-      const precioEl = card.querySelector('.price')
-      const linkEl = card.querySelector('a.item-link')
-      const stockEl = card.querySelector('.stock-available')
+    // Extraer datos del JSON-LD que Tienda Nube inyecta en cada página
+    const scripts = document.querySelectorAll('script[type="application/ld+json"]')
+    const productosJSON = []
 
-      if (!imgEl || !tituloEl || !precioEl) return
+    scripts.forEach(script => {
+      try {
+        const data = JSON.parse(script.textContent)
+        if (data['@type'] === 'ItemList' && data.itemListElement) {
+          data.itemListElement.forEach(item => {
+            if (item.item) productosJSON.push(item.item)
+          })
+        }
+        if (data['@type'] === 'Product') {
+          productosJSON.push(data)
+        }
+      } catch(e) {}
+    })
 
-      const imagen = imgEl.getAttribute('src') || imgEl.getAttribute('data-src')
-      const titulo = tituloEl.textContent.trim()
-      const precioTxt = precioEl.textContent.trim()
-      const href = linkEl ? linkEl.getAttribute('href') : ''
+    productosJSON.forEach(prod => {
+      if (!prod.name || !prod.offers) return
+console.log('imagen:', prod.image) /*agregado para debug*/
+      const titulo = prod.name
+      const imagenRaw = prod.image
+const imagen = Array.isArray(imagenRaw) ? imagenRaw[0] : (imagenRaw || '')
+      const href = prod.url || prod.offers?.url || ''
+      const precio = Math.round(parseFloat(prod.offers?.price || '0'))
+      const disponible = prod.offers?.availability?.includes('InStock')
+      const stock = prod.offers?.inventoryLevel?.value || (disponible ? 1 : 0)
 
-      const precioNum = Math.round(
-        parseFloat(
-          precioTxt.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, '')
-        )
-      )
-      if (!imagen || !titulo || isNaN(precioNum) || precioNum === 0) return
-
-      const stockTxt = stockEl ? stockEl.textContent.trim() : ''
-      const stockNum = stockTxt.match(/\d+/) ? parseInt(stockTxt.match(/\d+/)[0]) : 1
+      if (!titulo || precio === 0 || !imagen) return
 
       const id = href.split('/').filter(Boolean).pop() || Math.random().toString(36).slice(2)
 
       items.push({
         id_producto: id,
         titulo,
-        precio: precioNum,
+        precio,
         categoria: categoriaId,
-        etiqueta: stockNum === 0 ? 'Sin stock' : 'Disponible',
+        etiqueta: parseInt(stock) === 0 ? 'Sin stock' : 'Disponible',
         descripcion: titulo,
         imagen: imagen.startsWith('http') ? imagen : 'https:' + imagen,
-        stock: stockNum > 0 ? 1 : 0,
+        stock: parseInt(stock) > 0 ? 1 : 0,
       })
     })
 
     return items
   }, categoriaId)
 
-  return productos
+if (productos.length > 0) {
+  console.log('  Ejemplo imagen:', productos[0].imagen)
 }
 
+  return productos
+}
 async function main() {
   console.log('🚀 Iniciando scraper Integrados Argentinos...\n')
 
   const browser = await puppeteer.launch({ headless: true })
-  const page = await browser.newPage()
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-
   const resultado = { secciones: [] }
 
   for (const seccion of SECCIONES) {
@@ -133,14 +160,24 @@ async function main() {
     let todos = []
 
     for (const url of seccion.urls) {
+      // Crear página nueva por cada URL
+      const page = await browser.newPage()
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+      
       try {
         const prods = await scrapearPagina(page, url, seccion.id)
         todos = [...todos, ...prods]
         console.log(`  → ${prods.length} productos en esta URL`)
-        if (todos.length >= LIMITE) break
+        if (todos.length >= LIMITE) {
+          await page.close()
+          break
+        }
       } catch (err) {
         console.log(`  ⚠️ Error en ${url}: ${err.message}`)
       }
+      
+      await page.close()
+      if (todos.length >= LIMITE) break
     }
 
     const unicos = todos.filter(

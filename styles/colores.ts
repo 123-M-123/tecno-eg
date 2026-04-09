@@ -19,7 +19,7 @@ export const C = {
   // Neutros
   white:       '#FFFFFF',
   fondo:       '#cecece',   // fondo general de la página
-  negro:       '#0c0000',   // solo letras chicas
+  negro:       '#000000',   // solo letras chicas
 };
 
 // Uso rápido:

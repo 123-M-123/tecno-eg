@@ -87,7 +87,7 @@ export default function Carrusel({ titulo, productos, onVerProducto }: Props) {
   {/* UNA SOLA etiqueta arriba izquierda */}
   <span translate="no" style={{
     position: 'absolute', top: 8, left: 8,
-    background: p.stock === 0 ? '#cc0000' : C.naranja,
+    background: p.stock === 0 ? '#cc0000' : '#11cc00',
     color: 'white',
     fontSize: '0.65rem', fontWeight: 700,
     padding: '0.2rem 0.55rem',

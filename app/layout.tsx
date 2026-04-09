@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TECNO EG — Computación a otro Nivel",
+  title: "TECNO EG — Tecnología a otro Nivel",
   description: "Service, Armado y Mantenimiento de PC. Ventas de Componentes Electronicos. Asesoramiento Personalizado.",
   generator: "Tecno EG",
   manifest: "/manifest.json",
@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="es"translate="no">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#4A0606" />
+        <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Tecno EG" />
