@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TECNO EG — Computacion a todo Nivel",
+  title: "TECNO EG — Computación a otro Nivel",
   description: "Service, Armado y Mantenimiento de PC. Ventas de Componentes Electronicos. Asesoramiento Personalizado.",
   generator: "Tecno EG",
   manifest: "/manifest.json",

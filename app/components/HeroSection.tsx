@@ -3,8 +3,8 @@
 import { C } from '@/styles/colores'
 
 const condiciones = [
-  { icono: '🗓', titulo: 'Entregas', detalle: 'Viernes y sábados' },
-  { icono: '📍', titulo: 'Retiro', detalle: 'Barrio de Flores, CABA' },
+  { icono: '🗓', titulo: 'Entregas', detalle: 'CONSULTAR' },
+  { icono: '📍', titulo: 'Retiro', detalle: 'Barrio de CABALLITO, CABA (AL LADO DE LO DE ADORNI' },
   { icono: '💰', titulo: 'Señá', detalle: '50% para reservar' },
   { icono: '📦', titulo: 'Stock', detalle: 'Consultá por WhatsApp antes de comprar' },
 ]
@@ -14,7 +14,7 @@ export default function HeroSection() {
     <section
       id="inicio"
       style={{
-        background: C.fondo,
+        background: C.gris,
         padding: '3rem 1.5rem 2.5rem',
         textAlign: 'center',
         borderBottom: `3px solid ${C.naranjaPale}`,
@@ -28,14 +28,22 @@ export default function HeroSection() {
         margin: '0 0 0.4rem',
         letterSpacing: '-0.01em',
       }}>
-        Bazar & Regalos
+        TECNO EG — Computación a todo Nivel
       </h1>
       <p style={{
         color: C.grisOscuro,
-        fontSize: '1rem',
+        fontSize: '1.5rem',
         margin: '0 0 2.5rem',
       }}>
-        Productos de calidad con entrega a domicilio o retiro en Flores
+        Servicio de Reparación de Computadoras. Tienda de Componentes con Asesoramiento Personalizado.
+      </p>
+      <p style={{
+        color: C.grisOscuro,
+        fontSize: '1.2rem',
+        margin: '0 0 2.5rem',
+      }}>
+        Somos una Empresa de Servicios Especializados en Reparación y Mantenimiento de todo tipo de Máquinas de escritorio y portátiles, instalación de Cámaras de Seguridad. 
+        Venta de Componentes para PC y Armado a medida. Con más de 35 años de trayectoria. En constante aprendizaje de nuevas tecnologías para ofrecer el mejor Servicio a Nuestros Clientes.
       </p>
 
       {/* Condiciones — 4 íconos */}
@@ -48,7 +56,7 @@ export default function HeroSection() {
       }}>
         {condiciones.map((c) => (
           <div key={c.titulo} style={{
-            background: C.crema,
+            background: C.grisOscuro+75,
             border: `1.5px solid ${C.crema}`,
             borderRadius: 14,
             padding: '1.1rem 0.75rem',
@@ -70,7 +78,7 @@ export default function HeroSection() {
 
       {/* WhatsApp CTA */}
       <a
-        href="https://wa.me/5491168075600"
+        href="https://wa.me/5491158081432 "
         target="_blank"
         rel="noopener noreferrer"
         style={{

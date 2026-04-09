@@ -5,16 +5,16 @@
 
 export const C = {
   // Claros — fondos y superficies
-  gris:        '#a5a5a5',   // bordes, separadores
-  crema:       '#ffdfbf',   // fondo de secciones alternas
+  gris:        '#ADCEFB',   // bordes, separadores
+  crema:       '#CDFF48',   // fondo de secciones alternas
 
   // Media tinta — acentos y hover
-  naranjaPale: '#ffbd77',   // hover, badges, highlights
-  naranja:     '#EF7F1A',   // botones principales, CTA
+  naranjaPale: '#FFCF01',   // hover, badges, highlights
+  naranja:     '#Fc6608',   // botones principales, CTA
 
   // Oscuros — textos y header
-  vino:        '#4A0606',   // header, títulos principales
-  grisOscuro:  '#636363',   // textos secundarios, subtítulos
+  vino:        '#1B71CA',   // header, títulos principales
+  grisOscuro:  '#000000',   // textos secundarios, subtítulos
 
   // Neutros
   white:       '#FFFFFF',
