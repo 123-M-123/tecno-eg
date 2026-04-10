@@ -46,7 +46,7 @@ function Toast() {
 function Footer() {
   return (
     <footer style={{
-      background: C.vino,
+      background: C.grisOscuro,
       color: C.crema,
       textAlign: 'center',
       padding: '2rem 1.5rem',
@@ -55,11 +55,11 @@ function Footer() {
     }}>
       <p style={{ margin: 0, fontSize: '0.85rem' }}>
         <span style={{ color: C.naranjaPale, fontWeight: 700 }}>
-          MB Compras — Bazar & Regalos
+          TECNO EG — Componentes & Servicio Técnico
         </span>
       </p>
       <p style={{ margin: '0.5rem 0', fontSize: '0.8rem', opacity: 0.85 }}>
-        📍 Flores, CABA &nbsp;|&nbsp; 📅 Entregas viernes y sábados
+        CABALLITO  &nbsp;|&nbsp; C.A.B.A.
       </p>
       <p style={{ margin: '0.5rem 0', fontSize: '0.8rem' }}>
         

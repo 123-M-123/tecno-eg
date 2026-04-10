@@ -53,7 +53,7 @@ export default function EnviosSection() {
           📦 Envíos a domicilio
         </h2>
         <p style={{ color: C.grisOscuro, fontSize: '1.5rem', margin: '0 0 2rem' }}>
-          Solo Capital Federal · DIAS DE ENVIO LUNES Y MARTES
+          Solo Capital Federal · PARA ENVIOS CONSULTAR DISPONIBILIDAD
         </p>
 
 {/* Mapa */}

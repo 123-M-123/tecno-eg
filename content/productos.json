@@ -203,6 +203,116 @@
           "descripcion": "Notebook Lenovo IdeaPad 1 cloud grey Intel Celeron N4500 14.0&quot; HD 12GB RAM 256GB SSD M.2 Windows 11 Home en S Mode teclado inglés (82LV0075US)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123667-7b843766c1be55a33217658139979573-480-0.webp",
           "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-dell-45w-ac100-240vac-50-60hz-1-5a-dc-19-5v-2-31a-da45pm111",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO DELL 45W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 2.31A (DA45PM111)",
+          "precio": 15684,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO DELL 45W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 2.31A (DA45PM111)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122923-78c583d08aef9f856c17700462023985-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-12v-1a-switching-netquality-certificada",
+          "titulo": "Fuente 12V 1A switching netquality Certificada",
+          "precio": 3789,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 12V 1A switching netquality Certificada",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110212-618accf93b64d1b72d17700465924151-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-12v-5a-switching-netquality-certificada",
+          "titulo": "Fuente 12V 5A switching netquality Certificada",
+          "precio": 9368,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 12V 5A switching netquality Certificada",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110214-7da003574405c3c05517700465943438-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-hp-2-31-45w-original-para-sku-notebook-sku-40280-40518",
+          "titulo": "CARGADOR HP 2.31 45W ORIGINAL PARA SKU NOTEBOOK: SKU 40280-40518",
+          "precio": 19900,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR HP 2.31 45W ORIGINAL PARA SKU NOTEBOOK: SKU 40280-40518",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-lenovo-65w-ac100-240vac-50-60hz-1-5a-dc-20v-3-25a-adp-65yb-b",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO LENOVO 65W AC100-240VAC 50-60HZ 1.5A - DC 20V 3.25A (ADP-65YB B)",
+          "precio": 15684,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO LENOVO 65W AC100-240VAC 50-60HZ 1.5A - DC 20V 3.25A (ADP-65YB B)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122837-50f568d9a986d9330c17700462114098-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-hp-90w-ac100-240vac-50-60hz-2-4a-dc-19-5v-4-62a-pa-1900-08h2",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO HP 90W AC100-240VAC 50-60HZ 2.4A - DC 19.5V 4.62A (PA-1900-08H2)",
+          "precio": 20947,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO HP 90W AC100-240VAC 50-60HZ 2.4A - DC 19.5V 4.62A (PA-1900-08H2)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123319-aa8d469555dd11c81d17700462093628-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-hp-130w-ac100-240vac-50-60hz-1-5a-dc-19-5v-6-15a-pa-1131-08r",
+          "titulo": "Cargador de notebook generico HP 130W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 6.15A (PA-1131-08R)",
+          "precio": 31474,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "Cargador de notebook generico HP 130W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 6.15A (PA-1131-08R)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122927-e6fb6ddfe10fd54fd117700462801503-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-dell-65w-ac100-240vac-50-60hz-1-5a-dc-19-5v-3-34a-pa-1900-02d",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO DELL 65W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 3.34A (PA-1900-02D)",
+          "precio": 15684,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO DELL 65W AC100-240VAC 50-60HZ 1.5A - DC 19.5V 3.34A (PA-1900-02D)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122926-7962a205f7901dd89717700462074947-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-asus-45w-ac100-240vac-50-60hz-1-2a-dc-19v-2-37a-exa082xa",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO ASUS 45W AC100-240VAC 50-60HZ 1.2A - DC 19V 2.37A (EXA082XA)",
+          "precio": 18842,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO ASUS 45W AC100-240VAC 50-60HZ 1.2A - DC 19V 2.37A (EXA082XA)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122924-f2c7dc43105f01f44917658109575931-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-de-notebook-generico-asus-45w-ac100-240vac-50-60hz-1-0a-dc-19v-2-37a-90-xb34nopw00000y",
+          "titulo": "CARGADOR DE NOTEBOOK GENERICO ASUS 45W AC100-240VAC 50-60HZ 1.0A - DC 19V 2.37A (90-XB34NOPW00000Y)",
+          "precio": 20947,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR DE NOTEBOOK GENERICO ASUS 45W AC100-240VAC 50-60HZ 1.0A - DC 19V 2.37A (90-XB34NOPW00000Y)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123399-8f94acdcecbda7f6ff17700461889475-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cargador-asus-3-42-65w-original-para-sku-notebook-sku-40283",
+          "titulo": "CARGADOR ASUS 3.42 65W ORIGINAL PARA SKU NOTEBOOK: SKU 40283",
+          "precio": 17900,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "CARGADOR ASUS 3.42 65W ORIGINAL PARA SKU NOTEBOOK: SKU 40283",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
         }
       ]
     },
@@ -220,8 +330,16 @@
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123146-46a1e132126efd1cfa17700482035915-480-0.webp",
           "stock": 1
         },
-
-        
+        {
+          "id_producto": "monitor-lg-29-ultrawide-75hz-ips-hdr-amd-freesync-29wq600-w",
+          "titulo": "Monitor LG 29&quot; UltraWide 75Hz IPS HDR AMD FreeSync (29WQ600-W)",
+          "precio": 402000,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Monitor LG 29&quot; UltraWide 75Hz IPS HDR AMD FreeSync (29WQ600-W)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
         {
           "id_producto": "monitor-gigabyte-24-5-freesync-hdr-200hz-1ms-fhd-gs25f2",
           "titulo": "Monitor Gigabyte 24.5&quot; Freesync HDR 200HZ 1MS FHD (GS25F2)",
@@ -250,6 +368,56 @@
           "etiqueta": "Disponible",
           "descripcion": "Monitor COOLERMASTER GA241 LED FHD 100HZ VGA HDMI (CMI-GA241-AR) Para armado de PC",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124127-3df520b37e9ffa979617658130525544-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "soporte-de-televisor-intelaid-it-fmv44-32-a-55",
+          "titulo": "Soporte de Televisor Intelaid IT-FMV44 32″ a 55&quot;",
+          "precio": 147263,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Soporte de Televisor Intelaid IT-FMV44 32″ a 55&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121588-37d15dadb1e2d6a58817658157747684-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "soporte-de-proyector-intelaid-it-11e-techo-pared",
+          "titulo": "Soporte de proyector Intelaid IT-11E techo/pared",
+          "precio": 65873,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Soporte de proyector Intelaid IT-11E techo/pared",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109803-3976f78a8daaf7a25517658157519776-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "soporte-de-monitor-intelaid-it-dbsx-13-a-32",
+          "titulo": "Soporte de Monitor Intelaid IT-DBSX 13″ a 32&quot;",
+          "precio": 85158,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Soporte de Monitor Intelaid IT-DBSX 13″ a 32&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110027-5c7c13d9b255640b8817658157462270-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "soporte-de-monitor-intelaid-it-dbsl-13-a-32",
+          "titulo": "Soporte de Monitor Intelaid IT-DBSL 13&quot; a 32&quot;",
+          "precio": 84842,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Soporte de Monitor Intelaid IT-DBSL 13&quot; a 32&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109960-f1cc5d8b7f86f6509917658157405787-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "soporte-de-monitor-intelaid-it-dbgs-17-a-32",
+          "titulo": "Soporte de Monitor Intelaid IT-DBGS 17&quot; a 32&quot;",
+          "precio": 123053,
+          "categoria": "monitores",
+          "etiqueta": "Disponible",
+          "descripcion": "Soporte de Monitor Intelaid IT-DBGS 17&quot; a 32&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109911-776c5a4658a85e4c3317658157348782-480-0.webp",
           "stock": 1
         }
       ]
@@ -549,16 +717,6 @@
           "stock": 1
         },
         {
-          "id_producto": "pc-amd-ryzen-7-5700g-16gb-1tb-kit-rgb-voltix-monitor-27",
-          "titulo": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Voltix monitor 27&quot;",
-          "precio": 999895,
-          "categoria": "pc",
-          "etiqueta": "Disponible",
-          "descripcion": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Voltix monitor 27&quot;",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124198-ba34e3517e81130c3d17691929839488-480-0.webp",
-          "stock": 1
-        },
-        {
           "id_producto": "pc-intel-i3-12100-16gb-480gb-rgb",
           "titulo": "PC INTEL i3 12100 16GB 480GB RGB",
           "precio": 673579,
@@ -757,6 +915,676 @@
           "descripcion": "PC AMD Ryzen 3 3200G RAM 32GB SSD 480GB RGB Ultimate",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125838-54ec9338fa130f3ac817740344670643-480-0.webp",
           "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-3-3200g-ram-32gb-ssd-960gb-rgb-ultimate",
+          "titulo": "PC AMD Ryzen 3 3200G RAM 32GB SSD 960GB RGB Ultimate",
+          "precio": 863053,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 3 3200G RAM 32GB SSD 960GB RGB Ultimate",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125839-74b3567d76a33f883c17740336997069-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-ram-32gb-ssd-960gb-wifi-rgb-ultimate1",
+          "titulo": "PC AMD Ryzen 7 5700G RAM 32GB SSD 960GB WiFi RGB Ultimate",
+          "precio": 1063053,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G RAM 32GB SSD 960GB WiFi RGB Ultimate",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123466-76cfce39a837cb3b0017740335751287-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-ram-32gb-ssd-960gb-wifi-rgb-ultimate",
+          "titulo": "PC AMD Ryzen 7 5700G RAM 32GB SSD 960GB WiFi RGB Ultimate",
+          "precio": 1063053,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G RAM 32GB SSD 960GB WiFi RGB Ultimate",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123465-2f87b1985aef0e055c17740333496016-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-ram-16gb-ssd-480gb-rgb-ultimate",
+          "titulo": "PC AMD Ryzen 7 5700G RAM 16GB SSD 480GB RGB Ultimate",
+          "precio": 747263,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G RAM 16GB SSD 480GB RGB Ultimate",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123463-4e2b46b771c66221c717740331422814-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-ram-16gb-ssd-960gb-rgb-ultimate",
+          "titulo": "PC AMD Ryzen 7 5700G RAM 16GB SSD 960GB RGB Ultimate",
+          "precio": 856737,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G RAM 16GB SSD 960GB RGB Ultimate",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125841-f9524efc28b819918117740325236582-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-3-3200g-16gb-960gb-rgb-ultimate-lb-100",
+          "titulo": "PC AMD Ryzen 3 3200G 16GB 960GB RGB Ultimate (LB-100)",
+          "precio": 652631,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 3 3200G 16GB 960GB RGB Ultimate (LB-100)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125837-2f8927896449db986617737126198989-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i9-14900-32gb-960gb-ender",
+          "titulo": "PC Intel Core I9 14900 32GB 960GB Ender",
+          "precio": 1999895,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core I9 14900 32GB 960GB Ender",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125785-1723a4adf22213537517722941696580-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i7-14700-32gb-960gb-ender-monitor-24",
+          "titulo": "PC Intel Core I7 14700 32GB 960GB Ender monitor 24&quot;",
+          "precio": 1661939,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core I7 14700 32GB 960GB Ender monitor 24&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125781-faaa5b966c9f0b8b1017722869683128-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i7-14700-32gb-2tb-ender-monitor-27",
+          "titulo": "PC Intel Core I7 14700 32GB 2TB Ender monitor 27&quot;",
+          "precio": 1695180,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core I7 14700 32GB 2TB Ender monitor 27&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125782-217280d90ae0cf18e217722868459592-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i3-14100-32gb-960gb-noxen",
+          "titulo": "PC Intel Core I3 14100 32GB 960GB Noxen",
+          "precio": 989368,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core I3 14100 32GB 960GB Noxen",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125763-940d7e3087b9c7397417722267589490-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i9-14900-32gb-2tb-ender",
+          "titulo": "PC Intel Core i9 14900 32GB 2TB Ender",
+          "precio": 1947263,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core i9 14900 32GB 2TB Ender",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125786-d83c82ca1fac072fd517722152166384-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i9-14900-32gb-2tb-ender-monitor-27",
+          "titulo": "PC Intel Core i9 14900 32GB 2TB Ender monitor 27&quot;",
+          "precio": 2052526,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core i9 14900 32GB 2TB Ender monitor 27&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125790-e5a08a06a1588caeb417722151297039-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-i9-14900-32gb-960gb-ender-monitor-24",
+          "titulo": "PC Intel Core i9 14900 32GB 960GB Ender monitor 24&quot;",
+          "precio": 2020947,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core i9 14900 32GB 960GB Ender monitor 24&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125789-1d9aa7696a66494e3717722150546831-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-5-8600g-16gb-1tb-am5-rgb-voltix-con-monitor-24",
+          "titulo": "PC Ryzen 5 8600G 16GB 1TB AM5 RGB Voltix con monitor 24&quot;",
+          "precio": 1368316,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 5 8600G 16GB 1TB AM5 RGB Voltix con monitor 24&quot;",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125823-d6efe87f126a95554917722091765349-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-5-8600g-16gb-480gb-am5-rgb-voltix",
+          "titulo": "PC Ryzen 5 8600G 16GB 480GB AM5 RGB VOLTIX",
+          "precio": 1030360,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 5 8600G 16GB 480GB AM5 RGB VOLTIX",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125820-28d50c1e378ea1f5d617722041203584-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-5-8600g-16gb-1tb-am5-rgb-voltix",
+          "titulo": "PC Ryzen 5 8600G 16GB 1TB AM5 RGB Voltix",
+          "precio": 1094736,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 5 8600G 16GB 1TB AM5 RGB Voltix",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125819-60d08623d400dead4c17722029982716-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-ultra-5-245k-1tb-32gb-ddr5-monitor-27-water-cooler",
+          "titulo": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 monitor 27 Water cooler",
+          "precio": 2042000,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 monitor 27 Water cooler",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125753-c7b2af664c1f953ea317718869695151-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-ultra-5-245k-1tb-32gb-ddr5-monitor-24-water-cooler",
+          "titulo": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 monitor 24 Water cooler",
+          "precio": 2010421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 monitor 24 Water cooler",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125752-e1de5619314bee499517718867548557-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-ultra-5-245k-1tb-32gb-ddr5-water-cooler",
+          "titulo": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 Water cooler",
+          "precio": 1936737,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core Ultra 5 245k 1TB 32GB DDR5 Water cooler",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125751-8efbd1a48353daa4d217718857952226-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-intel-core-ultra-9-285-1tb-32gb-ddr5",
+          "titulo": "PC Intel Core Ultra 9 285 1TB 32GB DDR5",
+          "precio": 2659169,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Intel Core Ultra 9 285 1TB 32GB DDR5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125745-5dcbe91d1f66b4c55717718856923463-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-5-8500g-16gb-480gb-am5-rgb",
+          "titulo": "PC Ryzen 5 8500G 16GB 480GB AM5 RGB",
+          "precio": 905158,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 5 8500G 16GB 480GB AM5 RGB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122934-d3fa62cee747669b0617718780279728-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-7-8700g-16gb-512gb-am5-rgb",
+          "titulo": "PC Ryzen 7 8700G 16GB 512gb AM5 RGB",
+          "precio": 1131474,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 7 8700G 16GB 512gb AM5 RGB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122936-bde05b5f155a3734a817718778903025-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-ram-8gb-ssd-240gb-rgb-predator",
+          "titulo": "PC AMD Ryzen 7 5700G RAM 8GB SSD 240GB RGB Predator",
+          "precio": 684105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G RAM 8GB SSD 240GB RGB Predator",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124237-9a2295f26977e9530317748976926109-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-7-5700g-8gb-240gb-rgb-nebula",
+          "titulo": "PC Ryzen 7 5700G 8GB 240GB RGB Nebula",
+          "precio": 673674,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 7 5700G 8GB 240GB RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124238-c43340206345b49c0617718713776103-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-32gb-1tb-wifi-kit-rgb-aura",
+          "titulo": "PC AMD 5700G 32GB 1TB WIFI KIT RGB Aura",
+          "precio": 1094632,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 32GB 1TB WIFI KIT RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124108-49c63b40428273160317718709987082-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-32gb-1tb-wifi-kit-rgb-nebula",
+          "titulo": "PC AMD 5700G 32GB 1TB WIFI KIT RGB Nebula",
+          "precio": 1088316,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 32GB 1TB WIFI KIT RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124109-042dca1fb9cf6b81e617718709164007-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-32gb-1tb-wifi-rgb-nebula1",
+          "titulo": "PC AMD 5700G 32GB 1TB WIFI RGB Nebula",
+          "precio": 1084105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 32GB 1TB WIFI RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124105-0f327b702ef033a36f17718707407612-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-32gb-1tb-wifi-rgb-nebula",
+          "titulo": "PC AMD 5700G 32GB 1TB WIFI RGB Nebula",
+          "precio": 1084105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 32GB 1TB WIFI RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124106-7d171633ea511b4e1d17718706623724-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-16gb-480gb-kit-rgb-aura",
+          "titulo": "PC AMD 5700G 16GB 480GB KIT RGB Aura",
+          "precio": 810421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 16GB 480GB KIT RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124096-f8efada842315c9d8d17718696311106-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-16gb-480gb-kit-rgb-nebula",
+          "titulo": "PC AMD 5700G 16GB 480GB KIT RGB Nebula",
+          "precio": 799895,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 16GB 480GB KIT RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124097-152844aeb5b1dcf29d17718695586758-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-16gb-1tb-kit-rgb-aura",
+          "titulo": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Aura",
+          "precio": 889368,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124102-76610e094673d06e7b17718694657373-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-16gb-1tb-kit-rgb-nebula",
+          "titulo": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Nebula",
+          "precio": 884105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G 16GB 1TB KIT RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124103-351a50e41151d733ac17718690527038-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-ryzen-5-5700g-16gb-240gb-rgb-nebula",
+          "titulo": "PC Ryzen 5 5700G 16GB 240GB RGB Nebula",
+          "precio": 736737,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC Ryzen 5 5700G 16GB 240GB RGB Nebula",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124241-0909d5a1754ffa7e9917718620698429-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-ryzen-7-5700g-16gb-1tb-rgb-aura",
+          "titulo": "PC AMD Ryzen 7 5700G 16GB 1TB RGB Aura",
+          "precio": 884105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD Ryzen 7 5700G 16GB 1TB RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124099-7dbd262ca7e2069e1417718619624521-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-3200g-16gb-480gb-rgb-aura",
+          "titulo": "PC AMD 3200G 16GB 480GB RGB Aura",
+          "precio": 554632,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 3200G 16GB 480GB RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124087-cd3ca490c268937d4a17718611708262-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "pc-amd-5700g-16gb-480gb-rgb-aura",
+          "titulo": "PC AMD 5700G 16GB 480GB RGB Aura",
+          "precio": 773579,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "PC AMD 5700G 16GB 480GB RGB Aura",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124093-853b4eb5db31b7388d17718610459505-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mini-pc-asus-pn41-barebone-intel-celeron-n4505-16gb-ram-500gb-ssd-m-2-nvme-pn41-s1-bbn4000xfv-arg",
+          "titulo": "Mini PC Asus PN41 barebone Intel Celeron N4505 16GB RAM 500GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "precio": 610421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Mini PC Asus PN41 barebone Intel Celeron N4505 16GB RAM 500GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125936-8c43377049884a679917745526974164-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mini-pc-asus-pn41-barebone-intel-celeron-n4505-8gb-ram-256gb-ssd-m-2-nvme-pn41-s1-bbn4000xfv-arg",
+          "titulo": "Mini PC Asus PN41 barebone Intel Celeron N4505 8GB RAM 256GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "precio": 526211,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Mini PC Asus PN41 barebone Intel Celeron N4505 8GB RAM 256GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125935-be136540271a552b5317745508891692-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mini-pc-asus-pn41-barebone-intel-celeron-n4505-16gb-ram-256gb-ssd-m-2-nvme-pn41-s1-bbn4000xfv-arg",
+          "titulo": "Mini PC Asus PN41 barebone Intel Celeron N4505 16GB RAM 256GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "precio": 557789,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Mini PC Asus PN41 barebone Intel Celeron N4505 16GB RAM 256GB SSD M.2 NVMe (PN41-S1-BBN4000XFV-ARG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125934-73e6bf968333b428fd17745453302378-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mini-pc-asus-intel-celeron-n4505-barebone-sin-memoria-y-sin-disco-pn41-s1-bbn4000xfv-arg",
+          "titulo": "Mini PC Asus Intel Celeron N4505 barebone sin memoria y sin disco (PN41-S1-BBN4000XFV-ARG)",
+          "precio": 294632,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Mini PC Asus Intel Celeron N4505 barebone sin memoria y sin disco (PN41-S1-BBN4000XFV-ARG)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mini-pc-nuc-intel-celeron-j4025-boxnuc7cjyhn",
+          "titulo": "Mini PC NUC Intel Celeron J4025 (BOXNUC7CJYHN)",
+          "precio": 218000,
+          "categoria": "pc",
+          "etiqueta": "Sin stock",
+          "descripcion": "Mini PC NUC Intel Celeron J4025 (BOXNUC7CJYHN)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121584-ef85cafdd239c9f47917700472251695-480-0.webp",
+          "stock": 0
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-7-5700g-mother-am4",
+          "titulo": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4",
+          "precio": 415684,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125803-163bcc0c646919aa2917715167718577-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5-5600gt-mother-am4-ram-8gb-ssd-240gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4 + RAM 8GB + SSD 240GB",
+          "precio": 568316,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4 + RAM 8GB + SSD 240GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125846-acfbe201d49a938ed017743088276488-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-3-3200g-mother-am4-ram-8gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4 + RAM 8GB",
+          "precio": 319895,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4 + RAM 8GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125863-6f659f88fbfa3c366417740350945802-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-3-3200g-mother-am4",
+          "titulo": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4",
+          "precio": 206211,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125865-8359f0d758a402fd5a17755744074452-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5-5600gt-mother-am4-ram-16gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4 + RAM 16GB",
+          "precio": 568316,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4 + RAM 16GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125858-ee22d800bd0591007617740349918561-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5-5600gt-mother-am4",
+          "titulo": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4",
+          "precio": 355684,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 5 5600GT + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125864-f7ac4b3857e75725a617740349656499-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-7-5700g-mother-am41",
+          "titulo": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4",
+          "precio": 415684,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125862-abf5000db765067c4117740312233530-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-athlon-3000g-mother-am41",
+          "titulo": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4",
+          "precio": 145158,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125806-81b5a88e1dce40601e17716391465070-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5-8600g-mother-am5",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 5 8600g + mother AM5",
+          "precio": 470421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 5 8600g + mother AM5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125800-35175da5b2444221b017715167633939-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-7-8700g-mother-am5",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 7 8700g + mother AM5",
+          "precio": 620947,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 7 8700g + mother AM5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125798-b9cec5b1f3ab6cb80f17715167515194-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-athlon-3000g-mother-am4-8gb-ddr4",
+          "titulo": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4 + 8GB DDR4",
+          "precio": 263053,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4 + 8GB DDR4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125802-7cc2d79ab02cb9391817715167360955-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-athlon-3000g-mother-am4",
+          "titulo": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4",
+          "precio": 145158,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd ATHLON 3000G + mother AM4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125801-65347250480c1baf1a17715167238440-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5-8500g-mother-am5",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 5 8500g + mother AM5",
+          "precio": 390421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 5 8500g + mother AM5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125799-14eb920a33d2c3c4ed17715167111636-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-7-8700g-mother-am5-ram-16gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 7 8700G + mother AM5 + RAM 16GB",
+          "precio": 977789,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 7 8700G + mother AM5 + RAM 16GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122955-48a9a3c09b66b72ebc17700463031200-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-8500-mother-am5-16gb",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 8500 + mother AM5 + 16gb",
+          "precio": 749368,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 8500 + mother AM5 + 16gb",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122954-e5b8a96abeee45615317700462908846-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-13100-mother-8gb-ddr4",
+          "titulo": "Combo Actualización Intel Core i3 13100 + Mother + 8gb ddr4",
+          "precio": 533579,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 13100 + Mother + 8gb ddr4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123639-1371c580c90810048a17700463512305-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-13100-mother-16gb-ddr4",
+          "titulo": "Combo Actualización Intel Core i3 13100 + Mother + 16gb ddr4",
+          "precio": 578842,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 13100 + Mother + 16gb ddr4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123640-06d251a08349acc9c517700463483416-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-13100-mother",
+          "titulo": "Combo Actualización Intel Core i3 13100 + Mother",
+          "precio": 378842,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 13100 + Mother",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123638-b6238c5e3f257fcc3617700463455015-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-12100-mother-8gb-ddr4",
+          "titulo": "Combo Actualización Intel Core i3 12100 + Mother + 8gb ddr4",
+          "precio": 516737,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 12100 + Mother + 8gb ddr4",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123636-02af2e86a2d7bc4ed617700463429296-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-12100-mother-16gb-ddr4",
+          "titulo": "Combo Actualización Intel Core i3 12100 + Mother + 16gb ddr4",
+          "precio": 527263,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 12100 + Mother + 16gb ddr4",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-intel-core-i3-12100-mother",
+          "titulo": "Combo Actualización Intel Core i3 12100 + Mother",
+          "precio": 368420,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización Intel Core i3 12100 + Mother",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123635-5b01f0304cb4dea32b17700463299018-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-3-3200g-mother-8gb",
+          "titulo": "Combo Actualizacion pc Amd Ryzen 3 3200g + mother + 8gb",
+          "precio": 319895,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion pc Amd Ryzen 3 3200g + mother + 8gb",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122857-94284f298b3ce3aa6617700463277287-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5700g-mother-8gb-240gb",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 5700g + mother + 8gb +240gb",
+          "precio": 624105,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 5700g + mother + 8gb +240gb",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122864-a90556b6aaab5e09bd17700463001519-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-5700g-mother-8gb",
+          "titulo": "Combo Actualizacion PC Amd Ryzen 5700g + mother + 8gb",
+          "precio": 550421,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualizacion PC Amd Ryzen 5700g + mother + 8gb",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122861-3bc4ae5d48496bb4a117700462978763-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-7-5700g-mother-am4-ram-16gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4 + RAM 16GB",
+          "precio": 610525,
+          "categoria": "pc",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo Actualización PC AMD Ryzen 7 5700G + mother AM4 + RAM 16GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122862-05c37aa7102186993c17700462957902-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-actualizacion-pc-amd-ryzen-3-3200g-mother-am4-ram-16gb",
+          "titulo": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4 + RAM 16GB",
+          "precio": 383053,
+          "categoria": "pc",
+          "etiqueta": "Sin stock",
+          "descripcion": "Combo Actualización PC AMD Ryzen 3 3200G + mother AM4 + RAM 16GB",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122858-c9976164318d3b76c617700462936216-480-0.webp",
+          "stock": 0
         }
       ]
     },
@@ -1263,6 +2091,576 @@
           "descripcion": "MOTHER ASUS A620M A PRIME AM5 DDR5 (PRIME A620M-A)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124248-a0b579e59b8bbd315f17700478170348-480-0.webp",
           "stock": 0
+        },
+        {
+          "id_producto": "mother-msi-pro-h610m-s-ddr4-14va-1700-911-7e44",
+          "titulo": "MOTHER MSI PRO H610M-S DDR4 14VA (1700) (911-7E44)",
+          "precio": 107263,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER MSI PRO H610M-S DDR4 14VA (1700) (911-7E44)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123404-1a6f11450f8ba6b0d417700480337488-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-msi-pro-h610m-g-ddr5-14th-1700-911-7d46",
+          "titulo": "MOTHER MSI PRO H610M-G DDR5 14TH (1700) (911-7D46)",
+          "precio": 120947,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER MSI PRO H610M-G DDR5 14TH (1700) (911-7D46)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123461-95c579b4b8ef60fd8117700480316613-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-msi-b860m-gaming-plus-wifi-ddr5-serie-2-1851-911-7e42",
+          "titulo": "MOTHER MSI B860M GAMING PLUS WIFI DDR5 SERIE 2 (1851) (911-7E42)",
+          "precio": 351579,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER MSI B860M GAMING PLUS WIFI DDR5 SERIE 2 (1851) (911-7E42)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124348-e875ba8fcbd7aca15517700480240445-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-gigabyte-z890m-gaming-x-series-2-ddr5-1851-z890mgamingx",
+          "titulo": "MOTHER GIGABYTE Z890M GAMING X SERIES 2 DDR5 (1851) (Z890M GAMING X)",
+          "precio": 334632,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER GIGABYTE Z890M GAMING X SERIES 2 DDR5 (1851) (Z890M GAMING X)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124074-c7090f0c2c95b5512217700480147393-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-gigabyte-h810m-k-series-2-ddr5-1851-h810m-k",
+          "titulo": "MOTHER GIGABYTE H810M K SERIES 2 DDR5 (1851) (H810M K)",
+          "precio": 168316,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER GIGABYTE H810M K SERIES 2 DDR5 (1851) (H810M K)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124320-7ca4cedf733c3c8e0a17700480089740-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-gigabyte-h810m-gaming-wifi6-series-2-1851-h810m-gaming-wifi6-ddr5",
+          "titulo": "MOTHER GIGABYTE H810M GAMING WIFI6 SERIES 2 (1851) (H810M GAMING WIFI6) DDR5",
+          "precio": 204105,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER GIGABYTE H810M GAMING WIFI6 SERIES 2 (1851) (H810M GAMING WIFI6) DDR5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124352-d5fd140c2fe04f698d17700480058774-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-gigabyte-h610m-k-v2-14th-ddr5-1700-h610m-k-v2",
+          "titulo": "MOTHER GIGABYTE H610M K V2 14TH DDR5 (1700) (H610M K V2)",
+          "precio": 126305,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER GIGABYTE H610M K V2 14TH DDR5 (1700) (H610M K V2)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123545-c45ec41b094e9112ca17700480017218-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-biostar-tb360-btc-d-8a-9a-1151-ddr4-tb360-btc",
+          "titulo": "MOTHER BIOSTAR TB360-BTC D+ 8A 9A (1151) DDR4 (TB360-BTC)",
+          "precio": 55789,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER BIOSTAR TB360-BTC D+ 8A 9A (1151) DDR4 (TB360-BTC)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112547-58def663ab2e35d8c417700479354708-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-asus-rog-strix-b860-a-gaming-wifi-serie-2-1851-rog-strix-b860-a-gaming-wifiddr5",
+          "titulo": "MOTHER ASUS ROG STRIX B860-A GAMING WIFI SERIE 2 (1851) (ROG STRIX B860-A GAMING WIFI)DDR5",
+          "precio": 526211,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER ASUS ROG STRIX B860-A GAMING WIFI SERIE 2 (1851) (ROG STRIX B860-A GAMING WIFI)DDR5",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123614-bc9d0eb7270613e3e517658127037414-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-asus-prime-h610m-f-d4-r2-0-14th-1700-prime-h610m-f-d4-r2-0",
+          "titulo": "MOTHER ASUS PRIME H610M-F D4 R2.0 14TH (1700) (PRIME H610M-F D4 R2.0)",
+          "precio": 130421,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER ASUS PRIME H610M-F D4 R2.0 14TH (1700) (PRIME H610M-F D4 R2.0)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123718-7fcaec3be07eb58f3617658126595189-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-asrock-z890-pro-a-serie-2-1851-z890-pro-a",
+          "titulo": "MOTHER ASROCK Z890 PRO-A SERIE 2 (1851) (Z890 PRO-A)",
+          "precio": 399895,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MOTHER ASROCK Z890 PRO-A SERIE 2 (1851) (Z890 PRO-A)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124340-f48a93efb661dbbe2917700478139593-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "mother-gigabyte-h310m-ds2-rev-2-0-ddr4-ga-h310m-ds2",
+          "titulo": "MOTHER GIGABYTE H310M-DS2 REV 2.0 DDR4 (GA-H310M-DS2)",
+          "precio": 94736,
+          "categoria": "componentes",
+          "etiqueta": "Sin stock",
+          "descripcion": "MOTHER GIGABYTE H310M-DS2 REV 2.0 DDR4 (GA-H310M-DS2)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110065-a39cba8579ff1d26b317700479836368-480-0.webp",
+          "stock": 0
+        },
+        {
+          "id_producto": "memoria-ddr3-8192mb-8gb-1600mhz-kimota-blister",
+          "titulo": "Memoria DDR3 8192MB 8GB 1600MHZ Kimota blister",
+          "precio": 55788,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memoria DDR3 8192MB 8GB 1600MHZ Kimota blister",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_122320-cd2d4ac2ebe9e29e3617747134085312-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memoria-ddr4-16384mb-16gb-3200mhz-kimota-blister",
+          "titulo": "Memoria DDR4 16384MB 16GB 3200MHZ Kimota Blister",
+          "precio": 197884,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memoria DDR4 16384MB 16GB 3200MHZ Kimota Blister",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_122322-fbfe8e08b363c1e02f17744524250127-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memoria-ddr4-8192mb-8gb-3200mhz-adata-blister-ad4u32008g22-sgn",
+          "titulo": "Memoria DDR4 8192MB 8GB 3200MHZ Adata Blister (AD4U32008G22-SGN)",
+          "precio": 147263,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memoria DDR4 8192MB 8GB 3200MHZ Adata Blister (AD4U32008G22-SGN)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr4-8192mb-8gb-3200mhz-hiksemi-armor-blister-hsc408u32d2-8g",
+          "titulo": "Memorias DDR4 8192MB 8GB 3200MHZ HIKSEMI ARMOR BLISTER (HSC408U32D2 8G)",
+          "precio": 137884,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR4 8192MB 8GB 3200MHZ HIKSEMI ARMOR BLISTER (HSC408U32D2 8G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124382-d6f250c2b49868f44517748964728462-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memoria-ddr4-16384mb-16gb-2666mhz-kimota-blister",
+          "titulo": "Memoria DDR4 16384MB 16GB 2666MHz Kimota Blister",
+          "precio": 198842,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memoria DDR4 16384MB 16GB 2666MHz Kimota Blister",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125847-290f2b999667e375b417740298269368-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr5-16gb-16384mb-5600mhz-adata-blister-ad5u560016g-s",
+          "titulo": "Memorias DDR5 16GB 16384MB 5600MHZ ADATA BLISTER (AD5U560016G-S)",
+          "precio": 399989,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR5 16GB 16384MB 5600MHZ ADATA BLISTER (AD5U560016G-S)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121849-790c37c5b9479d721c17700481070671-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr4-8192mb-8gb-3200mhz-kingston-blister-kvr32n22s8-8",
+          "titulo": "Memorias DDR4 8192MB 8GB 3200MHZ KINGSTON BLISTER (KVR32N22S8/8)",
+          "precio": 163157,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR4 8192MB 8GB 3200MHZ KINGSTON BLISTER (KVR32N22S8/8)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110548-aaeff7a27b3b22915617700480971569-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr4-16384mb-16gb-3200mhz-puskill-killblade-blister-psk-d4d22m3200b-16g",
+          "titulo": "Memorias DDR4 16384MB 16GB 3200MHZ PUSKILL KILLBLADE BLISTER (PSK-D4D22M3200B-16G)",
+          "precio": 221052,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR4 16384MB 16GB 3200MHZ PUSKILL KILLBLADE BLISTER (PSK-D4D22M3200B-16G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125685-1ebb89c1f6f409fb1c17700480845929-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr4-16384mb-16gb-3200mhz-hiksemi-armor-blister-hsc416u32d2-16g",
+          "titulo": "Memorias DDR4 16384MB 16GB 3200MHZ HIKSEMI ARMOR BLISTER (HSC416U32D2 16G)",
+          "precio": 265158,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR4 16384MB 16GB 3200MHZ HIKSEMI ARMOR BLISTER (HSC416U32D2 16G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123252-792e4bf3c2f0334afa17700480776330-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-ddr4-16384mb-16gb-3200mhz-hiksemi-hiker-blister-hsc416u32z1-16g",
+          "titulo": "Memorias DDR4 16384MB 16GB 3200MHZ HIKSEMI HIKER BLISTER (HSC416U32Z1 16G)",
+          "precio": 227358,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias DDR4 16384MB 16GB 3200MHZ HIKSEMI HIKER BLISTER (HSC416U32Z1 16G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122419-cce8c4924d7078d38517700480796314-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-hiksemi-sword-ddr4-16384mb-16gb-3200mhz-rgb-blister",
+          "titulo": "Memorias Hiksemi Sword DDR4 16384MB 16GB 3200MHZ RGB Blister",
+          "precio": 243147,
+          "categoria": "componentes",
+          "etiqueta": "Sin stock",
+          "descripcion": "Memorias Hiksemi Sword DDR4 16384MB 16GB 3200MHZ RGB Blister",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124381-3ef40a1ac28b697f6017700481100384-480-0.webp",
+          "stock": 0
+        },
+        {
+          "id_producto": "memoria-so-dimm-ddr4-8192mb-8gb-skhynix-3200mhz-hmag68exnsa051n-bc-oem",
+          "titulo": "MEMORIA SO-DIMM DDR4 8192MB 8GB SKHYNIX 3200MHZ (HMAG68EXNSA051N-BC) OEM",
+          "precio": 136841,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MEMORIA SO-DIMM DDR4 8192MB 8GB SKHYNIX 3200MHZ (HMAG68EXNSA051N-BC) OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124269-68c5f4386aedd7797d17700475682264-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-so-dimm-ddr4-16384mb-16gb-3200mhz-puskill-killblade-blister-psk-d4d22m3200bl-16g",
+          "titulo": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ PUSKILL KILLBLADE BLISTER (PSK-D4D22M3200BL-16G)",
+          "precio": 205158,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ PUSKILL KILLBLADE BLISTER (PSK-D4D22M3200BL-16G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125686-c0ca8e02107b063acc17700481212190-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memoria-so-dimm-ddr4-8192mb-8gb-skhynix-3200mhz-hma81gs6djr8n-xn-oem",
+          "titulo": "MEMORIA SO-DIMM DDR4 8192MB 8GB SKHYNIX 3200MHZ (HMA81GS6DJR8N-XN) OEM",
+          "precio": 136841,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MEMORIA SO-DIMM DDR4 8192MB 8GB SKHYNIX 3200MHZ (HMA81GS6DJR8N-XN) OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124264-76293c85f7a52b57f817700475660122-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-so-dimm-ddr4-8192mb-8gb-3200mhz-aimerican-telekinesis-blister-ais8gd432",
+          "titulo": "Memorias SO-DIMM DDR4 8192MB 8GB 3200MHZ AIMERICAN TELEKINESIS BLISTER (AIS8GD432)",
+          "precio": 136841,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias SO-DIMM DDR4 8192MB 8GB 3200MHZ AIMERICAN TELEKINESIS BLISTER (AIS8GD432)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124485-71415ba702af5dd63217700481246692-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-so-dimm-ddr4-16384mb-16gb-3200mhz-kingston-blister-kvr32s22s8-16",
+          "titulo": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ KINGSTON BLISTER (KVR32S22S8/16)",
+          "precio": 284209,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ KINGSTON BLISTER (KVR32S22S8/16)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112679-59358b957bad4d0fa917700481185910-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memorias-so-dimm-ddr4-16384mb-16gb-3200mhz-aimerican-telekinesis-blister-ais16gd432",
+          "titulo": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ AIMERICAN TELEKINESIS BLISTER (AIS16GD432)",
+          "precio": 210525,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Memorias SO-DIMM DDR4 16384MB 16GB 3200MHZ AIMERICAN TELEKINESIS BLISTER (AIS16GD432)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124486-4e7c8557a154c251e217700481133691-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "memoria-ddr4-8192mb-8gb-2666mhz-so-dimm-kimota-blister",
+          "titulo": "MEMORIA DDR4 8192MB 8GB 2666MHZ SO-DIMM KIMOTA BLISTER",
+          "precio": 136841,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "MEMORIA DDR4 8192MB 8GB 2666MHZ SO-DIMM KIMOTA BLISTER",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124416-09935c22c107a828ea17700475635047-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "placa-de-video-asus-nvidia-geforce-gt-1030-oc-2gb-gddr5-ph-gt1030-o2g",
+          "titulo": "PLACA DE VIDEO ASUS NVIDIA GEFORCE GT 1030 OC 2GB GDDR5 (PH-GT1030-O2G)",
+          "precio": 199999,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "PLACA DE VIDEO ASUS NVIDIA GEFORCE GT 1030 OC 2GB GDDR5 (PH-GT1030-O2G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125730-e69dec50a7b31af8e017702389077037-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "placa-de-video-asus-nvidia-gforce-prime-rtx-5060ti-8gb-gddr7-oc-edition-prime-rtx5060ti-o8g",
+          "titulo": "PLACA DE VIDEO ASUS NVIDIA GFORCE PRIME RTX 5060TI 8GB GDDR7 OC EDITION (PRIME-RTX5060TI-O8G)",
+          "precio": 1263053,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "PLACA DE VIDEO ASUS NVIDIA GFORCE PRIME RTX 5060TI 8GB GDDR7 OC EDITION (PRIME-RTX5060TI-O8G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124505-78d9b24dffd70c50b317658149105301-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-asus-prime-850w-white-black-power-supply-80-plus-gold-ap-850g",
+          "titulo": "FUENTE ASUS PRIME 850W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD (AP-850G)",
+          "precio": 223053,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS PRIME 850W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD (AP-850G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124502-bcd58a9ffefdcf526717700466848874-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-harryson-oem-a-800-plus",
+          "titulo": "Fuente 800W Harryson OEM (A-800-PLUS)",
+          "precio": 41052,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 800W Harryson OEM (A-800-PLUS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125814-75cc30bbf901c02fbd17721155523530-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-white-p550ss-ice-80-plus-silver-gp-p550ss-ice",
+          "titulo": "Fuente Gigabyte white P550SS ICE 80 Plus Silver (GP-P550SS ICE)",
+          "precio": 77578,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Gigabyte white P550SS ICE 80 Plus Silver (GP-P550SS ICE)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-p750bs-750w-80-plus-bronze-gp-p750bs",
+          "titulo": "Fuente Gigabyte P750BS 750W 80 Plus Bronze (GP-P750BS)",
+          "precio": 113579,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Gigabyte P750BS 750W 80 Plus Bronze (GP-P750BS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125734-089a15014b4cba867117720300087326-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-alimentacion-pc-450w-500w-550w-600w-aconcawa-cable-30cm",
+          "titulo": "Fuente alimentación PC 450w/500w/550w/600w Aconcawa cable 30cm",
+          "precio": 17789,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente alimentación PC 450w/500w/550w/600w Aconcawa cable 30cm",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124513-f3d46511869c20057117658165940518-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-ud-gold-850w-full-modular-80-plus-gold-gp-ud850gm-pg5",
+          "titulo": "FUENTE GIGABYTE UD GOLD 850W FULL MODULAR 80 PLUS GOLD (GP-UD850GM PG5)",
+          "precio": 190525,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE GIGABYTE UD GOLD 850W FULL MODULAR 80 PLUS GOLD (GP-UD850GM PG5)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123351-9bb5f118ec1adc124b17700467188543-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gfast-atx-powersupply500woem",
+          "titulo": "FUENTE GFAST ATX POWER SUPPLY 500W OEM",
+          "precio": 31474,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE GFAST ATX POWER SUPPLY 500W OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124286-b1cf7d2a530ec24d0e17700467165903-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-cooler-master-mwe-v3-750w-80-plus-gold-nm-fr-mpe-7506-acag-bar",
+          "titulo": "FUENTE COOLER MASTER MWE V3 750W 80 PLUS GOLD NM FR (MPE-7506-ACAG-BAR)",
+          "precio": 125158,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE COOLER MASTER MWE V3 750W 80 PLUS GOLD NM FR (MPE-7506-ACAG-BAR)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124047-dd16484d967ffde11517658117992592-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-asus-rog-strix-aura-edition-gaming-750w-black-power-supply-80-plus-gold-sin-cable-power-rog-strix-750g-aura-gaming",
+          "titulo": "FUENTE ASUS ROG STRIX AURA EDITION GAMING 750W BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (ROG-STRIX-750G-AURA-GAMING)",
+          "precio": 284209,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS ROG STRIX AURA EDITION GAMING 750W BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (ROG-STRIX-750G-AURA-GAMING)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123584-0cea130f50236572c717700466867893-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-asus-prime-750w-white-black-power-supply-80-plus-gold-sin-cable-power-ap-750g",
+          "titulo": "FUENTE ASUS PRIME 750W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (AP-750G)",
+          "precio": 210525,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS PRIME 750W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (AP-750G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123582-5a2b3c85f0d687f0f417658117637787-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-harrison-oem-a-800-plus",
+          "titulo": "FUENTE 800W HARRISON OEM (A-800-PLUS)",
+          "precio": 43157,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 800W HARRISON OEM (A-800-PLUS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124473-81dac23e7173b62d2f17700466282869-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-aconcawa-600w-atx-x24-pines-2s-oem",
+          "titulo": "Fuente Aconcawa 600W ATX X24 pines 2S OEM",
+          "precio": 17789,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Aconcawa 600W ATX X24 pines 2S OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123213-7f4b60a7c6cb4af29d17700466608612-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-850w-redragon-80-plus-gold-full-modular-rgps-pcie-5-1-gc-ps010-v2-6950376704894",
+          "titulo": "Fuente 850W Redragon 80 PLUS GOLD FULL MODULAR RGPS PCIE 5.1 (GC-PS010 V2) (6950376704894)",
+          "precio": 187895,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 850W Redragon 80 PLUS GOLD FULL MODULAR RGPS PCIE 5.1 (GC-PS010 V2) (6950376704894)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124415-9d81902678e7a83bbd17700466582999-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-redragon-80-plus-bronze-full-modular-rgps-pcie-5-1-gc-ps011-v2-6950376705433",
+          "titulo": "Fuente 800W Redragon 80 PLUS BRONZE FULL MODULAR RGPS PCIE 5.1 (GC-PS011 V2) (6950376705433)",
+          "precio": 164105,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 800W Redragon 80 PLUS BRONZE FULL MODULAR RGPS PCIE 5.1 (GC-PS011 V2) (6950376705433)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123887-68aadf5af80239407b17700466339734-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-redragon-80-plus-bronze-full-modular-rgps-gc-ps011-6950376705433",
+          "titulo": "FUENTE 800W REDRAGON 80 PLUS BRONZE FULL MODULAR RGPS (GC-PS011) (6950376705433)",
+          "precio": 149473,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 800W REDRAGON 80 PLUS BRONZE FULL MODULAR RGPS (GC-PS011) (6950376705433)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122116-205a21880da79aff8117700466310153-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-550w-brb-atx550-box",
+          "titulo": "FUENTE 550W BRB ATX550 BOX (*)",
+          "precio": 31474,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 550W BRB ATX550 BOX (*)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110033-20961f0f5bcc39b1f517658116897568-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-1200w-cooler-master-80-gold-elite-gold-full-modular-mpw-c001-afag",
+          "titulo": "FUENTE 1200W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-C001-AFAG)",
+          "precio": 272526,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 1200W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-C001-AFAG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124446-4b7c394f60564b4ce717658116604646-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-1000w-cooler-master-80-gold-elite-gold-full-modular-mpw-a001-afag",
+          "titulo": "FUENTE 1000W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-A001-AFAG)",
+          "precio": 214736,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 1000W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-A001-AFAG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124445-29b7bc04aee89b3a9617700465775716-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cable-adaptador-modular-de-fuente-cooler-master-1810-pines-a-24-pines-atx-cm-cab24pincab-oem",
+          "titulo": "Cable adaptador modular de fuente Cooler Master 18+10 Pines a 24 Pines ATX CM-CAB24PINCAB OEM",
+          "precio": 5253,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Cable adaptador modular de fuente Cooler Master 18+10 Pines a 24 Pines ATX CM-CAB24PINCAB OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124069-0dc41cec289b95e77717700462379181-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "water-cooler-asus-rog-strix-lc-iii-360-argb-white-rog-strix-lc-iii-360-argb-wht",
+          "titulo": "Water Cooler Asus ROG STRIX LC III 360 ARGB white (ROG STRIX LC III 360 ARGB WHT)",
+          "precio": 490421,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Water Cooler Asus ROG STRIX LC III 360 ARGB white (ROG STRIX LC III 360 ARGB WHT)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123966-5a0037d09f9f6b635e17694419323519-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "water-cooler-asus-tuf-gaming-lc-iii-360-argb-edition-blanco-tuf-gaming-lc-iii-360-argb-wht",
+          "titulo": "Water cooler Asus TUF Gaming LC III 360 ARGB Edition blanco (TUF GAMING LC III 360 ARGB WHT)",
+          "precio": 252526,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Water cooler Asus TUF Gaming LC III 360 ARGB Edition blanco (TUF GAMING LC III 360 ARGB WHT)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125851-6f8293adfd8beaf95917748981290293-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "watercooler-thermaltake-la360-s-argb-sync-segment-lcd-aio-liquid-cooler-black-3-fan-cl-w462-pl12sw-a",
+          "titulo": "WATERCOOLER THERMALTAKE LA360-S ARGB SYNC SEGMENT LCD AIO LIQUID COOLER BLACK 3 FAN (CL-W462-PL12SW-A)",
+          "precio": 195684,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "WATERCOOLER THERMALTAKE LA360-S ARGB SYNC SEGMENT LCD AIO LIQUID COOLER BLACK 3 FAN (CL-W462-PL12SW-A)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124235-8f86de2d7b2a0ed44917694414905778-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "coolers-redragon-para-cpu-water-cooling-black-ccw-1019-6950376726650",
+          "titulo": "Coolers REDRAGON PARA CPU WATER COOLING BLACK (CCW-1019) (6950376726650)",
+          "precio": 134737,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "Coolers REDRAGON PARA CPU WATER COOLING BLACK (CCW-1019) (6950376726650)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124001-dd67db932476bd006c17700463960808-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "asus-water-cooling-rog-strix-lc-120mm-rgb-rog-strix-lc-120",
+          "titulo": "ASUS WATER COOLING ROG STRIX LC 120MM RGB (ROG STRIX LC 120)",
+          "precio": 279895,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "ASUS WATER COOLING ROG STRIX LC 120MM RGB (ROG STRIX LC 120)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122190-493f198a945475357617700457660762-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "asus-water-cooling-rog-ryuo-120mm-rog-ryuo-120",
+          "titulo": "ASUS WATER COOLING ROG RYUO 120MM (ROG RYUO 120)",
+          "precio": 421053,
+          "categoria": "componentes",
+          "etiqueta": "Disponible",
+          "descripcion": "ASUS WATER COOLING ROG RYUO 120MM (ROG RYUO 120)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122122-8351224b07e51838e117700457628809-480-0.webp",
+          "stock": 1
         }
       ]
     },
@@ -1401,16 +2799,6 @@
           "stock": 1
         },
         {
-          "id_producto": "mouses-logitech-m90-wired-usb-black-910-004053",
-          "titulo": "Mouses LOGITECH M90 WIRED USB BLACK (910-004053)",
-          "precio": 5683,
-          "categoria": "perifericos",
-          "etiqueta": "Disponible",
-          "descripcion": "Mouses LOGITECH M90 WIRED USB BLACK (910-004053)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109819-75f9efd0d2ae34e7d617658132736425-480-0.webp",
-          "stock": 1
-        },
-        {
           "id_producto": "mouses-logitech-m280-wireless-2-4-right-handed-azul-910-004361",
           "titulo": "Mouses Logitech M280 wireless 2.4 right handed azul (910-004361)",
           "precio": 17474,
@@ -1478,6 +2866,16 @@
           "etiqueta": "Sin stock",
           "descripcion": "Mouses GENIUS OPTICAL MOUSE DX-110 NEGRO USB (DX-110 USB NEGRO G5)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109885-4d4d4850f24a85d0e817694468480908-480-0.webp",
+          "stock": 0
+        },
+        {
+          "id_producto": "mouses-logitech-m90-wired-usb-black-910-004053",
+          "titulo": "Mouses LOGITECH M90 WIRED USB BLACK (910-004053)",
+          "precio": 5683,
+          "categoria": "perifericos",
+          "etiqueta": "Sin stock",
+          "descripcion": "Mouses LOGITECH M90 WIRED USB BLACK (910-004053)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109819-75f9efd0d2ae34e7d617658132736425-480-0.webp",
           "stock": 0
         },
         {
@@ -1769,6 +3167,1018 @@
           "descripcion": "Fukuoka Inpod Summer Edition Red (Tws-S1-Rd)",
           "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
           "stock": 1
+        },
+        {
+          "id_producto": "auricular-redragon-zeus-x-usb-wire-connection-rgb-pink-h510p-rgb-6950376708656",
+          "titulo": "Auricular REDRAGON ZEUS X USB WIRE CONNECTION RGB PINK (H510P-RGB) (6950376708656)",
+          "precio": 100000,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular REDRAGON ZEUS X USB WIRE CONNECTION RGB PINK (H510P-RGB) (6950376708656)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121658-acbdf3d0213ca9ebf417658074634827-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-redragon-zeus-x-usb-wire-connection-rgb-black-h510-rgb-6950376705914",
+          "titulo": "Auricular REDRAGON ZEUS X USB WIRE CONNECTION RGB BLACK (H510-RGB) (6950376705914)",
+          "precio": 109368,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular REDRAGON ZEUS X USB WIRE CONNECTION RGB BLACK (H510-RGB) (6950376705914)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112426-1d460c6d042ab1703717700460361204-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-redragon-lamia-2-gaming-connection-usb-wire-virtual-7-1-rgb-white-support-included-h320w-rgb-1-6950376778857",
+          "titulo": "Auricular REDRAGON LAMIA 2 GAMING CONNECTION USB WIRE VIRTUAL 7.1 RGB WHITE SUPPORT INCLUDED (H320W-RGB-1) (6950376778857)",
+          "precio": 77789,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular REDRAGON LAMIA 2 GAMING CONNECTION USB WIRE VIRTUAL 7.1 RGB WHITE SUPPORT INCLUDED (H320W-RGB-1) (6950376778857)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121662-fa6d918f5c697d315517700460274365-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-redragon-ire-pro-utra-light-wireless-wire-connection-white-blue-h848b-6950376715395",
+          "titulo": "Auricular REDRAGON IRE PRO UTRA LIGHT WIRELESS-WIRE CONNECTION WHITE-BLUE (H848B) (6950376715395)",
+          "precio": 78842,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular REDRAGON IRE PRO UTRA LIGHT WIRELESS-WIRE CONNECTION WHITE-BLUE (H848B) (6950376715395)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121648-8b88ac78fb41b66aba17700460228467-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-redragon-h510-zeus-x-usb-cable-connection-white-h510w-rgb-6950376710079",
+          "titulo": "Auricular REDRAGON H510 ZEUS X USB CABLE CONNECTION WHITE (H510W-RGB) (6950376710079)",
+          "precio": 105474,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular REDRAGON H510 ZEUS X USB CABLE CONNECTION WHITE (H510W-RGB) (6950376710079)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121659-f441ff3fca1697ce7c17700460167948-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-noganet-vincha-blanco-aris-bluetooth-manos-libres-ng-a208bt",
+          "titulo": "Auricular NOGANET VINCHA BLANCO ARIS BLUETOOTH MANOS LIBRES (NG-A208BT)",
+          "precio": 14632,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular NOGANET VINCHA BLANCO ARIS BLUETOOTH MANOS LIBRES (NG-A208BT)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123928-47ffcfc49a7407f76b17700460077096-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-zone-300-bluetooth-white-981-001416",
+          "titulo": "Auricular LOGITECH ZONE 300 BLUETOOTH WHITE (981-001416)",
+          "precio": 116947,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular LOGITECH ZONE 300 BLUETOOTH WHITE (981-001416)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123784-348453c3bd566b450217700460031161-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-headset-inalambrico-g735-aurora-gaming-blanco-981-001082",
+          "titulo": "Auricular LOGITECH HEADSET INALAMBRICO G735 AURORA GAMING BLANCO (981-001082)",
+          "precio": 451474,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular LOGITECH HEADSET INALAMBRICO G735 AURORA GAMING BLANCO (981-001082)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/113583-9da74b5f048345718617700459982072-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-h151-stereo-negro-con-microfono-981-000587",
+          "titulo": "Auricular Logitech H151 Stereo Negro con Micrófono (981-000587)",
+          "precio": 30421,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular Logitech H151 Stereo Negro con Micrófono (981-000587)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109883-5a2de3935b21d2089917700460054443-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-g522-lightspeed-wireless-2-4-ghz-bluetooth-usb-wired-white-981-001549",
+          "titulo": "Auricular LOGITECH G522 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH - USB WIRED WHITE (981-001549)",
+          "precio": 342000,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular LOGITECH G522 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH - USB WIRED WHITE (981-001549)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124495-beaba612116530e82017658073118538-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-g435-lightspeed-wireless-2-4-ghz-bluetooth-white-981-001073",
+          "titulo": "Auricular LOGITECH G435 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH WHITE (981-001073)",
+          "precio": 155684,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular LOGITECH G435 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH WHITE (981-001073)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123788-035a7b531cc32cae5917700459674088-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-logitech-g435-lightspeed-wireless-2-4-ghz-bluetooth-blue-981-001061",
+          "titulo": "Auricular LOGITECH G435 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH BLUE (981-001061)",
+          "precio": 143053,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Auricular LOGITECH G435 LIGHTSPEED WIRELESS 2.4 GHZ - BLUETOOTH BLUE (981-001061)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112407-d01cc1d83ee581af6217700459650710-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "auricular-con-microfono-y-manos-libre-noganet-x-2670-fit-rosa-x-2670rs",
+          "titulo": "AURICULAR CON MICROFONO Y MANOS LIBRE NOGANET X-2670 FIT ROSA (X-2670RS)",
+          "precio": 11368,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "AURICULAR CON MICROFONO Y MANOS LIBRE NOGANET X-2670 FIT ROSA (X-2670RS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109939-2cfe9440ee0b033c5e17700457680579-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "combo-teclado-y-mouse-logitech-wireless-2-4-mk470-negro-920-009266",
+          "titulo": "Combo teclado y mouse Logitech wireless 2.4 MK470 negro (920-009266)",
+          "precio": 61474,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Combo teclado y mouse Logitech wireless 2.4 MK470 negro (920-009266)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123757-ff91c4953c488a374e17700463622674-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "teclado-y-mouse-logitech-mk295-silent-wireless-2-4-black-920-009792",
+          "titulo": "Teclado y Mouse LOGITECH MK295 SILENT WIRELESS 2.4 BLACK (920-009792)",
+          "precio": 44209,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Teclado y Mouse LOGITECH MK295 SILENT WIRELESS 2.4 BLACK (920-009792)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112826-4474ee4c6714d0330117658164603580-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "kit-de-teclado-y-mouse-logitech-pop-icon-combo-920-013055-blanco-crudo-y-naranja",
+          "titulo": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013055 blanco crudo y naranja",
+          "precio": 103053,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013055 blanco crudo y naranja",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/35-0c84fbe8f51f61453417700474592801-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "kit-de-teclado-y-mouse-logitech-pop-icon-combo-920-013054-lila-y-blanco-crudo",
+          "titulo": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013054 lila y blanco crudo",
+          "precio": 99895,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013054 lila y blanco crudo",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/30-587156adf46dba238217700474433083-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "kit-de-teclado-y-mouse-logitech-pop-icon-combo-920-013052-grafito-y-verde",
+          "titulo": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013052 grafito y verde",
+          "precio": 99895,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Kit de teclado y mouse Logitech Pop Icon Combo 920-013052 grafito y verde",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/22-d533697ca3258ccb9b17700473272271-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "teclado-solarmax-combo-mouse-mw200-y-teclado-kb302w-inalambrico",
+          "titulo": "Teclado Solarmax Combo Mouse Mw200 Y Teclado Kb302W Inalambrico",
+          "precio": 59990,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Teclado Solarmax Combo Mouse Mw200 Y Teclado Kb302W Inalambrico",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/113291-e993259d83d3bb68b517658164152346-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "teclado-y-mouse-kit-multi-negro-usb-tc309esp",
+          "titulo": "TECLADO Y MOUSE KIT MULTI NEGRO USB (TC309ESP)",
+          "precio": 4316,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "TECLADO Y MOUSE KIT MULTI NEGRO USB (TC309ESP)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124276-f75129394259e6785417694426594185-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "teclado-y-mouse-genius-wireless-2-4ghz-and-bluetooth-black-slimstar-8230-copilot-key-ia-slimstar-ia-8230-black",
+          "titulo": "TECLADO Y MOUSE GENIUS WIRELESS 2.4GHZ AND BLUETOOTH BLACK SLIMSTAR 8230 COPILOT KEY IA (SLIMSTAR IA 8230 BLACK)",
+          "precio": 36737,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "TECLADO Y MOUSE GENIUS WIRELESS 2.4GHZ AND BLUETOOTH BLACK SLIMSTAR 8230 COPILOT KEY IA (SLIMSTAR IA 8230 BLACK)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "teclado-y-mouse-genius-wireless-2-4ghz-and-bluetooth-black-slimstar-8230-slimstar-8230-black",
+          "titulo": "TECLADO Y MOUSE GENIUS WIRELESS 2.4GHZ AND BLUETOOTH BLACK SLIMSTAR 8230 (SLIMSTAR 8230 BLACK)",
+          "precio": 36737,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "TECLADO Y MOUSE GENIUS WIRELESS 2.4GHZ AND BLUETOOTH BLACK SLIMSTAR 8230 (SLIMSTAR 8230 BLACK)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "netmak-joystick-ps4-pc-ps3-conexion-inalambrico-usb-negro-nm-p401",
+          "titulo": "NETMAK JOYSTICK PS4 PC PS3 CONEXIÓN INALAMBRICO-USB NEGRO (NM-P401)",
+          "precio": 35684,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "NETMAK JOYSTICK PS4 PC PS3 CONEXIÓN INALAMBRICO-USB NEGRO (NM-P401)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/112763-32b944c895e108ebb117658136057905-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "joystick-hyperx-clutch-gladiate-rgb-transparente-xbox-pc-7d6h2aa",
+          "titulo": "Joystick HYPERX CLUTCH GLADIATE RGB TRANSPARENTE XBOX-PC (7D6H2AA)",
+          "precio": 75684,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "Joystick HYPERX CLUTCH GLADIATE RGB TRANSPARENTE XBOX-PC (7D6H2AA)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122873-d68c646448d90220fc17700472844258-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "joystick-pxn-p5-negro-conector-inalambrico-2-4-bluetooth-y-clable-usb-pc-nintendo-switch-android-ios-p5-6948052903655",
+          "titulo": "JOYSTICK PXN P5 NEGRO CONECTOR INALAMBRICO 2.4 - BLUETOOTH Y CLABLE USB PC-NINTENDO SWITCH-ANDROID-IOS (P5) (6948052903655)",
+          "precio": 68421,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "JOYSTICK PXN P5 NEGRO CONECTOR INALAMBRICO 2.4 - BLUETOOTH Y CLABLE USB PC-NINTENDO SWITCH-ANDROID-IOS (P5) (6948052903655)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "joystick-pxn-p5-8k-negro-conector-inalambrico-2-4-bluetooth-y-clable-usb-pc-nintendo-switch-android-ios-p5-8k-6948052903723",
+          "titulo": "JOYSTICK PXN P5 8K NEGRO CONECTOR INALAMBRICO 2.4 - BLUETOOTH Y CLABLE USB PC-NINTENDO SWITCH-ANDROID-IOS (P5 8K) (6948052903723)",
+          "precio": 91579,
+          "categoria": "perifericos",
+          "etiqueta": "Disponible",
+          "descripcion": "JOYSTICK PXN P5 8K NEGRO CONECTOR INALAMBRICO 2.4 - BLUETOOTH Y CLABLE USB PC-NINTENDO SWITCH-ANDROID-IOS (P5 8K) (6948052903723)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124395-6c1836115a11355e8617658122870613-480-0.webp",
+          "stock": 1
+        }
+      ]
+    },
+    {
+      "id": "almacenamiento",
+      "nombre": "Almacenamiento",
+      "productos": [
+        {
+          "id_producto": "disco-solido-ssd-1920-2tb-gb-sata-hiksemi-wave-hs-ssd-waves-1920g",
+          "titulo": "Disco Solido Ssd 1920 (2TB) GB SATA HIKSEMI WAVE (HS-SSD-WAVE(S) 1920G)",
+          "precio": 252631,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 1920 (2TB) GB SATA HIKSEMI WAVE (HS-SSD-WAVE(S) 1920G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125325-5ce96703c036a3c76317700464595148-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-ssd-memox-240-gb-sata-2-5-oem-mmss-240g",
+          "titulo": "Disco SSD Memox 240 GB SATA 2.5&quot; OEM (MMSS-240G)",
+          "precio": 78842,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco SSD Memox 240 GB SATA 2.5&quot; OEM (MMSS-240G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125717-f0df145b5ef3fe151717747139332686-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-ssd-puskill-960gb-sata-sata3-2-5",
+          "titulo": "Disco SSD Puskill 960GB SATA (SATA3 2.5)",
+          "precio": 187502,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco SSD Puskill 960GB SATA (SATA3 2.5)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125849-c06d39e340439adf6d17745308900258-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-union-memory-256-gb-am6b0-m2-2242-nvme-sss1s36619-oem-adaptador-m2-2280-de-aluminio",
+          "titulo": "DISCO SOLIDO SSD UNION MEMORY 256 GB AM6B0 M2.2242 NVME (SSS1S36619) OEM + ADAPTADOR M2.2280 DE ALUMINIO",
+          "precio": 94632,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "DISCO SOLIDO SSD UNION MEMORY 256 GB AM6B0 M2.2242 NVME (SSS1S36619) OEM + ADAPTADOR M2.2280 DE ALUMINIO",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125860-9164380bb797be45da17748958321790-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-256gb-m2-nvme-hiksemi-wave-hs-ssd-wave-p-256g",
+          "titulo": "Disco Solido Ssd 256GB M2 NVME HIKSEMI WAVE (HS-SSD-WAVE (P) 256G)",
+          "precio": 89463,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 256GB M2 NVME HIKSEMI WAVE (HS-SSD-WAVE (P) 256G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123789-0accd5ff7fa222874d17740374740769-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-ssd-patriot-burst-elite-480gb-sata-9se00108-pbe480gs25ssdr",
+          "titulo": "Disco Ssd PATRIOT BURST ELITE 480GB SATA (9SE00108-PBE480GS25SSDR)",
+          "precio": 130516,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Ssd PATRIOT BURST ELITE 480GB SATA (9SE00108-PBE480GS25SSDR)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124065-37f05379602f5067c117740371592646-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-ssd-puskill-480gb-sata-sata3-2-5",
+          "titulo": "Disco Ssd PUSKILL 480GB SATA (SATA3 2.5)",
+          "precio": 147367,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Ssd PUSKILL 480GB SATA (SATA3 2.5)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125687-ac0e667fa3f4855b3d17700465338075-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-1tb-sata-aimerican-immortality-aissd1tbs25",
+          "titulo": "Disco Solido Ssd 1TB SATA AIMERICAN IMMORTALITY (AISSD1TBS25)",
+          "precio": 252526,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 1TB SATA AIMERICAN IMMORTALITY (AISSD1TBS25)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125688-5feb7fd3e441b4d24717700464669692-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-960-gb-sata-kingston-a400-sa400s37-960g",
+          "titulo": "Disco Solido SSD 960 GB SATA Kingston A400 (SA400S37/960G)",
+          "precio": 255779,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido SSD 960 GB SATA Kingston A400 (SA400S37/960G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110066-c941f0a5abe112b7a017700465120450-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-512gb-sata-aimerican-immortality-aissd512s25",
+          "titulo": "Disco Solido Ssd 512GB SATA AIMERICAN IMMORTALITY (AISSD512S25)",
+          "precio": 152526,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 512GB SATA AIMERICAN IMMORTALITY (AISSD512S25)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124488-fa40d069f762f3da4417700465071573-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-480-gb-sata-kingston-a400-sa400s37-480g",
+          "titulo": "Disco Solido Ssd 480 GB SATA KINGSTON A400 (SA400S37/480G)",
+          "precio": 176832,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 480 GB SATA KINGSTON A400 (SA400S37/480G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110029-d49e96b552d848c47a17658115385879-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "disco-solido-ssd-240gb-sata-kingston-a400-sa400s37-240g",
+          "titulo": "Disco Solido Ssd 240GB SATA KINGSTON A400 (SA400S37/240G)",
+          "precio": 147263,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "Disco Solido Ssd 240GB SATA KINGSTON A400 (SA400S37/240G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110028-edf39750b458dcfd6717700464712616-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cpu-de-test-tienda-nube-no-usar1",
+          "titulo": "CPU de test tienda nube (no usar)",
+          "precio": 1,
+          "categoria": "almacenamiento",
+          "etiqueta": "Disponible",
+          "descripcion": "CPU de test tienda nube (no usar)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125719-4c11d72e9f1f7a378d17715270127217-480-0.webp",
+          "stock": 1
+        }
+      ]
+    },
+    {
+      "id": "gabinetes",
+      "nombre": "Gabinetes y Fuentes",
+      "productos": [
+        {
+          "id_producto": "gabinete-sentey-r20-sf-p-lateral-acrilico-r20-r20-sf",
+          "titulo": "GABINETE SENTEY R20-SF P/LATERAL ACRÍLICO R20 (R20-SF)",
+          "precio": 43684,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE SENTEY R20-SF P/LATERAL ACRÍLICO R20 (R20-SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123065-0d61984e541d59809b17700469822111-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ender-atx-5-coolers-rgb-gb-kit008sf",
+          "titulo": "Gabinete Aconcawa Ender ATX 5 coolers RGB (GB-KIT008SF)",
+          "precio": 47367,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ender ATX 5 coolers RGB (GB-KIT008SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125329-5206da01806c40301e17746179309937-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-performance-kit-teclado-y-mouse-x3-m-atx-black-f500w-lp-atx500-l903-mate-500w",
+          "titulo": "Gabinete Performance + Kit teclado y mouse X3 M-ATX black F500W (LP-ATX500-L903) (MATE 500W)",
+          "precio": 40000,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Performance + Kit teclado y mouse X3 M-ATX black F500W (LP-ATX500-L903) (MATE 500W)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110651-7fa35ae7e32e17a1e917694308510285-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-asus-tuf-gaming-gt-302-white-ancho-x-alto-x-profundidad-235-x-520-x-485-mm-gt302-argb-fans-wht",
+          "titulo": "GABINETE ASUS TUF GAMING GT 302 WHITE (Ancho x Alto x Profundidad 235 x 520 x 485 mm ) (GT302/ARGB FANS/WHT)",
+          "precio": 249368,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ASUS TUF GAMING GT 302 WHITE (Ancho x Alto x Profundidad 235 x 520 x 485 mm ) (GT302/ARGB FANS/WHT)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123518-eef9b4593516c7af6817658119408160-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-asus-prime-case-ap202-argb-vidrio-templado-m-atx-negro-ap202-bk-tg-argb",
+          "titulo": "Gabinete gamer Asus Prime Case AP202 ARGB vidrio templado M-ATX Negro (AP202/BK/TG/ARGB)",
+          "precio": 194632,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete gamer Asus Prime Case AP202 ARGB vidrio templado M-ATX Negro (AP202/BK/TG/ARGB)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125856-f7feb636d941430bf817748964320505-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-asus-case-a31-plus-vidrio-templado-argb-blanco",
+          "titulo": "Gabinete gamer Asus Case A31 Plus vidrio templado argb Blanco",
+          "precio": 144105,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete gamer Asus Case A31 Plus vidrio templado argb Blanco",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125904-9da35d5ecef852482017748963477730-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-jarvis-5-coolers-rgb-m-atx-gb-kit004sf",
+          "titulo": "Gabinete Aconcawa Jarvis 5 coolers RGB M-ATX GB-KIT004SF",
+          "precio": 85262,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Jarvis 5 coolers RGB M-ATX GB-KIT004SF",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125343-a7df8c07a45485ce6217750699718671-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-aconcawa-zerix-m-atx-6-coolers-rgb-gb-kit001sf",
+          "titulo": "Gabinete gamer Aconcawa Zerix M-ATX 6 coolers RGB GB-KIT001SF",
+          "precio": 85263,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete gamer Aconcawa Zerix M-ATX 6 coolers RGB GB-KIT001SF",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125326-b40a998522d3f7302517709288361354-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-predator-pecera-5-coolers-rgb-m-atx-gb-kit002sf",
+          "titulo": "Gabinete Aconcawa Predator pecera 5 coolers RGB M-ATX GB-KIT002SF",
+          "precio": 69473,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Predator pecera 5 coolers RGB M-ATX GB-KIT002SF",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125330-deb45fd732ac4076d517746294543887-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-colossus-mid-tower-m-atx-gb-kit005sf",
+          "titulo": "Gabinete Aconcawa Colossus mid tower M-ATX (GB-KIT005SF)",
+          "precio": 94736,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Colossus mid tower M-ATX (GB-KIT005SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125328-25e13a1838e58da40417700470459779-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-sentey-s20-sf-p-lateral-acrilico-s20-s20-sf",
+          "titulo": "GABINETE SENTEY S20-SF P/LATERAL ACRILICO S20 (S20-SF)",
+          "precio": 39579,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE SENTEY S20-SF P/LATERAL ACRILICO S20 (S20-SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123381-07afc4df20e76e12ba17658120985227-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-sentey-h10-negro-sin-cooler-p-lateral-y-frontal-de-acrilico-h10-sin-cooler-6100-sf",
+          "titulo": "GABINETE SENTEY H10 NEGRO SIN/COOLER P/LATERAL Y FRONTAL DE ACRILICO H10 SIN COOLER (6100-SF)",
+          "precio": 36632,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE SENTEY H10 NEGRO SIN/COOLER P/LATERAL Y FRONTAL DE ACRILICO H10 SIN COOLER (6100-SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124049-01a7535bcbb1a1069417700469795433-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-performance-nsv2-kit-x3-slim-black-fuente-teclado-mouse-dx-atx600-5830",
+          "titulo": "GABINETE PERFORMANCE NSV2 KIT X3 SLIM BLACK FUENTE TECLADO MOUSE (DX-ATX600-5830)",
+          "precio": 64632,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE PERFORMANCE NSV2 KIT X3 SLIM BLACK FUENTE TECLADO MOUSE (DX-ATX600-5830)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124508-7f6aacfe5133c7c71817700469763052-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-msi-mag-forge-m100a-negro-micro-atx-tower",
+          "titulo": "GABINETE MSI MAG FORGE M100A Negro Micro ATX-Tower",
+          "precio": 68316,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE MSI MAG FORGE M100A Negro Micro ATX-Tower",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123854-37ce759a936e97196317658120510978-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-magnumtech-negro-fan-frgb-120mm-x1-ventana-lateral-transparente-mt-436b",
+          "titulo": "GABINETE MAGNUMTECH NEGRO FAN FRGB 120MM X1 VENTANA LATERAL TRANSPARENTE (MT-436B)",
+          "precio": 43684,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE MAGNUMTECH NEGRO FAN FRGB 120MM X1 VENTANA LATERAL TRANSPARENTE (MT-436B)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123655-9473842dc83c9a78df17700469580770-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-magnumtech-kit-x3-f600w-teclado-mouse-mt-k735",
+          "titulo": "GABINETE MAGNUMTECH KIT X3 F600W TECLADO MOUSE (MT-K735)",
+          "precio": 73579,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE MAGNUMTECH KIT X3 F600W TECLADO MOUSE (MT-K735)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123625-0f8018b13d0515353e17700469557110-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-aconcawa-stroma-v2-gb-kit009",
+          "titulo": "Gabinete gamer Aconcawa Stroma v2 (GB-KIT009)",
+          "precio": 75684,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete gamer Aconcawa Stroma v2 (GB-KIT009)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124463-34c264624e1a10cdd117700471243658-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ender-atx-fuente-650w-gb-kit008",
+          "titulo": "Gabinete Aconcawa Ender ATX | Fuente 650w (GB-KIT008)",
+          "precio": 67367,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ender ATX | Fuente 650w (GB-KIT008)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124462-4258b3f75bb623746417744577805590-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-voltix-v2-m-atx-3-coolers-rgb-gb-kit007",
+          "titulo": "Gabinete Aconcawa Voltix v2 M-atx 3 coolers RGB (GB-KIT007)",
+          "precio": 48420,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Voltix v2 M-atx 3 coolers RGB (GB-KIT007)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124467-76b9a6f0d5c1322a3c17757481840185-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-boris-7-coolers-rgb-atx-fuente-800w-gb-kit006",
+          "titulo": "Gabinete Aconcawa Boris 7 coolers RGB ATX | Fuente 800w (GB-KIT006)",
+          "precio": 147367,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Boris 7 coolers RGB ATX | Fuente 800w (GB-KIT006)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124465-0449c860c215ee12b117757481412606-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-colossus-mid-tower-m-atx-itx-fuente-800wgb-kit005",
+          "titulo": "Gabinete Aconcawa Colossus mid tower M-ATX/ITX | Fuente 800w(GB-KIT005)",
+          "precio": 117789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Colossus mid tower M-ATX/ITX | Fuente 800w(GB-KIT005)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124464-6d1577dc548832bbea17700470592504-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-jarvis-5-coolers-rgb-m-atx-con-fuente-800w-gb-kit004",
+          "titulo": "Gabinete Aconcawa Jarvis 5 coolers RGB M-atx con Fuente 800w GB-KIT004",
+          "precio": 103053,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Jarvis 5 coolers RGB M-atx con Fuente 800w GB-KIT004",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124461-a5188d3bc4813c96e117750708510533-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-predator-5-coolers-rgb-m-atx-fuente-650w-kit002",
+          "titulo": "Gabinete Aconcawa Predator 5 coolers RGB M-atx | Fuente 650w KIT002",
+          "precio": 93683,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Predator 5 coolers RGB M-atx | Fuente 650w KIT002",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124459-243fe4b027dd4967a317700470958677-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-aconcawa-zerix-fuente-650w-gb-kit001",
+          "titulo": "Gabinete gamer Aconcawa Zerix | Fuente 650w (GB-KIT001)",
+          "precio": 89473,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete gamer Aconcawa Zerix | Fuente 650w (GB-KIT001)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124458-3c086f35d2d6a6273717709291672396-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-cromax-f-600w-kit-teclado-y-mouse-negro-cm-2801",
+          "titulo": "GABINETE CROMAX F 600W KIT TECLADO Y MOUSE NEGRO (CM-2801)",
+          "precio": 46211,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE CROMAX F 600W KIT TECLADO Y MOUSE NEGRO (CM-2801)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110427-5fbd251c0adb3ed07217700469379617-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-cooler-master-qube-500-flatpack-macaron-edition-ancho-x-alto-x-profundidad-406-x-231-x-415-mm-q500-dgnn-s00",
+          "titulo": "GABINETE COOLER MASTER QUBE 500 FLATPACK MACARON EDITION (Ancho x Alto x Profundidad 406 x 231 x 415 mm ) (Q500-DGNN-S00)",
+          "precio": 185789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE COOLER MASTER QUBE 500 FLATPACK MACARON EDITION (Ancho x Alto x Profundidad 406 x 231 x 415 mm ) (Q500-DGNN-S00)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121831-75bc7e04e6fabdec8217700469359693-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-brb-kit-x4-black-f550-teclado-mouse-parlantebei-40",
+          "titulo": "GABINETE BRB KIT X4 BLACK F550 TECLADO MOUSE PARLANTE (BEI-40)",
+          "precio": 36737,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE BRB KIT X4 BLACK F550 TECLADO MOUSE PARLANTE (BEI-40)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124285-e3684e646cad58e3f917700469338848-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-brb-kit-black-f550w-teclado-mouse-parlante-sb-30",
+          "titulo": "GABINETE BRB KIT BLACK F550W-TECLADO-MOUSE-PARLANTE (SB-30)",
+          "precio": 55000,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE BRB KIT BLACK F550W-TECLADO-MOUSE-PARLANTE (SB-30)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110113-3fb0b3d6f75714b43f17658119576930-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-asus-tuf-gaming-gt-502-horizon-white-ancho-x-alto-x-profundidad-285-x-450-x-446-mm-gt502-fv-wht-tg",
+          "titulo": "GABINETE ASUS TUF GAMING GT 502 HORIZON WHITE (Ancho x Alto x Profundidad 285 x 450 x 446 mm ) (GT502 FV/WHT/TG)",
+          "precio": 283674,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ASUS TUF GAMING GT 502 HORIZON WHITE (Ancho x Alto x Profundidad 285 x 450 x 446 mm ) (GT502 FV/WHT/TG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123695-ec23cd44efe636c96b17658119517456-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-asus-tuf-gaming-gt-501-white-alto-x-ancho-x-profundidad-552-x-251-x-545-mm-gt501-wt-handle",
+          "titulo": "GABINETE ASUS TUF GAMING GT 501 WHITE (Alto x Ancho x Profundidad 552 x 251 x 545 mm )(GT501/WT/HANDLE)",
+          "precio": 297789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ASUS TUF GAMING GT 501 WHITE (Alto x Ancho x Profundidad 552 x 251 x 545 mm )(GT501/WT/HANDLE)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123520-4551229a7a36ca6c6d17700469210383-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-gamer-asus-gx601-rog-strix-helios-white-edition-ancho-x-alto-x-profundidad-250-x-565-x-591-mm-gx601-wt-al-with-handle",
+          "titulo": "Gabinete GAMER ASUS GX601 ROG STRIX HELIOS WHITE EDITION (Ancho x Alto x Profundidad 250 x 565 x 591 mm ) (GX601/WT/AL/WITH HANDLE)",
+          "precio": 511474,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete GAMER ASUS GX601 ROG STRIX HELIOS WHITE EDITION (Ancho x Alto x Profundidad 250 x 565 x 591 mm ) (GX601/WT/AL/WITH HANDLE)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123685-7d5e74fdb340d76a9d17658119280686-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-voltix-f-600w-1-cooler-fan-argb-micro-atx-kit-tecmou-s-parlantes",
+          "titulo": "GABINETE ACONCAWA VOLTIX F-600W 1 COOLER FAN ARGB MICRO ATX KIT TEC+MOU (S/PARLANTES)",
+          "precio": 97789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ACONCAWA VOLTIX F-600W 1 COOLER FAN ARGB MICRO ATX KIT TEC+MOU (S/PARLANTES)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124288-b6b925d37e92bed96b17700469156761-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-voltix-f-600w-1-cooler-fan-argb-micro-atx-acw-2712r",
+          "titulo": "Gabinete Aconcawa Voltix F-600W 1 cooler fan ARGB Micro ATX (ACW-2712R)",
+          "precio": 94736,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Voltix F-600W 1 cooler fan ARGB Micro ATX (ACW-2712R)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123985-370b4818df66b2b37017700469127967-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ultimate-gaming-series-rgb-sin-fuente-lb-200-sf",
+          "titulo": "Gabinete Aconcawa Ultimate Gaming Series RGB sin fuente LB-200-SF",
+          "precio": 45158,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ultimate Gaming Series RGB sin fuente LB-200-SF",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124511-9cde408b57c626c19917749723817560-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ultimate-gaming-series-rgb-sin-fuente-lb-120-sf",
+          "titulo": "Gabinete Aconcawa Ultimate Gaming Series RGB sin fuente LB-120-SF",
+          "precio": 38842,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ultimate Gaming Series RGB sin fuente LB-120-SF",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124512-b817d961ec9b31d4ea17749724838652-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ultimate-gaming-series-rgb-sin-fuente-lb-100l-sf",
+          "titulo": "Gabinete Aconcawa Ultimate gaming series RGB sin fuente (LB-100L-SF)",
+          "precio": 38842,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ultimate gaming series RGB sin fuente (LB-100L-SF)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124510-2ba2ccf5a3b9aec45e17746191408378-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ultimate-gaming-series-rgb-600w-lb-200",
+          "titulo": "Gabinete Aconcawa Ultimate Gaming Series RGB 600W LB-200",
+          "precio": 68316,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ultimate Gaming Series RGB 600W LB-200",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123210-8c91867ca5afd9365217749725610980-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-ultimate-gaming-series-rgb-600w-lb-120",
+          "titulo": "Gabinete Aconcawa Ultimate Gaming Series RGB 600W LB-120",
+          "precio": 58842,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Gabinete Aconcawa Ultimate Gaming Series RGB 600W LB-120",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123211-9bf979838484e66bf317742797811058-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-stroma-4-cooler-fan-argb-micro-atx-y-atx-acw-502-sin-fuente",
+          "titulo": "GABINETE ACONCAWA STROMA 4 COOLER FAN ARGB MICRO ATX Y ATX (ACW-502) SIN FUENTE",
+          "precio": 38946,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ACONCAWA STROMA 4 COOLER FAN ARGB MICRO ATX Y ATX (ACW-502) SIN FUENTE",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124472-0bc159ddc905303a8e17700468646891-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-aconcawa-noxen-4-cooler-fan-argb-micro-atx-y-atx-acw-505-sin-fuente",
+          "titulo": "GABINETE ACONCAWA NOXEN 4 COOLER FAN ARGB MICRO ATX Y ATX (ACW-505) SIN FUENTE",
+          "precio": 39999,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "GABINETE ACONCAWA NOXEN 4 COOLER FAN ARGB MICRO ATX Y ATX (ACW-505) SIN FUENTE",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124471-fb58607dfc6a44616e17700468585641-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "gabinete-magnumtech-con-fuente-500w-mt-k835",
+          "titulo": "GABINETE MAGNUMTECH CON FUENTE 500W (MT-K835)",
+          "precio": 41579,
+          "categoria": "gabinetes",
+          "etiqueta": "Sin stock",
+          "descripcion": "GABINETE MAGNUMTECH CON FUENTE 500W (MT-K835)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123194-b8454ed0264259732b17700469536428-480-0.webp",
+          "stock": 0
+        },
+        {
+          "id_producto": "fuente-asus-prime-850w-white-black-power-supply-80-plus-gold-ap-850g",
+          "titulo": "FUENTE ASUS PRIME 850W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD (AP-850G)",
+          "precio": 223053,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS PRIME 850W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD (AP-850G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124502-bcd58a9ffefdcf526717700466848874-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-harryson-oem-a-800-plus",
+          "titulo": "Fuente 800W Harryson OEM (A-800-PLUS)",
+          "precio": 41052,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 800W Harryson OEM (A-800-PLUS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125814-75cc30bbf901c02fbd17721155523530-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-white-p550ss-ice-80-plus-silver-gp-p550ss-ice",
+          "titulo": "Fuente Gigabyte white P550SS ICE 80 Plus Silver (GP-P550SS ICE)",
+          "precio": 77578,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Gigabyte white P550SS ICE 80 Plus Silver (GP-P550SS ICE)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-p750bs-750w-80-plus-bronze-gp-p750bs",
+          "titulo": "Fuente Gigabyte P750BS 750W 80 Plus Bronze (GP-P750BS)",
+          "precio": 113579,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Gigabyte P750BS 750W 80 Plus Bronze (GP-P750BS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125734-089a15014b4cba867117720300087326-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-alimentacion-pc-450w-500w-550w-600w-aconcawa-cable-30cm",
+          "titulo": "Fuente alimentación PC 450w/500w/550w/600w Aconcawa cable 30cm",
+          "precio": 17789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente alimentación PC 450w/500w/550w/600w Aconcawa cable 30cm",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124513-f3d46511869c20057117658165940518-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gigabyte-ud-gold-850w-full-modular-80-plus-gold-gp-ud850gm-pg5",
+          "titulo": "FUENTE GIGABYTE UD GOLD 850W FULL MODULAR 80 PLUS GOLD (GP-UD850GM PG5)",
+          "precio": 190525,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE GIGABYTE UD GOLD 850W FULL MODULAR 80 PLUS GOLD (GP-UD850GM PG5)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123351-9bb5f118ec1adc124b17700467188543-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-gfast-atx-powersupply500woem",
+          "titulo": "FUENTE GFAST ATX POWER SUPPLY 500W OEM",
+          "precio": 31474,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE GFAST ATX POWER SUPPLY 500W OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124286-b1cf7d2a530ec24d0e17700467165903-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-cooler-master-mwe-v3-750w-80-plus-gold-nm-fr-mpe-7506-acag-bar",
+          "titulo": "FUENTE COOLER MASTER MWE V3 750W 80 PLUS GOLD NM FR (MPE-7506-ACAG-BAR)",
+          "precio": 125158,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE COOLER MASTER MWE V3 750W 80 PLUS GOLD NM FR (MPE-7506-ACAG-BAR)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124047-dd16484d967ffde11517658117992592-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-asus-rog-strix-aura-edition-gaming-750w-black-power-supply-80-plus-gold-sin-cable-power-rog-strix-750g-aura-gaming",
+          "titulo": "FUENTE ASUS ROG STRIX AURA EDITION GAMING 750W BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (ROG-STRIX-750G-AURA-GAMING)",
+          "precio": 284209,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS ROG STRIX AURA EDITION GAMING 750W BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (ROG-STRIX-750G-AURA-GAMING)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123584-0cea130f50236572c717700466867893-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-asus-prime-750w-white-black-power-supply-80-plus-gold-sin-cable-power-ap-750g",
+          "titulo": "FUENTE ASUS PRIME 750W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (AP-750G)",
+          "precio": 210525,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE ASUS PRIME 750W WHITE-BLACK POWER SUPPLY 80 PLUS GOLD SIN CABLE POWER (AP-750G)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123582-5a2b3c85f0d687f0f417658117637787-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-harrison-oem-a-800-plus",
+          "titulo": "FUENTE 800W HARRISON OEM (A-800-PLUS)",
+          "precio": 43157,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 800W HARRISON OEM (A-800-PLUS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124473-81dac23e7173b62d2f17700466282869-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-aconcawa-600w-atx-x24-pines-2s-oem",
+          "titulo": "Fuente Aconcawa 600W ATX X24 pines 2S OEM",
+          "precio": 17789,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente Aconcawa 600W ATX X24 pines 2S OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123213-7f4b60a7c6cb4af29d17700466608612-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-850w-redragon-80-plus-gold-full-modular-rgps-pcie-5-1-gc-ps010-v2-6950376704894",
+          "titulo": "Fuente 850W Redragon 80 PLUS GOLD FULL MODULAR RGPS PCIE 5.1 (GC-PS010 V2) (6950376704894)",
+          "precio": 187895,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 850W Redragon 80 PLUS GOLD FULL MODULAR RGPS PCIE 5.1 (GC-PS010 V2) (6950376704894)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124415-9d81902678e7a83bbd17700466582999-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-redragon-80-plus-bronze-full-modular-rgps-pcie-5-1-gc-ps011-v2-6950376705433",
+          "titulo": "Fuente 800W Redragon 80 PLUS BRONZE FULL MODULAR RGPS PCIE 5.1 (GC-PS011 V2) (6950376705433)",
+          "precio": 164105,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Fuente 800W Redragon 80 PLUS BRONZE FULL MODULAR RGPS PCIE 5.1 (GC-PS011 V2) (6950376705433)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123887-68aadf5af80239407b17700466339734-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-800w-redragon-80-plus-bronze-full-modular-rgps-gc-ps011-6950376705433",
+          "titulo": "FUENTE 800W REDRAGON 80 PLUS BRONZE FULL MODULAR RGPS (GC-PS011) (6950376705433)",
+          "precio": 149473,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 800W REDRAGON 80 PLUS BRONZE FULL MODULAR RGPS (GC-PS011) (6950376705433)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122116-205a21880da79aff8117700466310153-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-550w-brb-atx550-box",
+          "titulo": "FUENTE 550W BRB ATX550 BOX (*)",
+          "precio": 31474,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 550W BRB ATX550 BOX (*)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110033-20961f0f5bcc39b1f517658116897568-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-1200w-cooler-master-80-gold-elite-gold-full-modular-mpw-c001-afag",
+          "titulo": "FUENTE 1200W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-C001-AFAG)",
+          "precio": 272526,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 1200W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-C001-AFAG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124446-4b7c394f60564b4ce717658116604646-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "fuente-1000w-cooler-master-80-gold-elite-gold-full-modular-mpw-a001-afag",
+          "titulo": "FUENTE 1000W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-A001-AFAG)",
+          "precio": 214736,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "FUENTE 1000W COOLER MASTER 80+ GOLD ELITE GOLD FULL MODULAR (MPW-A001-AFAG)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124445-29b7bc04aee89b3a9617700465775716-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "cable-adaptador-modular-de-fuente-cooler-master-1810-pines-a-24-pines-atx-cm-cab24pincab-oem",
+          "titulo": "Cable adaptador modular de fuente Cooler Master 18+10 Pines a 24 Pines ATX CM-CAB24PINCAB OEM",
+          "precio": 5253,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "Cable adaptador modular de fuente Cooler Master 18+10 Pines a 24 Pines ATX CM-CAB24PINCAB OEM",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124069-0dc41cec289b95e77717700462379181-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "netmak-fan-cooler-12cm-con-15-leds-rgb-nm-12rgb",
+          "titulo": "NETMAK Fan Cooler 12Cm Con 15 Leds Rgb (NM-12RGB)",
+          "precio": 5262,
+          "categoria": "gabinetes",
+          "etiqueta": "Disponible",
+          "descripcion": "NETMAK Fan Cooler 12Cm Con 15 Leds Rgb (NM-12RGB)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125668-0bce5296f8d894008317694413923747-480-0.webp",
+          "stock": 1
         }
       ]
     },
@@ -1784,16 +4194,6 @@
           "etiqueta": "Disponible",
           "descripcion": "Sistema Mesh TP-Link WiFi 6 AC1900 2-Pack (Deco S7)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_113704-0472649b8fedb7c0d517747159695255-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "sistema-mesh-tp-link-deco-xe75-2-pack-axe5400-deco-xe75-2-pack",
-          "titulo": "Sistema mesh TP-LINK DECO XE75 (2-PACK) AXE5400 (DECO XE75 2-PACK)",
-          "precio": 362216,
-          "categoria": "redes",
-          "etiqueta": "Disponible",
-          "descripcion": "Sistema mesh TP-LINK DECO XE75 (2-PACK) AXE5400 (DECO XE75 2-PACK)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125815-c0c15617de2464c81c17722933043967-480-0.webp",
           "stock": 1
         },
         {
@@ -1825,6 +4225,16 @@
           "descripcion": "Cisco Router Wireless-N Vpn Multifuncion (Rv130W-A-K9-Na)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110196-e45bfc165b51402f8d17700462877870-480-0.webp",
           "stock": 1
+        },
+        {
+          "id_producto": "sistema-mesh-tp-link-deco-xe75-2-pack-axe5400-deco-xe75-2-pack",
+          "titulo": "Sistema mesh TP-LINK DECO XE75 (2-PACK) AXE5400 (DECO XE75 2-PACK)",
+          "precio": 362216,
+          "categoria": "redes",
+          "etiqueta": "Sin stock",
+          "descripcion": "Sistema mesh TP-LINK DECO XE75 (2-PACK) AXE5400 (DECO XE75 2-PACK)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125815-c0c15617de2464c81c17722933043967-480-0.webp",
+          "stock": 0
         },
         {
           "id_producto": "nisuta-cable-utp-cat-5e-30m-blanco-nscutp30c",
@@ -1974,6 +4384,56 @@
           "etiqueta": "Disponible",
           "descripcion": "SWITCH CCTV ETHERNET 16 PUERTOS POE CYGNUS (S1016-200)",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/123364-79e0f557922a980a2717658156429790-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "access-point-tp-link-tl-wa850re",
+          "titulo": "Access point TP-Link (TL-WA850RE)",
+          "precio": 29368,
+          "categoria": "redes",
+          "etiqueta": "Disponible",
+          "descripcion": "Access point TP-Link (TL-WA850RE)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109882-a84ee3d266014ce37a17658159891608-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "access-point-indoor-tp-link-re200",
+          "titulo": "Access point indoor TP-Link (RE200)",
+          "precio": 37008,
+          "categoria": "redes",
+          "etiqueta": "Disponible",
+          "descripcion": "Access point indoor TP-Link (RE200)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110047-af1a3b29b028245d4817658159948380-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "placa-de-red-wifi-tp-link-usb-m-ac1300-archer-t4u",
+          "titulo": "Placa de Red WiFi TP-Link USB (M) AC1300 (Archer T4U)",
+          "precio": 32000,
+          "categoria": "redes",
+          "etiqueta": "Disponible",
+          "descripcion": "Placa de Red WiFi TP-Link USB (M) AC1300 (Archer T4U)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_110042-d5d3f524f7560b5d3717748978521121-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "placa-de-red-wifi-tp-link-usb-m-ac-1300-archer-t3u",
+          "titulo": "Placa de red WiFi TP-Link USB (M) AC 1300 (ARCHER T3U)",
+          "precio": 25158,
+          "categoria": "redes",
+          "etiqueta": "Disponible",
+          "descripcion": "Placa de red WiFi TP-Link USB (M) AC 1300 (ARCHER T3U)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110226-9ff8c5b2930aa1524c17658160345040-480-0.webp",
+          "stock": 1
+        },
+        {
+          "id_producto": "placa-de-red-wifi-tp-link-usb-m-ac-1300-archer-t3u-nano",
+          "titulo": "Placa de red WiFi TP-Link USB (M) AC 1300 (ARCHER T3U NANO)",
+          "precio": 24632,
+          "categoria": "redes",
+          "etiqueta": "Disponible",
+          "descripcion": "Placa de red WiFi TP-Link USB (M) AC 1300 (ARCHER T3U NANO)",
+          "imagen": "https://acdn-us.mitiendanube.com/assets/stores/img/no-photo-480-0.webp",
           "stock": 1
         }
       ]
@@ -2441,141 +4901,35 @@
           "descripcion": "Adaptador Micro-USB / Micro-USB Netmak NM-C87",
           "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/109843-8e427668eccf2c578117700458725964-480-0.webp",
           "stock": 1
-        }
-      ]
-    },
-    {
-      "id": "almacenamiento",
-      "nombre": "Almacenamiento",
-      "productos": [
+        },
         {
-          "id_producto": "disco-solido-ssd-1920-2tb-gb-sata-hiksemi-wave-hs-ssd-waves-1920g",
-          "titulo": "Disco Solido Ssd 1920 (2TB) GB SATA HIKSEMI WAVE (HS-SSD-WAVE(S) 1920G)",
-          "precio": 252631,
-          "categoria": "almacenamiento",
+          "id_producto": "netmak-adaptador-audio-mic-nm-c50",
+          "titulo": "Netmak Adaptador Audio/Mic (Nm-C50)",
+          "precio": 870,
+          "categoria": "cables",
           "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 1920 (2TB) GB SATA HIKSEMI WAVE (HS-SSD-WAVE(S) 1920G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125325-5ce96703c036a3c76317700464595148-480-0.webp",
+          "descripcion": "Netmak Adaptador Audio/Mic (Nm-C50)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110094-230e1cbdc9797517ea17658137184861-480-0.webp",
           "stock": 1
         },
         {
-          "id_producto": "disco-ssd-memox-240-gb-sata-2-5-oem-mmss-240g",
-          "titulo": "Disco SSD Memox 240 GB SATA 2.5&quot; OEM (MMSS-240G)",
-          "precio": 78842,
-          "categoria": "almacenamiento",
+          "id_producto": "netmak-receptor-de-audio-bluetooth-3-0-con-conector-plug-jack-nm-bt6",
+          "titulo": "NETMAK RECEPTOR DE AUDIO BLUETOOTH 3.0 CON CONECTOR PLUG-JACK (NM-BT6)",
+          "precio": 6200,
+          "categoria": "cables",
           "etiqueta": "Disponible",
-          "descripcion": "Disco SSD Memox 240 GB SATA 2.5&quot; OEM (MMSS-240G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125717-f0df145b5ef3fe151717747139332686-480-0.webp",
+          "descripcion": "NETMAK RECEPTOR DE AUDIO BLUETOOTH 3.0 CON CONECTOR PLUG-JACK (NM-BT6)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/121717-fd782bee10acec1c5a17658136420024-480-0.webp",
           "stock": 1
         },
         {
-          "id_producto": "disco-ssd-puskill-960gb-sata-sata3-2-5",
-          "titulo": "Disco SSD Puskill 960GB SATA (SATA3 2.5)",
-          "precio": 187502,
-          "categoria": "almacenamiento",
+          "id_producto": "netmak-cable-optico-digital-toslink-3m-nm-c101-3",
+          "titulo": "NETMAK CABLE OPTICO DIGITAL TOSLINK 3M (NM-C101 3)",
+          "precio": 5262,
+          "categoria": "cables",
           "etiqueta": "Disponible",
-          "descripcion": "Disco SSD Puskill 960GB SATA (SATA3 2.5)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125849-c06d39e340439adf6d17745308900258-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-union-memory-256-gb-am6b0-m2-2242-nvme-sss1s36619-oem-adaptador-m2-2280-de-aluminio",
-          "titulo": "DISCO SOLIDO SSD UNION MEMORY 256 GB AM6B0 M2.2242 NVME (SSS1S36619) OEM + ADAPTADOR M2.2280 DE ALUMINIO",
-          "precio": 94632,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "DISCO SOLIDO SSD UNION MEMORY 256 GB AM6B0 M2.2242 NVME (SSS1S36619) OEM + ADAPTADOR M2.2280 DE ALUMINIO",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125860-9164380bb797be45da17748958321790-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-256gb-m2-nvme-hiksemi-wave-hs-ssd-wave-p-256g",
-          "titulo": "Disco Solido Ssd 256GB M2 NVME HIKSEMI WAVE (HS-SSD-WAVE (P) 256G)",
-          "precio": 89463,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 256GB M2 NVME HIKSEMI WAVE (HS-SSD-WAVE (P) 256G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_123789-0accd5ff7fa222874d17740374740769-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-ssd-patriot-burst-elite-480gb-sata-9se00108-pbe480gs25ssdr",
-          "titulo": "Disco Ssd PATRIOT BURST ELITE 480GB SATA (9SE00108-PBE480GS25SSDR)",
-          "precio": 130516,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Ssd PATRIOT BURST ELITE 480GB SATA (9SE00108-PBE480GS25SSDR)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_124065-37f05379602f5067c117740371592646-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-ssd-puskill-480gb-sata-sata3-2-5",
-          "titulo": "Disco Ssd PUSKILL 480GB SATA (SATA3 2.5)",
-          "precio": 147367,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Ssd PUSKILL 480GB SATA (SATA3 2.5)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125687-ac0e667fa3f4855b3d17700465338075-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-1tb-sata-aimerican-immortality-aissd1tbs25",
-          "titulo": "Disco Solido Ssd 1TB SATA AIMERICAN IMMORTALITY (AISSD1TBS25)",
-          "precio": 252526,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 1TB SATA AIMERICAN IMMORTALITY (AISSD1TBS25)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125688-5feb7fd3e441b4d24717700464669692-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-960-gb-sata-kingston-a400-sa400s37-960g",
-          "titulo": "Disco Solido SSD 960 GB SATA Kingston A400 (SA400S37/960G)",
-          "precio": 255779,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido SSD 960 GB SATA Kingston A400 (SA400S37/960G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110066-c941f0a5abe112b7a017700465120450-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-512gb-sata-aimerican-immortality-aissd512s25",
-          "titulo": "Disco Solido Ssd 512GB SATA AIMERICAN IMMORTALITY (AISSD512S25)",
-          "precio": 152526,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 512GB SATA AIMERICAN IMMORTALITY (AISSD512S25)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/124488-fa40d069f762f3da4417700465071573-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-480-gb-sata-kingston-a400-sa400s37-480g",
-          "titulo": "Disco Solido Ssd 480 GB SATA KINGSTON A400 (SA400S37/480G)",
-          "precio": 176832,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 480 GB SATA KINGSTON A400 (SA400S37/480G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110029-d49e96b552d848c47a17658115385879-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "disco-solido-ssd-240gb-sata-kingston-a400-sa400s37-240g",
-          "titulo": "Disco Solido Ssd 240GB SATA KINGSTON A400 (SA400S37/240G)",
-          "precio": 147263,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "Disco Solido Ssd 240GB SATA KINGSTON A400 (SA400S37/240G)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/110028-edf39750b458dcfd6717700464712616-480-0.webp",
-          "stock": 1
-        },
-        {
-          "id_producto": "cpu-de-test-tienda-nube-no-usar1",
-          "titulo": "CPU de test tienda nube (no usar)",
-          "precio": 1,
-          "categoria": "almacenamiento",
-          "etiqueta": "Disponible",
-          "descripcion": "CPU de test tienda nube (no usar)",
-          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/125719-4c11d72e9f1f7a378d17715270127217-480-0.webp",
+          "descripcion": "NETMAK CABLE OPTICO DIGITAL TOSLINK 3M (NM-C101 3)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/122433-8cdea972f1fedf9c3917658135409032-480-0.webp",
           "stock": 1
         }
       ]

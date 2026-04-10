@@ -15,14 +15,17 @@ const IconCarrito = ({ size = 20 }: { size?: number }) => (
 )
 
 const NAV_LINKS = [
-  { label: 'Inicio',      id: 'inicio'    },
-  { label: 'Novedades',   id: 'novedades' },
-  { label: 'Bolsos',      id: 'bolsos'    },
-  { label: 'Bazar',       id: 'bazar'     },
-  { label: 'Cuencos',     id: 'cuencos'   },
-  { label: 'Decoración',  id: 'deco'      },
-  { label: 'Cerámica',    id: 'ceramica'  },
+  { label: 'Quienes Somos',      id: 'inicio'    },
+  { label: 'Notebooks',   id: 'novedades' },
+  { label: 'Monitores',      id: 'bolsos'    },
+  { label: 'PCs Armadas',       id: 'bazar'     },
+  { label: 'Componentes',     id: 'cuencos'   },
+  { label: 'Periféricos',  id: 'deco'      },
+  { label: 'Redes y Conectividad',    id: 'ceramica'  },
+  { label: 'Cables y Adaptadores',    id: 'ceramica'  },
+  { label: 'Almacenamiento',    id: 'ceramica'  },
   { label: 'Envíos',      id: 'envios'    },
+  { label: 'Formulario Contacto',      id: 'envios'    },
 ]
 
 function handleNavClick(e: React.MouseEvent, id: string) {

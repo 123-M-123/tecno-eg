@@ -5,77 +5,107 @@ const path = require('path')
 const BASE = 'https://www.integradosargentinos.com'
 
 const SECCIONES = [
- 
-  {
-    id: 'notebooks',
-    nombre: 'Notebooks',
-    urls: [`${BASE}/notebooks/notebooks1/`],
-  },
-  {
-    id: 'monitores',
-    nombre: 'Monitores',
-    urls: [`${BASE}/monitores/`],
-  },
-  {
-    id: 'pc',
-    nombre: 'PCs Armadas',
-    urls: [
-      `${BASE}/pc2/pc-oficina/`,
-      `${BASE}/pc2/pc-gamer/`,
-    ],
-  },
-  {
-    id: 'componentes',
-    nombre: 'Componentes',
-    urls: [
-      `${BASE}/procesadores/amd2/`,
-      `${BASE}/procesadores/intel2/`,
-      `${BASE}/mothers/amd/`,
-      `${BASE}/mothers/intel/`,
-      `${BASE}/memorias-ram/`,
-      `${BASE}/placas-de-video/`,
-    ],
-  },
-  {
-    id: 'perifericos',
-    nombre: 'Periféricos',
-    urls: [
-      `${BASE}/mouses/mouses1/`,
-      `${BASE}/teclados/`,
-      `${BASE}/auriculares/`,
-    ],
-  },
-  {
-    id: 'redes',
-    nombre: 'Redes y Conectividad',
-    urls: [
-      `${BASE}/conectividad-y-redes/routers/`,
-      `${BASE}/conectividad-y-redes/cables/`,
-      `${BASE}/conectividad-y-redes/adaptadores-wifi/`,
-      `${BASE}/conectividad-y-redes/switches/`,
-    ],
-  },
-  {
-    id: 'cables',
-    nombre: 'Cables y Adaptadores',
-    urls: [
-      `${BASE}/cables-y-adaptadores/usb-c/`,
-      `${BASE}/cables-y-adaptadores/video/`,
-      `${BASE}/cables-y-adaptadores/usb/`,
-      `${BASE}/cables-y-adaptadores/adaptadores/`,
-    ],
-  },
-  {
-    id: 'almacenamiento',
-    nombre: 'Almacenamiento',
-    urls: [
-      `${BASE}/almacenamiento/discos-solidos-ssd/`,
-      `${BASE}/almacenamiento/discos-externos/`,
-    ],
-  },
+
+{
+id: 'notebooks',
+nombre: 'Notebooks',
+urls: [
+`${BASE}/notebooks/notebooks1/`,
+`${BASE}/notebooks/accesorios/`,
+`${BASE}/notebooks/cargadores/`,
+],
+},
+{
+id: 'monitores',
+nombre: 'Monitores',
+urls: [
+`${BASE}/monitores/`,
+`${BASE}/soportes/monitores1/`,
+],
+},
+{
+id: 'pc',
+nombre: 'PCs Armadas',
+urls: [
+`${BASE}/pc2/pc-oficina/`,
+`${BASE}/pc2/pc-gamer/`,
+`${BASE}/pc2/pc-mini/`,
+`${BASE}/kit-de-actualizacion-pc/`,
+],
+},
+{
+id: 'componentes',
+nombre: 'Componentes',
+urls: [
+`${BASE}/procesadores/amd2/`,
+`${BASE}/procesadores/intel2/`,
+`${BASE}/mothers/amd/`,
+`${BASE}/mothers/intel/`,
+`${BASE}/memorias-ram/pc1/`,
+`${BASE}/memorias-ram/notebook/`,
+`${BASE}/placas-de-video/nvidia/`,
+`${BASE}/placas-de-video/amd1/`,
+`${BASE}/placas-de-video/intel1/`,
+`${BASE}/fuentes/`,
+`${BASE}/refrigeracion/coolers-procesador/`,
+],
+},
+{
+id: 'perifericos',
+nombre: 'Periféricos',
+urls: [
+`${BASE}/mouses/mouses1/`,
+`${BASE}/mouses/mouse-pads/`,
+`${BASE}/teclados/`,
+`${BASE}/auriculares/`,
+`${BASE}/kit-de-teclado-mouse-y-otros/`,
+`${BASE}/joysticks/`,
+],
+},
+{
+id: 'almacenamiento',
+nombre: 'Almacenamiento',
+urls: [
+`${BASE}/almacenamiento/discos-solidos-ssd/`,
+`${BASE}/almacenamiento/discos-externos/`,
+`${BASE}/almacenamiento/discos-rigidos/`,
+],
+},
+{
+id: 'gabinetes',
+nombre: 'Gabinetes y Fuentes',
+urls: [
+`${BASE}/gabinetes/`,
+`${BASE}/fuentes/`,
+`${BASE}/refrigeracion/coolers-fan-gabinetes/`,
+],
+},
+{
+id: 'redes',
+nombre: 'Redes y Conectividad',
+urls: [
+`${BASE}/conectividad-y-redes/routers/`,
+`${BASE}/conectividad-y-redes/cables/`,
+`${BASE}/conectividad-y-redes/adaptadores-wifi/`,
+`${BASE}/conectividad-y-redes/switches/`,
+`${BASE}/conectividad-y-redes/access-point/`,
+`${BASE}/conectividad-y-redes/placas-de-red/`,
+],
+},
+{
+id: 'cables',
+nombre: 'Cables y Adaptadores',
+urls: [
+`${BASE}/cables-y-adaptadores/usb-c/`,
+`${BASE}/cables-y-adaptadores/video/`,
+`${BASE}/cables-y-adaptadores/usb/`,
+`${BASE}/cables-y-adaptadores/adaptadores/`,
+`${BASE}/cables-y-adaptadores/audio/`,
+],
+},
 ]
 
-const LIMITE = 50
+const LIMITE = 299
 
 async function scrapearPagina(page, url, categoriaId) {
   console.log(`  Scrapeando: ${url}`)

@@ -6,7 +6,7 @@ import { Wrench, ShoppingCart, Headset, ChevronDown, ChevronUp } from 'lucide-re
 
 const condiciones = [
   { icono: '🗓', titulo: 'Entregas', detalle: 'CONSULTAR' },
-  { icono: '📍', titulo: 'Retiro', detalle: 'Barrio de CABALLITO, CABA (AL LADO DE LO DE ADORNI' },
+  { icono: '📍', titulo: 'Retiro', detalle: 'Barrio de CABALLITO, CABA' },
   { icono: '💰', titulo: 'Señá', detalle: '50% para reservar' },
   { icono: '📦', titulo: 'Stock', detalle: 'Consultá por WhatsApp antes de comprar' },
 ]
@@ -126,7 +126,7 @@ export default function HeroSection() {
           }}>
             <div style={{ fontSize: '1.75rem', marginBottom: '0.4rem' }}>{c.icono}</div>
             <div style={{
-              fontSize: '0.75rem', fontWeight: 700, color: C.naranja,
+              fontSize: '0.75rem', fontWeight: 700, color: C.white,
               textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.25rem',
             }}>
               {c.titulo}
