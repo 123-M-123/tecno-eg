@@ -1,4 +1,4 @@
-import { getGoogleSheetsClient } from '@/lib/googleSheets';
+import { getGoogleSheetsClient } from '../../lib/googleSheets';
 
 export default async function TestSheetsPage() {
   try {

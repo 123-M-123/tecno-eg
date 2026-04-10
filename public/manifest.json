@@ -1,11 +1,11 @@
 {
-  "name": "MB Compras — Bazar & Regalos",
-  "short_name": "MB Compras",
-  "description": "Bazar y regalos con envío a domicilio en CABA",
+  "name": "TECNO EG — Tecnología a otro Nivel",
+  "short_name": "Tecno EG",
+  "description": "Service, Armado y Mantenimiento de PC. Ventas de Componentes Electronicos. Asesoramiento Personalizado.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBD8B6",
-  "theme_color": "#4A0606",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "orientation": "portrait",
   "icons": [
     {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Service, Armado y Mantenimiento de PC. Ventas de Componentes Electronicos. Asesoramiento Personalizado.",
   generator: "Tecno EG",
   manifest: "/manifest.json",
-  themeColor: "#080000",
+  themeColor: "#000000",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
