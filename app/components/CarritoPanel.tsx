@@ -30,32 +30,18 @@ export default function CarritoPanel() {
   const totalCarrito    = carrito.reduce((s, i) => s + i.precio * i.cantidad, 0)
   const cantidadCarrito = carrito.reduce((s, i) => s + i.cantidad, 0)
 
-  const handleComprar = async () => {
-    if (carrito.length === 0) return
-    setProcesando(true)
-    try {
-      const res = await fetch('/api/create-preference', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: carrito.map(i => ({
-            id: i.id_producto, title: i.titulo,
-            quantity: i.cantidad, unit_price: i.precio,
-          })),
-        }),
-      })
-      const data: { init_point?: string; error?: string } = await res.json()
-      if (data.init_point) {
-        window.location.href = data.init_point
-      } else {
-        mostrarNotif('Error al iniciar el pago. Intenta de nuevo.')
-      }
-    } catch {
-      mostrarNotif('Error de conexión. Intenta de nuevo.')
-    } finally {
-      setProcesando(false)
-    }
+ const handleComprar = async () => {
+  if (carrito.length === 0) return
+  setProcesando(true)
+  try {
+    const titulo = carrito.map(i => `${i.titulo} x${i.cantidad}`).join(', ')
+    const precio = carrito.reduce((s, i) => s + i.precio * i.cantidad, 0)
+    setCarritoOpen(false)
+    window.location.href = `/checkout?titulo=${encodeURIComponent(titulo)}&precio=${precio}`
+  } finally {
+    setProcesando(false)
   }
+}
 
   if (!carritoOpen) return null
 

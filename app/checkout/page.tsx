@@ -10,7 +10,7 @@ declare global {
   }
 }
  
-const ALIAS = 'Guillermo-tecno-eg';
+const ALIAS = 'mguiyemo.mp';
 const CVU   = ''; // Opcional: agregá el CVU si lo tenés
  
 function CheckoutContent() {
@@ -31,73 +31,80 @@ function CheckoutContent() {
  
   // ── Inicializar Brick MP ──────────────────────────────────────────
   useEffect(() => {
-    if (metodoPago !== 'mp') return;
-    if (brickRendered.current)  return;
-    brickRendered.current = true;
- 
-    const initBrick = async () => {
-      try {
-        const res = await fetch('/api/create-preference', {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
-        });
- 
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Error creando preferencia');
- 
-        const preferenceId = data.id;
- 
-        const script    = document.createElement('script');
-        script.src      = 'https://sdk.mercadopago.com/js/v2';
-        script.async    = true;
-        document.body.appendChild(script);
- 
-        script.onload = async () => {
-          const mp            = new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY!, { locale: 'es-AR' });
-          const bricksBuilder = mp.bricks();
- 
-          await bricksBuilder.create('payment', 'payment-brick-container', {
-            initialization: { amount: precio, preferenceId },
-            customization: {
-              paymentMethods: {
-                creditCard:  'all',
-                debitCard:   'all',
-                mercadoPago: 'all',
-                ticket:      'all',
-              },
-            },
-            callbacks: {
-              onReady: () => setLoading(false),
-              onSubmit: async ({ formData, selectedPaymentMethod }: any) => {
-                if (selectedPaymentMethod?.type === 'wallet_purchase') return;
- 
-                const result  = await fetch('/api/process-payment', {
-                  method:  'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body:    JSON.stringify(formData),
-                });
-                const payment = await result.json();
- 
-                if      (payment.status === 'approved')                        window.location.href = '/success';
-                else if (payment.status === 'pending' || payment.status === 'in_process') window.location.href = '/pending';
-                else                                                           window.location.href = '/failure';
-              },
-              onError: (error: any) => {
-                console.error('Brick error:', error);
-                setError('Ocurrió un error con el formulario de pago.');
-              },
-            },
-          });
-        };
-      } catch (err: any) {
-        setError(err.message || 'Error inesperado');
-        setLoading(false);
+  if (metodoPago !== 'mp') return
+
+  const container = document.getElementById('payment-brick-container')
+  if (!container) return
+  
+  // Si ya tiene contenido, no renderizar de nuevo
+  if (container.children.length > 0) return
+
+  const initBrick = async () => {
+    try {
+      const res = await fetch('/api/create-preference', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
+      })
+
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Error creando preferencia')
+
+      const preferenceId = data.id
+
+      // Si el SDK ya está cargado no lo cargamos de nuevo
+      if (!window.MercadoPago) {
+        await new Promise<void>((resolve) => {
+          const script    = document.createElement('script')
+          script.src      = 'https://sdk.mercadopago.com/js/v2'
+          script.async    = true
+          script.onload   = () => resolve()
+          document.body.appendChild(script)
+        })
       }
-    };
- 
-    initBrick();
-  }, [metodoPago]);
+
+      const mp            = new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY!, { locale: 'es-AR' })
+      const bricksBuilder = mp.bricks()
+
+      await bricksBuilder.create('payment', 'payment-brick-container', {
+        initialization: { amount: precio, preferenceId },
+        customization: {
+          paymentMethods: {
+            creditCard: 'all',
+            debitCard:  'all',
+            ticket:     'all',
+          },
+        },
+        callbacks: {
+          onReady: () => setLoading(false),
+          onSubmit: async ({ formData, selectedPaymentMethod }: any) => {
+            if (selectedPaymentMethod?.type === 'wallet_purchase') return
+
+            const result  = await fetch('/api/process-payment', {
+              method:  'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body:    JSON.stringify(formData),
+            })
+            const payment = await result.json()
+
+            if      (payment.status === 'approved')   window.location.href = '/success'
+            else if (payment.status === 'pending' || payment.status === 'in_process') window.location.href = '/pending'
+            else    window.location.href = '/failure'
+          },
+          onError: (error: any) => {
+            console.error('Brick error:', error)
+            setError('Ocurrió un error con el formulario de pago.')
+          },
+        },
+      })
+    } catch (err: any) {
+      setError(err.message || 'Error inesperado')
+      setLoading(false)
+    }
+  }
+
+  initBrick()
+}, [metodoPago])
  
   // ── Enviar comprobante de transferencia ───────────────────────────
   const handleEnviarComprobante = async () => {
@@ -148,7 +155,7 @@ function CheckoutContent() {
               cursor: 'pointer', fontSize: '0.9rem',
             }}
           >
-            {m === 'mp' ? '💳 MercadoPago' : '🏦 Transferencia'}
+            {m === 'mp' ? '💳 Tarjeta / Efectivo' : '🏦 Transferencia por Alias'}
           </button>
         ))}
       </div>
