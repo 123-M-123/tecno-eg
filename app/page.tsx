@@ -7,6 +7,7 @@ import ProductosSection from '@/app/components/ProductosSection'
 import CarritoPanel from '@/app/components/CarritoPanel'
 import ModalImagen from '@/app/components/ModalImagen'
 import EnviosSection from '@/app/components/EnviosSection'
+import Footer from '@/app/components/Footer'
 
 function Toast() {
   const { notif } = useCarrito()
@@ -43,43 +44,6 @@ function Toast() {
   )
 }
 
-function Footer() {
-  return (
-    <footer style={{
-      background: C.grisOscuro,
-      color: C.crema,
-      textAlign: 'center',
-      padding: '2rem 1.5rem',
-      marginTop: '3rem',
-      borderTop: `3px solid ${C.naranja}`,
-    }}>
-      <p style={{ margin: 0, fontSize: '0.85rem' }}>
-        <span style={{ color: C.naranjaPale, fontWeight: 700 }}>
-          TECNO EG — Componentes & Servicio Técnico
-        </span>
-      </p>
-      <p style={{ margin: '0.5rem 0', fontSize: '0.8rem', opacity: 0.85 }}>
-        CABALLITO  &nbsp;|&nbsp; C.A.B.A.
-      </p>
-      <p style={{ margin: '0.5rem 0', fontSize: '0.8rem' }}>
-        
-      </p>
-      <p style={{ margin: '1.2rem 0 0', fontSize: '0.85rem', opacity: 0.5 }}>
-        © {new Date().getFullYear()} Todos los derechos reservados {' '}
-        <span style={{ color: C.naranjaPale }}>
-          <br />
-          Diseño web: Marcos Marti
-        </span>
-      </p>
-      <a href="mailto:marcosmarti1980@gmail.com"
-          style={{ color: C.gris, textDecoration: 'none', fontSize: '0.70rem', fontWeight: 400 }}>
-           Si queres una web como esta <br />
-           sos emprendedor ✉️ contactame
-        </a>
-    </footer>
-  )
-}
-
 function AppContent() {
   return (
     <div suppressHydrationWarning className="app-content">
@@ -91,7 +55,6 @@ function AppContent() {
       <CarritoPanel />
       <ModalImagen />
       <Toast />
-
     </div>
   )
 }

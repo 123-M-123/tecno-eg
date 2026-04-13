@@ -1,242 +1,402 @@
 'use client';
- 
+
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
- 
+
 declare global {
-  interface Window {
-    MercadoPago: any;
-  }
+  interface Window { MercadoPago: any }
 }
- 
+
 const ALIAS = 'mguiyemo.mp';
-const CVU   = ''; // Opcional: agregá el CVU si lo tenés
- 
+const CVU   = '';
+
+// ── Paleta neutral elegante ───────────────────────────────────────────
+const K = {
+  bg:        '#F7F6F3',
+  surface:   '#FFFFFF',
+  border:    '#E2E0DC',
+  muted:     '#9A9690',
+  text:      '#1C1B19',
+  sub:       '#6B6862',
+  accent:    '#2D6BE4',
+  accentBg:  '#EEF3FC',
+  green:     '#1A7F5A',
+  greenBg:   '#EDF7F3',
+  mp:        '#009EE3',
+  mpBg:      '#EDF7FD',
+  warn:      '#7A5C00',
+  warnBg:    '#FFF8E1',
+} as const;
+
+type Metodo = 'alias' | 'tarjeta' | 'mp' | 'otros';
+
+const OPCIONES: { id: Metodo; emoji: string; label: string; sub: string }[] = [
+  { id: 'alias',   emoji: '🏦', label: 'Transferencia',     sub: 'Obtené descuento pagando directo' },
+  { id: 'tarjeta', emoji: '💳', label: 'Tarjeta / Efectivo', sub: 'Medios por fuera de MercadoPago'  },
+  { id: 'mp',      emoji: '🔵', label: 'Cuenta MP',          sub: 'Usá tu saldo o tarjetas en MP'    },
+  { id: 'otros',   emoji: '🌐', label: 'Otros métodos',      sub: 'Próximamente'                     },
+];
+
+// ── Componente botón de opción ────────────────────────────────────────
+function OpcionBtn({ op, activo, onClick }: { op: typeof OPCIONES[0]; activo: boolean; onClick: () => void }) {
+  return (
+    <button onClick={onClick} style={{
+      flex: '1 1 140px', padding: '0.85rem 0.75rem',
+      borderRadius: 12, cursor: 'pointer', textAlign: 'left',
+      border:      `2px solid ${activo ? K.accent : K.border}`,
+      background:  activo ? K.accentBg : K.surface,
+      transition:  'all 0.18s',
+      opacity:     op.id === 'otros' ? 0.6 : 1,
+    }}>
+      <div style={{ fontSize: '1.3rem', marginBottom: '0.2rem' }}>{op.emoji}</div>
+      <div style={{ fontSize: '0.82rem', fontWeight: 700, color: activo ? K.accent : K.text, lineHeight: 1.2 }}>
+        {op.label}
+      </div>
+      <div style={{ fontSize: '0.7rem', color: K.muted, marginTop: '0.2rem', lineHeight: 1.3 }}>
+        {op.sub}
+      </div>
+    </button>
+  );
+}
+
+// ── Checkout principal ────────────────────────────────────────────────
 function CheckoutContent() {
   const searchParams = useSearchParams();
-  const brickContainer  = useRef<HTMLDivElement>(null);
-  const brickRendered   = useRef(false);
- 
-  const [metodoPago,    setMetodoPago]    = useState<'mp' | 'transferencia'>('mp');
-  const [error,         setError]         = useState('');
-  const [loading,       setLoading]       = useState(true);
-  const [comprobante,   setComprobante]   = useState<File | null>(null);
-  const [enviando,      setEnviando]      = useState(false);
-  const [enviado,       setEnviado]       = useState(false);
- 
+  const brickContainer = useRef<HTMLDivElement>(null);
+
+  const [metodo,      setMetodo]      = useState<Metodo>('alias');
+  const [error,       setError]       = useState('');
+  const [loading,     setLoading]     = useState(true);
+  const [comprobante, setComprobante] = useState<File | null>(null);
+  const [enviando,    setEnviando]    = useState(false);
+  const [enviado,     setEnviado]     = useState(false);
+
   const titulo      = searchParams?.get('titulo')      || '';
-  const precio      = Number(searchParams?.get('precio'))  || 0;
+  const precio      = Number(searchParams?.get('precio')) || 0;
   const descripcion = searchParams?.get('descripcion') || '';
- 
-  // ── Inicializar Brick MP ──────────────────────────────────────────
+
+  // ── Brick Tarjeta/Efectivo (sin wallet MP) ────────────────────────
   useEffect(() => {
-  if (metodoPago !== 'mp') return
+    if (metodo !== 'tarjeta') return;
+    const container = document.getElementById('brick-tarjeta');
+    if (!container || container.children.length > 0) return;
 
-  const container = document.getElementById('payment-brick-container')
-  if (!container) return
-  
-  // Si ya tiene contenido, no renderizar de nuevo
-  if (container.children.length > 0) return
+    const init = async () => {
+      try {
+        const res  = await fetch('/api/create-preference', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error);
 
-  const initBrick = async () => {
-    try {
-      const res = await fetch('/api/create-preference', {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
-      })
+        if (!window.MercadoPago) {
+          await new Promise<void>(resolve => {
+            const s = document.createElement('script');
+            s.src = 'https://sdk.mercadopago.com/js/v2';
+            s.async = true; s.onload = () => resolve();
+            document.body.appendChild(s);
+          });
+        }
 
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Error creando preferencia')
-
-      const preferenceId = data.id
-
-      // Si el SDK ya está cargado no lo cargamos de nuevo
-      if (!window.MercadoPago) {
-        await new Promise<void>((resolve) => {
-          const script    = document.createElement('script')
-          script.src      = 'https://sdk.mercadopago.com/js/v2'
-          script.async    = true
-          script.onload   = () => resolve()
-          document.body.appendChild(script)
-        })
+        const mp = new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY!, { locale: 'es-AR' });
+        await mp.bricks().create('payment', 'brick-tarjeta', {
+          initialization: { amount: precio, preferenceId: data.id },
+          customization: {
+            paymentMethods: {
+              creditCard: 'all',
+              debitCard:  'all',
+              ticket:     'all',   // Pago Fácil y Rapipago van acá
+            },
+          },
+          callbacks: {
+            onReady: () => setLoading(false),
+            onSubmit: async ({ formData }: any) => {
+              const r = await fetch('/api/process-payment', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+              });
+              const p = await r.json();
+              if      (p.status === 'approved') window.location.href = '/success';
+              else if (p.status === 'pending' || p.status === 'in_process') window.location.href = '/pending';
+              else    window.location.href = '/failure';
+            },
+            onError: () => setError('Error en el formulario de pago.'),
+          },
+        });
+      } catch (e: any) {
+        setError(e.message); setLoading(false);
       }
+    };
+    init();
+  }, [metodo]);
 
-      const mp            = new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY!, { locale: 'es-AR' })
-      const bricksBuilder = mp.bricks()
+  // ── Brick Cuenta MP (wallet + saldo, sin tarjetas offline) ────────
+  useEffect(() => {
+    if (metodo !== 'mp') return;
+    const container = document.getElementById('brick-mp');
+    if (!container || container.children.length > 0) return;
 
-      await bricksBuilder.create('payment', 'payment-brick-container', {
-        initialization: { amount: precio, preferenceId },
-        customization: {
-          paymentMethods: {
-            creditCard: 'all',
-            debitCard:  'all',
-            ticket:     'all',
+    const init = async () => {
+      try {
+        const res  = await fetch('/api/create-preference', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error);
+
+        if (!window.MercadoPago) {
+          await new Promise<void>(resolve => {
+            const s = document.createElement('script');
+            s.src = 'https://sdk.mercadopago.com/js/v2';
+            s.async = true; s.onload = () => resolve();
+            document.body.appendChild(s);
+          });
+        }
+
+        const mp = new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY!, { locale: 'es-AR' });
+        await mp.bricks().create('payment', 'brick-mp', {
+          initialization: { amount: precio, preferenceId: data.id },
+          customization: {
+            paymentMethods: {
+              mercadoPago: 'all', // Solo wallet y saldo MP
+            },
           },
-        },
-        callbacks: {
-          onReady: () => setLoading(false),
-          onSubmit: async ({ formData, selectedPaymentMethod }: any) => {
-            if (selectedPaymentMethod?.type === 'wallet_purchase') return
-
-            const result  = await fetch('/api/process-payment', {
-              method:  'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body:    JSON.stringify(formData),
-            })
-            const payment = await result.json()
-
-            if      (payment.status === 'approved')   window.location.href = '/success'
-            else if (payment.status === 'pending' || payment.status === 'in_process') window.location.href = '/pending'
-            else    window.location.href = '/failure'
+          callbacks: {
+            onReady: () => setLoading(false),
+            onSubmit: async ({ formData, selectedPaymentMethod }: any) => {
+              if (selectedPaymentMethod?.type === 'wallet_purchase') return;
+              const r = await fetch('/api/process-payment', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+              });
+              const p = await r.json();
+              if      (p.status === 'approved') window.location.href = '/success';
+              else if (p.status === 'pending' || p.status === 'in_process') window.location.href = '/pending';
+              else    window.location.href = '/failure';
+            },
+            onError: () => setError('Error al conectar con MercadoPago.'),
           },
-          onError: (error: any) => {
-            console.error('Brick error:', error)
-            setError('Ocurrió un error con el formulario de pago.')
-          },
-        },
-      })
-    } catch (err: any) {
-      setError(err.message || 'Error inesperado')
-      setLoading(false)
-    }
-  }
+        });
+      } catch (e: any) {
+        setError(e.message); setLoading(false);
+      }
+    };
+    init();
+  }, [metodo]);
 
-  initBrick()
-}, [metodoPago])
- 
-  // ── Enviar comprobante de transferencia ───────────────────────────
+  // ── Enviar comprobante ────────────────────────────────────────────
   const handleEnviarComprobante = async () => {
     if (!comprobante) return;
     setEnviando(true);
- 
     const fd = new FormData();
-    fd.append('archivo',     comprobante);
-    fd.append('titulo',      titulo);
-    fd.append('precio',      String(precio));
-    fd.append('descripcion', descripcion);
- 
+    fd.append('archivo', comprobante);
+    fd.append('titulo',  titulo);
+    fd.append('precio',  String(precio));
     try {
       const res = await fetch('/api/upload-comprobante', { method: 'POST', body: fd });
       if (res.ok) setEnviado(true);
-      else        setError('Error al enviar el comprobante. Intentá de nuevo.');
-    } catch {
-      setError('Error de conexión al enviar el comprobante.');
-    } finally {
-      setEnviando(false);
-    }
+      else        setError('Error al enviar. Intentá de nuevo.');
+    } catch { setError('Error de conexión.'); }
+    finally   { setEnviando(false); }
   };
- 
-  // ── UI ────────────────────────────────────────────────────────────
+
+  // ── Render ────────────────────────────────────────────────────────
   return (
-    <div style={{ maxWidth: 560, margin: '0 auto', padding: '2rem 1.25rem' }}>
- 
-      {/* Resumen del pedido */}
-      <h1 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-        Finalizar compra
-      </h1>
-      <p  style={{ color: '#555', marginBottom: '0.25rem' }}>{titulo}</p>
-      <p  style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1.5rem' }}>
-        $ {precio.toLocaleString('es-AR')}
-      </p>
- 
-      {/* Selector de método de pago */}
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-        {(['mp', 'transferencia'] as const).map(m => (
-          <button
-            key={m}
-            onClick={() => setMetodoPago(m)}
-            style={{
-              flex: 1, padding: '0.75rem', borderRadius: 10,
-              border:     `2px solid ${metodoPago === m ? '#009EE3' : '#ddd'}`,
-              background: metodoPago === m ? '#e8f4fd' : '#fff',
-              fontWeight: metodoPago === m ? 700 : 400,
-              cursor: 'pointer', fontSize: '0.9rem',
-            }}
-          >
-            {m === 'mp' ? '💳 Tarjeta / Efectivo' : '🏦 Transferencia por Alias'}
-          </button>
-        ))}
-      </div>
- 
-      {/* ── OPCIÓN MP ── */}
-      {metodoPago === 'mp' && (
-        <>
-          {loading && <p style={{ color: '#888' }}>Cargando formulario de pago...</p>}
-          {error   && <p style={{ color: 'red'  }}>{error}</p>}
-          <div id="payment-brick-container" ref={brickContainer} />
-        </>
-      )}
- 
-      {/* ── OPCIÓN TRANSFERENCIA ── */}
-      {metodoPago === 'transferencia' && !enviado && (
-        <div style={{ background: '#f9f9f9', borderRadius: 12, padding: '1.5rem', border: '1px solid #eee' }}>
-          <h2 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
-            Datos para transferir
-          </h2>
- 
-          <div style={{ marginBottom: '0.75rem' }}>
-            <span style={{ fontSize: '0.8rem', color: '#888', display: 'block' }}>ALIAS</span>
-            <span style={{ fontSize: '1.1rem', fontWeight: 700 }}>{ALIAS}</span>
-          </div>
- 
-          {CVU && (
-            <div style={{ marginBottom: '0.75rem' }}>
-              <span style={{ fontSize: '0.8rem', color: '#888', display: 'block' }}>CVU</span>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>{CVU}</span>
-            </div>
-          )}
- 
-          <div style={{ background: '#fff3cd', borderRadius: 8, padding: '0.75rem', marginBottom: '1.25rem', fontSize: '0.85rem' }}>
-            ⚠️ Transferí exactamente <strong>$ {precio.toLocaleString('es-AR')}</strong> y subí el comprobante abajo para confirmar tu pedido.
-          </div>
- 
-          <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', fontSize: '0.9rem' }}>
-            Subir comprobante de transferencia
-          </label>
-          <input
-            type="file"
-            accept="image/*,application/pdf"
-            onChange={e => setComprobante(e.target.files?.[0] || null)}
-            style={{ marginBottom: '1rem', width: '100%' }}
-          />
- 
-          {error && <p style={{ color: 'red', marginBottom: '0.75rem' }}>{error}</p>}
- 
-          <button
-            onClick={handleEnviarComprobante}
-            disabled={!comprobante || enviando}
-            style={{
-              width: '100%', padding: '0.9rem',
-              background:  !comprobante || enviando ? '#ccc' : '#00b894',
-              border:      'none', borderRadius: 10,
-              color:       '#fff', fontWeight: 800,
-              fontSize:    '1rem', cursor: !comprobante || enviando ? 'not-allowed' : 'pointer',
-            }}
-          >
-            {enviando ? 'Enviando...' : 'Confirmar pedido con comprobante'}
-          </button>
-        </div>
-      )}
- 
-      {/* ── COMPROBANTE ENVIADO ── */}
-      {metodoPago === 'transferencia' && enviado && (
-        <div style={{ textAlign: 'center', padding: '2rem', background: '#d4edda', borderRadius: 12 }}>
-          <p style={{ fontSize: '2rem' }}>✅</p>
-          <h2 style={{ fontWeight: 800, marginBottom: '0.5rem' }}>¡Comprobante recibido!</h2>
-          <p style={{ color: '#555' }}>
-            Vamos a verificar tu transferencia y te confirmamos el pedido pronto.
+    <div style={{ minHeight: '100vh', background: K.bg, padding: '2rem 1rem' }}>
+      <div style={{ maxWidth: 560, margin: '0 auto' }}>
+
+        {/* Header */}
+        <div style={{
+          background: K.surface, borderRadius: 16, padding: '1.5rem',
+          border: `1px solid ${K.border}`, marginBottom: '1rem',
+          boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+        }}>
+          <p style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: K.muted, margin: '0 0 0.4rem' }}>
+            Finalizar compra
+          </p>
+          <p style={{ fontSize: '0.9rem', color: K.sub, margin: '0 0 0.6rem', lineHeight: 1.4 }}>
+            {titulo}
+          </p>
+          <p style={{ fontSize: '1.6rem', fontWeight: 800, color: K.text, margin: 0, letterSpacing: '-0.02em' }}>
+            $ {precio.toLocaleString('es-AR')}
           </p>
         </div>
-      )}
+
+        {/* Selector métodos */}
+        <div style={{ marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: K.muted, margin: '0 0 0.6rem 0.25rem' }}>
+            Elegí cómo pagar
+          </p>
+          <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
+            {OPCIONES.map(op => (
+              <OpcionBtn
+                key={op.id} op={op} activo={metodo === op.id}
+                onClick={() => setMetodo(op.id)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ── Panel Transferencia ── */}
+        {metodo === 'alias' && !enviado && (
+          <div style={{ background: K.surface, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            
+            <div style={{ background: K.greenBg, borderRadius: 10, padding: '0.75rem 1rem', marginBottom: '1.25rem', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '1rem' }}>💚</span>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: K.green, fontWeight: 600 }}>
+                Pagando por transferencia obtés un descuento especial. Consultá el monto final por WhatsApp.
+              </p>
+            </div>
+
+            <div style={{ marginBottom: '1rem' }}>
+              <span style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: K.muted, display: 'block', marginBottom: '0.2rem' }}>Alias</span>
+              <span style={{ fontSize: '1.15rem', fontWeight: 700, color: K.text, letterSpacing: '0.03em' }}>{ALIAS}</span>
+            </div>
+
+            {CVU && (
+              <div style={{ marginBottom: '1rem' }}>
+                <span style={{ fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: K.muted, display: 'block', marginBottom: '0.2rem' }}>CVU</span>
+                <span style={{ fontSize: '0.95rem', fontWeight: 600, color: K.text }}>{CVU}</span>
+              </div>
+            )}
+
+            <div style={{ background: K.warnBg, borderRadius: 8, padding: '0.75rem 1rem', marginBottom: '1.25rem' }}>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: K.warn }}>
+                ⚠️ Transferí y luego subí el comprobante para confirmar tu pedido.
+              </p>
+            </div>
+
+            <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, color: K.text, marginBottom: '0.5rem' }}>
+              Comprobante de transferencia
+            </label>
+            <input
+              type="file" accept="image/*,application/pdf"
+              onChange={e => setComprobante(e.target.files?.[0] || null)}
+              style={{ width: '100%', marginBottom: '1rem', fontSize: '0.85rem' }}
+            />
+
+            {error && <p style={{ color: 'red', fontSize: '0.82rem', marginBottom: '0.75rem' }}>{error}</p>}
+
+            <button
+              onClick={handleEnviarComprobante}
+              disabled={!comprobante || enviando}
+              style={{
+                width: '100%', padding: '0.9rem', borderRadius: 10, border: 'none',
+                background: !comprobante || enviando ? K.border : K.green,
+                color: !comprobante || enviando ? K.muted : '#fff',
+                fontWeight: 800, fontSize: '0.95rem',
+                cursor: !comprobante || enviando ? 'not-allowed' : 'pointer',
+              }}
+            >
+              {enviando ? 'Enviando...' : 'Confirmar pedido →'}
+            </button>
+          </div>
+        )}
+
+        {/* ── Confirmación comprobante ── */}
+        {metodo === 'alias' && enviado && (
+          <div style={{ background: K.greenBg, borderRadius: 16, padding: '2rem', textAlign: 'center', border: `1px solid ${K.green}` }}>
+            <p style={{ fontSize: '2.5rem', margin: '0 0 0.5rem' }}>✅</p>
+            <h2 style={{ fontWeight: 800, color: K.green, marginBottom: '0.5rem' }}>¡Comprobante recibido!</h2>
+            <p style={{ color: K.sub, fontSize: '0.88rem' }}>
+              Verificamos tu pago y te confirmamos el pedido a la brevedad.
+            </p>
+          </div>
+        )}
+
+        {/* ── Panel Tarjeta / Efectivo ── */}
+        {metodo === 'tarjeta' && (
+          <div style={{ background: K.surface, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Tarjeta de crédito, débito o efectivo (Pago Fácil / Rapipago) — procesado por MercadoPago de forma segura, sin necesidad de cuenta.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando formulario...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-tarjeta" />
+          </div>
+        )}
+
+        {/* ── Panel Cuenta MP ── */}
+        {metodo === 'mp' && (
+          <div style={{ background: K.surface, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Iniciá sesión en MercadoPago para pagar con tu saldo disponible o tarjetas guardadas en tu cuenta.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-mp" />
+          </div>
+        )}
+
+        {/* ── Panel Otros métodos ── */}
+        {metodo === 'otros' && (
+          <div style={{ background: K.surface, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: K.muted, marginBottom: '1rem' }}>
+              Plataformas disponibles próximamente
+            </p>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+              {[
+  { nombre: 'PayPal',  emoji: '🅿️', color: '#003087' },
+  { nombre: 'Walla',   emoji: '💜', color: '#6B2FA0' },
+  { nombre: 'Stripe',  emoji: '🔷', color: '#635BFF' },
+  { nombre: 'Cripto',  emoji: '₿',  color: '#F7931A' },
+].map(p => (
+  <div key={p.nombre} style={{
+    flex: '1 1 100px', padding: '1rem 0.75rem', borderRadius: 10,
+    border: `1.5px solid ${K.border}`, textAlign: 'center',
+    cursor: 'default',
+  }}>
+    <div style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>{p.emoji}</div>
+    <div style={{ fontSize: '0.8rem', fontWeight: 700, color: p.color }}>{p.nombre}</div>
+    <div style={{ fontSize: '0.65rem', color: K.muted, marginTop: '0.2rem' }}>Próximamente</div>
+  </div>
+))}
+            </div>
+            <div style={{ background: K.bg, borderRadius: 8, padding: '0.75rem 1rem' }}>
+              <p style={{ margin: 0, fontSize: '0.8rem', color: K.sub }}>
+                ¿Necesitás pagar con alguna de estas plataformas? Contactanos y lo gestionamos.
+              </p>
+              <a
+                href="https://wa.me/5491158081432?text=Hola%2C%20quiero%20consultar%20sobre%20m%C3%A9todos%20de%20pago%20alternativos%20para%20mi%20compra."
+                target="_blank" rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block', marginTop: '0.6rem',
+                  background: '#25D366', color: '#fff',
+                  padding: '0.4rem 1rem', borderRadius: 20,
+                  textDecoration: 'none', fontSize: '0.8rem', fontWeight: 700,
+                }}
+              >
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        )}
+{/* Volver a la tienda */}
+<div style={{ textAlign: 'center', marginTop: '1rem' }}>
+  <a href="/" style={{
+    fontSize: '0.88rem', color: K.muted,
+    textDecoration: 'none', display: 'inline-flex',
+    alignItems: 'center', gap: '0.3rem',
+  }}>
+    ← Volver a la tienda
+  </a>
+</div>
+        {/* Footer */}
+        <p style={{ textAlign: 'center', fontSize: '0.72rem', color: K.muted, marginTop: '1.5rem' }}>
+          🔒 Tus datos están protegidos · Pagos procesados de forma segura
+        </p>
+
+      </div>
     </div>
   );
 }
- 
+
 export default function CheckoutPage() {
   return (
-    <Suspense fallback={<div style={{ maxWidth: 560, margin: '0 auto', padding: '2rem' }}>Cargando...</div>}>
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#F7F6F3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><p style={{ color: '#9A9690' }}>Cargando...</p></div>}>
       <CheckoutContent />
     </Suspense>
   );
