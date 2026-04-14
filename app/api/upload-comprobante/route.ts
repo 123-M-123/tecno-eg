@@ -25,6 +25,13 @@ async function getAccessToken(): Promise<string> {
     }),
   })
   const data = await res.json()
+
+ // LOG - ver respuesta completa de Google
+  console.log('Google OAuth response:', JSON.stringify(data))
+
+
+
+
   if (!data.access_token) throw new Error('No se pudo obtener access token de Google')
   return data.access_token
 }
