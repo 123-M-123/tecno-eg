@@ -8,6 +8,12 @@ const REFRESH_TOKEN  = process.env.GOOGLE_REFRESH_TOKEN!
 
 // ── Obtener access token desde refresh token ──────────────────────────
 async function getAccessToken(): Promise<string> {
+  
+  console.log('CLIENT_ID existe:', !!CLIENT_ID)
+  console.log('CLIENT_SECRET existe:', !!CLIENT_SECRET)  
+  console.log('REFRESH_TOKEN existe:', !!REFRESH_TOKEN)
+
+  
   const res = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -29,6 +35,13 @@ async function subirADrive(
   archivo:  File,
   nombre:   string,
 ): Promise<string> {
+
+// LOG TEMPORAL - borralo después
+  console.log('TOKEN obtenido:', token ? 'SÍ' : 'NO')
+  console.log('Archivo:', archivo.name, archivo.size)
+  console.log('FOLDER_ID:', FOLDER_ID)
+
+
   const metadata = JSON.stringify({
     name:    nombre,
     parents: [FOLDER_ID],
