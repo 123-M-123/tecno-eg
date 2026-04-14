@@ -47,6 +47,11 @@ async function subirADrive(
     }
   )
   const data = await res.json()
+
+console.log('Drive response:', JSON.stringify(data)) // ← agregá esto
+
+
+
   if (!data.id) throw new Error('Error al subir archivo a Drive')
 
   // Hacer el archivo público para poder verlo con el link
@@ -60,6 +65,9 @@ async function subirADrive(
   })
 
   return data.webViewLink
+
+
+  
 }
 
 // ── Agregar fila en Google Sheets ─────────────────────────────────────
