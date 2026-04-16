@@ -14,7 +14,7 @@ type ItemCarrito = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://tecno-eg.vercel.app';
 
     // Soporta tanto carrito nuevo (items array) como llamada vieja (producto único)
     let items: ItemCarrito[];
