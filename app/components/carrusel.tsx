@@ -92,7 +92,7 @@ export default function Carrusel({ titulo, productos, onVerProducto }: Props) {
     fontSize: '0.65rem', fontWeight: 700,
     padding: '0.2rem 0.55rem',
     borderRadius: 10, letterSpacing: '0.06em',
-    zIndex: 2,
+    zIndex: 1,
   }}>
     {p.stock === 0 ? 'SIN STOCK' : 'Disponible'}
   </span>

@@ -29,12 +29,13 @@ const K = {
   warnBg:    '#FFF8E1',
 } as const;
 
-type Metodo = 'alias' | 'tarjeta' | 'mp' | 'otros';
+type Metodo = 'alias' | 'tarjeta' | 'mp' | 'otros' | 'qr';
 
 const OPCIONES: { id: Metodo; emoji: string; label: string; sub: string }[] = [
   { id: 'alias',   emoji: '🏦', label: 'Transferencia',     sub: 'Obtené descuento pagando directo' },
   { id: 'tarjeta', emoji: '💳', label: 'Tarjeta / Efectivo', sub: 'Medios por fuera de MercadoPago'  },
   { id: 'mp',      emoji: '🔵', label: 'Cuenta MP',          sub: 'Usá tu saldo o tarjetas en MP'    },
+{ id: 'qr', emoji: '📲', label: 'QR (apps bancarias)', sub: 'Pagá con MODO, Ualá, Cta DNi, Nar-X o bancos' },
   { id: 'otros',   emoji: '🌐', label: 'Otros métodos',      sub: 'Próximamente'                     },
 ];
 
@@ -330,7 +331,48 @@ function CheckoutContent() {
             <div id="brick-mp" />
           </div>
         )}
+{/* ── Panel QR ── */}
+{metodo === 'qr' && (
+  <div style={{
+    background: K.surface,
+    borderRadius: 16,
+    padding: '1.5rem',
+    border: `1px solid ${K.border}`,
+    boxShadow: '0 1px 4px rgba(0,0,0,0.06)'
+  }}>
+    <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
+       Escaneá este QR con tu app bancaria (MODO, Ualá, Cuenta DNI, Naranja X o MercadoPago)
+    </p>
 
+    {qrUrl ? (
+  <img
+    src={qrUrl}
+    alt="QR de pago"
+    style={{
+      width: '100%',
+      maxWidth: 260,
+      borderRadius: 12,
+      display: 'block',
+      margin: '0 auto'
+    }}
+  />
+) : (
+  <div style={{
+    width: '100%',
+    height: 220,
+    background: '#eee',
+    borderRadius: 12,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '0.9rem',
+    color: '#666'
+  }}>
+    Generando QR...
+  </div>
+)}
+  </div>
+)}
         {/* ── Panel Otros métodos ── */}
         {metodo === 'otros' && (
           <div style={{ background: K.surface, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
@@ -340,9 +382,12 @@ function CheckoutContent() {
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
               {[
   { nombre: 'PayPal',  emoji: '🅿️', color: '#003087' },
-  { nombre: 'Walla',   emoji: '💜', color: '#6B2FA0' },
   { nombre: 'Stripe',  emoji: '🔷', color: '#635BFF' },
   { nombre: 'Cripto',  emoji: '₿',  color: '#F7931A' },
+{ nombre: 'Apple Pay',   emoji: '🍎', color: '#6B2FA0' },
+{ nombre: 'Google Pay',   emoji: '🌐', color: '#6B2FA0' },
+{ nombre: 'Wise',   emoji: '🏦', color: '#6B2FA0' },
+
 ].map(p => (
   <div key={p.nombre} style={{
     flex: '1 1 100px', padding: '1rem 0.75rem', borderRadius: 10,

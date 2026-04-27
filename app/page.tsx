@@ -51,10 +51,11 @@ function AppContent() {
       <HeroSection />
       <ProductosSection />
       <EnviosSection />
-      <Footer />
+      
       <CarritoPanel />
       <ModalImagen />
       <Toast />
+      <Footer />
     </div>
   )
 }
