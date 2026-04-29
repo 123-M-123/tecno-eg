@@ -3,231 +3,365 @@ const fs = require('fs')
 const path = require('path')
 
 const BASE = 'https://www.integradosargentinos.com'
+const OUTPUT = path.join(__dirname, '../content/productos.json')
+const LIMITE = 299
+
+const PLACEHOLDER =
+  'https://via.placeholder.com/600x600/111111/ffffff?text=Sin+Imagen'
 
 const SECCIONES = [
-
-{
-id: 'notebooks',
-nombre: 'Notebooks',
-urls: [
-`${BASE}/notebooks/notebooks1/`,
-`${BASE}/notebooks/accesorios/`,
-`${BASE}/notebooks/cargadores/`,
-],
-},
-{
-id: 'monitores',
-nombre: 'Monitores',
-urls: [
-`${BASE}/monitores/`,
-`${BASE}/soportes/monitores1/`,
-],
-},
-{
-id: 'pc',
-nombre: 'PCs Armadas',
-urls: [
-`${BASE}/pc2/pc-oficina/`,
-`${BASE}/pc2/pc-gamer/`,
-`${BASE}/pc2/pc-mini/`,
-`${BASE}/kit-de-actualizacion-pc/`,
-],
-},
-{
-id: 'componentes',
-nombre: 'Componentes',
-urls: [
-`${BASE}/procesadores/amd2/`,
-`${BASE}/procesadores/intel2/`,
-`${BASE}/mothers/amd/`,
-`${BASE}/mothers/intel/`,
-`${BASE}/memorias-ram/pc1/`,
-`${BASE}/memorias-ram/notebook/`,
-`${BASE}/placas-de-video/nvidia/`,
-`${BASE}/placas-de-video/amd1/`,
-`${BASE}/placas-de-video/intel1/`,
-`${BASE}/fuentes/`,
-`${BASE}/refrigeracion/coolers-procesador/`,
-],
-},
-{
-id: 'perifericos',
-nombre: 'Periféricos',
-urls: [
-`${BASE}/mouses/mouses1/`,
-`${BASE}/mouses/mouse-pads/`,
-`${BASE}/teclados/`,
-`${BASE}/auriculares/`,
-`${BASE}/kit-de-teclado-mouse-y-otros/`,
-`${BASE}/joysticks/`,
-],
-},
-{
-id: 'almacenamiento',
-nombre: 'Almacenamiento',
-urls: [
-`${BASE}/almacenamiento/discos-solidos-ssd/`,
-`${BASE}/almacenamiento/discos-externos/`,
-`${BASE}/almacenamiento/discos-rigidos/`,
-],
-},
-{
-id: 'gabinetes',
-nombre: 'Gabinetes y Fuentes',
-urls: [
-`${BASE}/gabinetes/`,
-`${BASE}/fuentes/`,
-`${BASE}/refrigeracion/coolers-fan-gabinetes/`,
-],
-},
-{
-id: 'redes',
-nombre: 'Redes y Conectividad',
-urls: [
-`${BASE}/conectividad-y-redes/routers/`,
-`${BASE}/conectividad-y-redes/cables/`,
-`${BASE}/conectividad-y-redes/adaptadores-wifi/`,
-`${BASE}/conectividad-y-redes/switches/`,
-`${BASE}/conectividad-y-redes/access-point/`,
-`${BASE}/conectividad-y-redes/placas-de-red/`,
-],
-},
-{
-id: 'cables',
-nombre: 'Cables y Adaptadores',
-urls: [
-`${BASE}/cables-y-adaptadores/usb-c/`,
-`${BASE}/cables-y-adaptadores/video/`,
-`${BASE}/cables-y-adaptadores/usb/`,
-`${BASE}/cables-y-adaptadores/adaptadores/`,
-`${BASE}/cables-y-adaptadores/audio/`,
-],
-},
+  {
+    id: 'notebooks',
+    nombre: 'Notebooks',
+    urls: [
+      `${BASE}/notebooks/notebooks1/`,
+      `${BASE}/notebooks/accesorios/`,
+      `${BASE}/notebooks/cargadores/`,
+    ],
+  },
+  {
+    id: 'monitores',
+    nombre: 'Monitores',
+    urls: [`${BASE}/monitores/`, `${BASE}/soportes/monitores1/`],
+  },
+  {
+    id: 'pc',
+    nombre: 'PCs Armadas',
+    urls: [
+      `${BASE}/pc2/pc-oficina/`,
+      `${BASE}/pc2/pc-gamer/`,
+      `${BASE}/pc2/pc-mini/`,
+      `${BASE}/kit-de-actualizacion-pc/`,
+    ],
+  },
+  {
+    id: 'componentes',
+    nombre: 'Componentes',
+    urls: [
+      `${BASE}/procesadores/amd2/`,
+      `${BASE}/procesadores/intel2/`,
+      `${BASE}/mothers/amd/`,
+      `${BASE}/mothers/intel/`,
+      `${BASE}/memorias-ram/pc1/`,
+      `${BASE}/memorias-ram/notebook/`,
+      `${BASE}/placas-de-video/nvidia/`,
+      `${BASE}/placas-de-video/amd1/`,
+      `${BASE}/placas-de-video/intel1/`,
+      `${BASE}/fuentes/`,
+      `${BASE}/refrigeracion/coolers-procesador/`,
+    ],
+  },
+  {
+    id: 'perifericos',
+    nombre: 'Periféricos',
+    urls: [
+      `${BASE}/mouses/mouses1/`,
+      `${BASE}/mouses/mouse-pads/`,
+      `${BASE}/teclados/`,
+      `${BASE}/auriculares/`,
+      `${BASE}/kit-de-teclado-mouse-y-otros/`,
+      `${BASE}/joysticks/`,
+    ],
+  },
+  {
+    id: 'almacenamiento',
+    nombre: 'Almacenamiento',
+    urls: [
+      `${BASE}/almacenamiento/discos-solidos-ssd/`,
+      `${BASE}/almacenamiento/discos-externos/`,
+      `${BASE}/almacenamiento/discos-rigidos/`,
+    ],
+  },
+  {
+    id: 'gabinetes',
+    nombre: 'Gabinetes y Fuentes',
+    urls: [
+      `${BASE}/gabinetes/`,
+      `${BASE}/fuentes/`,
+      `${BASE}/refrigeracion/coolers-fan-gabinetes/`,
+    ],
+  },
+  {
+    id: 'redes',
+    nombre: 'Redes y Conectividad',
+    urls: [
+      `${BASE}/conectividad-y-redes/routers/`,
+      `${BASE}/conectividad-y-redes/cables/`,
+      `${BASE}/conectividad-y-redes/adaptadores-wifi/`,
+      `${BASE}/conectividad-y-redes/switches/`,
+      `${BASE}/conectividad-y-redes/access-point/`,
+      `${BASE}/conectividad-y-redes/placas-de-red/`,
+    ],
+  },
+  {
+    id: 'cables',
+    nombre: 'Cables y Adaptadores',
+    urls: [
+      `${BASE}/cables-y-adaptadores/usb-c/`,
+      `${BASE}/cables-y-adaptadores/video/`,
+      `${BASE}/cables-y-adaptadores/usb/`,
+      `${BASE}/cables-y-adaptadores/adaptadores/`,
+      `${BASE}/cables-y-adaptadores/audio/`,
+    ],
+  },
 ]
 
-const LIMITE = 299
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms))
+}
+
+function normalizarImagen(url) {
+  if (!url) return ''
+
+  let img = Array.isArray(url) ? url[0] : url
+  img = String(img).trim()
+
+  if (!img) return ''
+  if (img.startsWith('//')) return 'https:' + img
+  if (img.startsWith('/')) return BASE + img
+  if (img.startsWith('http')) return img
+
+  return ''
+}
+
+function esImagenValida(url) {
+  if (!url) return false
+
+  const limpia = url.toLowerCase()
+
+  return (
+    limpia.includes('.jpg') ||
+    limpia.includes('.jpeg') ||
+    limpia.includes('.png') ||
+    limpia.includes('.webp') ||
+    limpia.includes('.gif') ||
+    limpia.includes('cdn')
+  )
+}
+
+async function verificarImagen(page, url) {
+  if (!url) return false
+
+  try {
+    const ok = await page.evaluate(async (img) => {
+      try {
+        const res = await fetch(img, { method: 'HEAD' })
+        return res.ok
+      } catch {
+        return false
+      }
+    }, url)
+
+    return ok
+  } catch {
+    return false
+  }
+}
 
 async function scrapearPagina(page, url, categoriaId) {
   console.log(`  Scrapeando: ${url}`)
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
-  await new Promise(resolve => setTimeout(resolve, 6000))
-  // Forzar carga de imágenes lazy
-await page.evaluate(() => {
-  document.querySelectorAll('img[data-src]').forEach(img => {
-    img.src = img.dataset.src
+
+  await page.goto(url, {
+    waitUntil: 'networkidle2',
+    timeout: 45000,
   })
-  document.querySelectorAll('img[data-nimg]').forEach(img => {
-    if (img.dataset.src) img.src = img.dataset.src
+
+  await sleep(4000)
+
+  await page.evaluate(() => {
+    window.scrollTo(0, document.body.scrollHeight)
   })
-})
-await new Promise(resolve => setTimeout(resolve, 2000))
+
+  await sleep(2000)
 
   const productos = await page.evaluate((categoriaId) => {
-    const items = []
+    const salida = []
 
-    // Extraer datos del JSON-LD que Tienda Nube inyecta en cada página
-    const scripts = document.querySelectorAll('script[type="application/ld+json"]')
     const productosJSON = []
 
-    scripts.forEach(script => {
+    const scripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    )
+
+    scripts.forEach((script) => {
       try {
         const data = JSON.parse(script.textContent)
-        if (data['@type'] === 'ItemList' && data.itemListElement) {
-          data.itemListElement.forEach(item => {
-            if (item.item) productosJSON.push(item.item)
-          })
-        }
-        if (data['@type'] === 'Product') {
+
+        if (Array.isArray(data)) {
+          data.forEach((x) => productosJSON.push(x))
+        } else {
           productosJSON.push(data)
         }
-      } catch(e) {}
+      } catch {}
     })
 
-    productosJSON.forEach(prod => {
-      if (!prod.name || !prod.offers) return
-console.log('imagen:', prod.image) /*agregado para debug*/
-      const titulo = prod.name
-      const imagenRaw = prod.image
-const imagen = Array.isArray(imagenRaw) ? imagenRaw[0] : (imagenRaw || '')
-      const href = prod.url || prod.offers?.url || ''
-      const precio = Math.round(parseFloat(prod.offers?.price || '0'))
-      const disponible = prod.offers?.availability?.includes('InStock')
-      const stock = prod.offers?.inventoryLevel?.value || (disponible ? 1 : 0)
+    const expandir = []
 
-      if (!titulo || precio === 0 || !imagen) return
+    productosJSON.forEach((item) => {
+      if (item['@type'] === 'ItemList' && item.itemListElement) {
+        item.itemListElement.forEach((p) => {
+          if (p.item) expandir.push(p.item)
+        })
+      } else if (item['@type'] === 'Product') {
+        expandir.push(item)
+      }
+    })
 
-      const id = href.split('/').filter(Boolean).pop() || Math.random().toString(36).slice(2)
+    expandir.forEach((prod) => {
+      const titulo = prod.name || ''
+      const precio = Math.round(parseFloat(prod?.offers?.price || '0'))
+      const href = prod.url || prod?.offers?.url || ''
+      const disponible =
+        prod?.offers?.availability?.includes('InStock') || false
 
-      items.push({
+      const imagenJson = prod.image || ''
+
+      if (!titulo || precio <= 0) return
+
+      const id =
+        href.split('/').filter(Boolean).pop() ||
+        Math.random().toString(36).slice(2)
+
+      salida.push({
         id_producto: id,
         titulo,
         precio,
         categoria: categoriaId,
-        etiqueta: parseInt(stock) === 0 ? 'Sin stock' : 'Disponible',
+        etiqueta: disponible ? 'Disponible' : 'Sin stock',
         descripcion: titulo,
-        imagen: imagen.startsWith('http') ? imagen : 'https:' + imagen,
-        stock: parseInt(stock) > 0 ? 1 : 0,
+        imagen: imagenJson,
+        stock: disponible ? 1 : 0,
       })
     })
 
-    return items
+    return salida
   }, categoriaId)
 
-if (productos.length > 0) {
-  console.log('  Ejemplo imagen:', productos[0].imagen)
-}
+  for (let i = 0; i < productos.length; i++) {
+    let img = normalizarImagen(productos[i].imagen)
+
+    if (!esImagenValida(img)) {
+      img = ''
+    }
+
+    if (img) {
+      const ok = await verificarImagen(page, img)
+      if (!ok) img = ''
+    }
+
+    // Rescate automático buscando imagen parecida en DOM
+    if (!img) {
+      const rescue = await page.evaluate((titulo) => {
+        const imgs = [...document.querySelectorAll('img')]
+
+        const candidata = imgs.find((x) => {
+          const alt = (x.alt || '').toLowerCase()
+          return alt.includes(titulo.toLowerCase().slice(0, 12))
+        })
+
+        if (candidata) {
+          return (
+            candidata.src ||
+            candidata.dataset.src ||
+            candidata.getAttribute('src') ||
+            ''
+          )
+        }
+
+        const primera = imgs.find(
+          (x) =>
+            x.src &&
+            !x.src.includes('logo') &&
+            !x.src.includes('icon') &&
+            !x.src.includes('banner')
+        )
+
+        return primera?.src || ''
+      }, productos[i].titulo)
+
+      img = normalizarImagen(rescue)
+    }
+
+    // Último fallback
+    if (!img) {
+      img = PLACEHOLDER
+    }
+
+    productos[i].imagen = img
+  }
 
   return productos
 }
-async function main() {
-  console.log('🚀 Iniciando scraper Integrados Argentinos...\n')
 
-  const browser = await puppeteer.launch({ headless: true })
+function deduplicar(lista) {
+  const mapa = new Map()
+
+  for (const item of lista) {
+    if (!mapa.has(item.id_producto)) {
+      mapa.set(item.id_producto, item)
+    }
+  }
+
+  return [...mapa.values()]
+}
+
+async function main() {
+  console.log('🚀 Iniciando scraper PRO...\n')
+
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    defaultViewport: {
+      width: 1400,
+      height: 900,
+    },
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  })
+
   const resultado = { secciones: [] }
 
   for (const seccion of SECCIONES) {
-    console.log(`\n📦 Sección: ${seccion.nombre}`)
+    console.log(`📦 ${seccion.nombre}`)
+
     let todos = []
 
     for (const url of seccion.urls) {
-      // Crear página nueva por cada URL
       const page = await browser.newPage()
-      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-      
+
+      await page.setUserAgent(
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36'
+      )
+
       try {
-        const prods = await scrapearPagina(page, url, seccion.id)
-        todos = [...todos, ...prods]
-        console.log(`  → ${prods.length} productos en esta URL`)
-        if (todos.length >= LIMITE) {
-          await page.close()
-          break
-        }
+        const productos = await scrapearPagina(page, url, seccion.id)
+
+        console.log(`   → ${productos.length} productos`)
+
+        todos.push(...productos)
       } catch (err) {
-        console.log(`  ⚠️ Error en ${url}: ${err.message}`)
+        console.log(`   ⚠ Error: ${err.message}`)
       }
-      
+
       await page.close()
+
       if (todos.length >= LIMITE) break
     }
 
-    const unicos = todos.filter(
-      (p, i, arr) => arr.findIndex(x => x.id_producto === p.id_producto) === i
-    )
-    const final = unicos.slice(0, LIMITE)
+    todos = deduplicar(todos).slice(0, LIMITE)
 
-    console.log(`  ✅ ${final.length} productos encontrados`)
+    console.log(`   ✅ Final: ${todos.length}\n`)
+
     resultado.secciones.push({
       id: seccion.id,
       nombre: seccion.nombre,
-      productos: final,
+      productos: todos,
     })
   }
 
   await browser.close()
 
-  const outputPath = path.join(__dirname, '../content/productos.json')
-  fs.writeFileSync(outputPath, JSON.stringify(resultado, null, 2), 'utf-8')
-  console.log('\n✅ productos.json generado!')
+  fs.writeFileSync(OUTPUT, JSON.stringify(resultado, null, 2), 'utf8')
+
+  console.log('✅ productos.json generado correctamente')
 }
 
 main().catch(console.error)
