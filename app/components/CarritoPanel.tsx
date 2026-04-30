@@ -244,16 +244,61 @@ export default function CarritoPanel() {
                     {item.titulo}
                   </p>
 
-                  <p
-                    style={{
-                      margin: 0,
-                      fontSize: '.82rem',
-                      fontWeight: 800,
-                      color: C.naranja,
-                    }}
-                  >
-                    {formatARS(item.precio)}
-                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+
+  {/* precio lista (tachado izquierda + label derecha) */}
+  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+    <span
+      style={{
+        fontSize: '.9rem',
+        textDecoration: 'line-through',
+        opacity: 0.5,
+        color: C.grisOscuro,
+      }}
+    >
+      {formatARS(item.precio / 0.9)}
+    </span>
+
+    <span
+      style={{
+        fontSize: '.8rem',
+        opacity: 0.7,
+        color: C.grisOscuro,
+      }}
+    >
+      Precio de lista
+    </span>
+
+  </div>
+
+  {/* precio con descuento */}
+  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+    <span
+      style={{
+        fontSize: '.9rem',
+        fontWeight: 900,
+        color: C.naranja,
+      }}
+    >
+      {formatARS(item.precio)}
+    </span>
+
+    <span
+      style={{
+        fontSize: '.75rem',
+        fontWeight: 400,
+        color: C.naranja,
+        opacity: 0.85,
+      }}
+    >
+      (Con desc.-10%)
+    </span>
+
+  </div>
+
+</div>
                 </div>
 
                 <div

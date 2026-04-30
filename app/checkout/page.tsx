@@ -336,8 +336,8 @@ function CheckoutContent() {
               style={{ width: 26, height: 26, objectFit: 'contain', flexShrink: 0 }}
             />
             <p style={{ margin: 0, fontSize: '0.82rem', fontWeight: 700, color: '#333', lineHeight: 1.35 }}>
-              {metodo === 'alias'   && 'Pagando por transferencia obtenés un descuento especial. Transferí y luego subí el comprobante.'}
-              {metodo === 'qr'      && 'Escaneá el QR y pagá desde MODO, Ualá, Cuenta DNI, bancos o billeteras compatibles.'}
+              {metodo === 'alias'   && 'PAGANDO POR TRANFERENCIA TENES 10% OFF!!. Transferí y luego subí el comprobante.'}
+              {metodo === 'qr'      && 'DESCUENTO 5%!! COMBINA PROMOS CON BANCOS Y BILLETERAS VIRTUALES COMPATIBLES CON QR 3.0'}
               {metodo === 'tarjeta' && 'Pagá con crédito, débito o efectivo en Pago Fácil / Rapipago mediante Mercado Pago.'}
               {metodo === 'mp'      && 'Ingresá a Mercado Pago y usá tu saldo disponible o tarjetas guardadas.'}
             </p>
