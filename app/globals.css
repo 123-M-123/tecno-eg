@@ -1,366 +1,146 @@
+/* =========================================================
+   GLOBALS.CSS — TECNO EG (LIMPIO Y ORDENADO)
+   Se eliminaron restos de otra web.
+   NO cambia colores actuales de Header / Hero.
+========================================================= */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Variables */
-/* Variables de tema */
+/* =========================================================
+   VARIABLES BASE
+   Solo fondos generales y textos neutros
+========================================================= */
 :root {
-  --color-bg: #ffffff;   /* fondo claro por defecto */
-  --color-text: #000000; /* texto oscuro por defecto */
+  --background: #cecece; /* fondo general web */
+  --foreground: #000000; /* texto general */
 }
 
-.dark {
-  --color-bg: #121212;   /* fondo oscuro */
-  --color-text: #f5f5f5; /* texto claro */
-}
-:root {
-  --background: #e7bd7a;
-  --foreground: #000000;
-  --meraki-olive: #4c522b;
-  --meraki-gold:  #fffb28;
-  --meraki-tan:   #e7bd7a;
-  --meraki-purple:#7201ce;
-  --meraki-purple-light:#7c42fa;
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+* {
+  box-sizing: border-box;
 }
 
-/* Dark mode */
-.dark {
-  --background: #111111;       /* fondo general */
-  --foreground: #f5f5f5;       /* texto principal */
-
-  --meraki-olive: #2a2a2a;     /* fila verde → gris carbón */
-  --meraki-gold:  #d4c000;     /* dorado más apagado */
-  --meraki-tan:   #333333;     /* fila marrón clara → gris oscuro */
-  --meraki-purple:#a67df5;     /* púrpura más suave */
-  --meraki-purple-light:#c0a8f9;
+html {
+  scroll-behavior: smooth; /* navegación suave */
 }
 
-/* Base */
-body{
+body {
   margin: 0;
   padding: 0;
+  background: var(--background);
+  color: var(--foreground);
   font-family: Inter, system-ui, sans-serif;
-
-  background-color: var(--color-bg);
-  color: var(--color-text);
-
-  /* overflow-x: hidden;
-  overflow-y: auto; */ /* desactivado para probar carrusel */
+  overflow-x: hidden; /* evita corrimiento lateral */
 }
 
-/* Sticky header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* =========================================================
+   CONTENEDOR GENERAL APP
+========================================================= */
+.app-content {
+  min-height: 100vh;
+  background: var(--background);
 }
 
-/* Header inner (fila 1 verde) */
-.header-inner {
-  width: 100%;
-  margin: 0;
-  padding: 0 1.5rem 6px;
-  height: 155px;
-  overflow: hidden; 
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  position: relative;
-  background: var(--meraki-olive);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.31);
+/* =========================================================
+   LINKS
+========================================================= */
+a {
+  color: inherit;
 }
 
-/* Social links */
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin-top: 16px;
-}
-.social-links a {
-  color: var(--meraki-tan);
-  display: flex;
-  align-items: center;
-  gap: .45rem;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-/* SVG fixes */
-.social-links .social-instagram svg,
-.cart-btn .icon-carrito {
-  stroke: currentColor;
-  stroke-width: 2;
-  fill: none;
-  width: 30px;
-  height: 30px;
-}
-.social-links .social-whatsapp svg {
-  fill: currentColor;
-  stroke: none;
-  width: 30px;
-  height: 30px;
-}
-
-/* Logo */
-.logo-wrap {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 80;
-}
-
-/* Carrito */
-.cart-btn {
-  position: relative;
-  background: transparent;
-  border: 2.5px solid var(--meraki-gold);
-  border-radius: 8px;
-  padding: .35rem .6rem;
-  color: var(--meraki-gold);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: .35rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-top: 8px;
-  z-index: 70;
-}
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: var(--meraki-purple);
-  color: #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: .7rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Fila 2 (nav marrón) */
-header nav {
-  background: var(--meraki-tan); /* el color correcto */
-  padding: .2rem 1rem;
-  position: relative; /* para los absolutos */
-  display: flex;
-  justify-content: center; /* centra los links */
-  align-items: center;
-  z-index: 60;
-}
-
-/* Links centrados */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-}
-
-/* Hamburguesa fija a la izquierda */
-.menu-toggle {
-  position: absolute;
-  left: 1rem;
-}
-
-/* Dark toggle fijo a la derecha */
-.dark-toggle {
-  position: absolute;
-  right: 1rem;
-  background: transparent;
-  border: 1px solid var(--meraki-olive);
-  border-radius: 6px;
-  padding: 0.2rem 0.6rem;
-  cursor: pointer;
-  font-size: 0.75rem;
-  color: var(--meraki-olive);
-}
-.dark .dark-toggle {
-  border: 1px solid var(--meraki-gold);
-  color: var(--meraki-gold);
-}
-.dark .cart-btn {
-  border: 2.5px solid var(--meraki-purple-light);
-  color: var(--meraki-purple-light);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header nav {
-    min-height: 50px;
-    padding: 0.6rem 1rem;
-  }
-  .header-inner {
-    height: 90px;
-    padding: 0 1rem 6px;
-    align-items: flex-start;
-    padding-bottom: 15px;
-  }
-  .social-links svg { width: 26px; height: 26px; }
-  .logo-wrap img { width: 200px; max-height: 140px; height: auto; }
-  .menu-toggle { display: inline-block; }
-
-  /* Menú hamburguesa más compacto */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0.4rem;       /* menos espacio entre links */
-    width: 100%;
-    align-items: center;
-    margin-top: 0;     /* elimina margen extra arriba */
-    padding-bottom: 0.5rem; /* controla espacio abajo */
-  }
-  .nav-links.open { display: flex; }
-
-  .social-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-    margin-top: 8px;
-  }
-
-  .cart-btn { padding: .35rem .5rem; margin-top: 18px; }
-}
-
-/* Accesibilidad */
-a:focus, button:focus {
-  outline: 2px solid rgba(0,0,0,0.08);
+/* =========================================================
+   FOCUS ACCESIBLE
+========================================================= */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.18);
   outline-offset: 2px;
 }
 
-/* Animación logo */
-@keyframes heroLogoBreath {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
-}
-/* Animación hero lotus */
-@keyframes heroLotusFloat {
-  0% { transform: scale(0.7) translateY(0); }
-  50% { transform: scale(1.05) translateY(-8px); }
-  100% { transform: scale(1.6) translateY(0); }
-}
-@keyframes growHero {
-  0% { transform: scale(0.8); }
-  100% { transform: scale(1.55); }
+/* =========================================================
+   CARRUSEL PRODUCTOS
+   Oculta scrollbar horizontal
+========================================================= */
+.carrusel-track::-webkit-scrollbar {
+  display: none;
 }
 
-.hero-image {
-  animation: growHero 6s ease-in-out infinite alternate;
+.carrusel-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* === Cards de producto === */
-.product-card {
-  max-height: 150px !important;
-  padding: 0.8rem !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
-  background: #fff;
+/* =========================================================
+   IMAGENES NEXT
+========================================================= */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.product-card img {
-  max-height: 140px !important;
-  object-fit: cover !important;
-  border-radius: 6px;
+/* =========================================================
+   ANIMACION FADE IN
+   usada por Hero / Toast / paneles
+========================================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.product-card h3,
-.product-card p {
-  margin: 0.3rem 0 !important;
-  font-size: 0.85rem !important;
-}
-
-.product-card button {
-  margin-top: auto;
-  padding: 0.4rem 0.8rem !important;
-  font-size: 0.75rem !important;
-}
-.app-content {
-  min-height: 100vh;
-  background-color: var(--background);
-}
-
-/* Toast */
-.toast {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--meraki-olive);
-  color: var(--meraki-gold);
-  padding: 0.6rem 1.4rem;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  z-index: 200;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  white-space: nowrap;
-}
-
-/* Footer */
-.footer-section {
-  background: var(--meraki-olive);
-  color: var(--foreground);
-  text-align: center;
-  padding: 2rem 1.5rem;
-  margin-top: 3rem;
-}
-
-.footer-brand {
-  color: var(--meraki-gold);
-  font-weight: 700;
-}
-
-.footer-copy {
-  margin: 0.4rem 0 0;
-  font-size: 0.75rem;
-  opacity: 0.5;
-}
-
-/* Social links texto */
-.social-links a span {
-  color: #bfa37a; /* marrón claro en modo claro */
-  transition: color 0.3s;
-}
-
-.dark .social-links a span {
-  color: #fff; /* blanco en oscuro */
-}
-
-.social-links a svg {
-  stroke: currentColor;
-  fill: none;
-}
-
-.dark .social-links a svg {
-  stroke: #fff;
-}
-
-/* WhatsApp especial */
-.social-whatsapp svg path {
-  fill: currentColor; /* hereda color del texto */
-}
-
-.dark .social-whatsapp svg path {
-  fill: #fff; /* blanco en dark */
-}
-
-/* Animación carrusel */
-@keyframes scrollX {
+/* =========================================================
+   ANIMACION SUAVE FLOAT
+   futura utilidad visual
+========================================================= */
+@keyframes floatSoft {
   0% {
-    transform: translateX(0);
+    transform: translateY(0px);
   }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
   100% {
-    transform: translateX(-50%);
+    transform: translateY(0px);
   }
 }
 
-/* Fin globals.css */
+/* =========================================================
+   SELECCION TEXTO
+========================================================= */
+::selection {
+  background: rgba(27, 113, 202, 0.18);
+  color: #000;
+}
+
+/* =========================================================
+   PLACEHOLDER INPUTS
+========================================================= */
+input::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* =========================================================
+   FIN
+========================================================= */

@@ -2,85 +2,152 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import { useRouter, usePathname } from 'next/navigation'
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Home,
+  Monitor,
+  Laptop,
+  Cpu,
+  Keyboard,
+  Router,
+  Cable,
+  HardDrive,
+  Truck,
+  Phone,
+  ShoppingBag,
+} from 'lucide-react'
+
 import { useCarrito } from '../context/CarritoContext'
 import { C } from '@/styles/colores'
+import { Producto } from '../context/CarritoContext'
 
+/* =========================================
+   ICONO CARRITO (NO TOCADO)
+========================================= */
 const IconCarrito = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <circle cx="9" cy="21" r="1"/>
-    <circle cx="20" cy="21" r="1"/>
-    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+  >
+    <circle cx="9" cy="21" r="1" />
+    <circle cx="20" cy="21" r="1" />
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
   </svg>
 )
 
-const NAV_LINKS = [
-  { label: 'Quienes Somos',      id: 'inicio'    },
-  { label: 'Notebooks',   id: 'novedades' },
-  { label: 'Monitores',      id: 'bolsos'    },
-  { label: 'PCs Armadas',       id: 'bazar'     },
-  { label: 'Componentes',     id: 'cuencos'   },
-  { label: 'Periféricos',  id: 'deco'      },
-  { label: 'Redes y Conectividad',    id: 'ceramica'  },
-  { label: 'Cables y Adaptadores',    id: 'ceramica'  },
-  { label: 'Almacenamiento',    id: 'ceramica'  },
-  { label: 'Envíos',      id: 'envios'    },
-  { label: 'Formulario Contacto',      id: 'envios'    },
+/* =========================================
+   LINKS PRINCIPALES
+========================================= */
+const LINKS_PRINCIPALES = [
+  { label: 'Inicio', id: 'inicio', icon: Home },
+  { label: 'Quiénes Somos', id: 'quienes', icon: Home },
+  { label: 'Contacto', id: 'contacto', icon: Phone },
 ]
 
-function handleNavClick(e: React.MouseEvent, id: string) {
-  e.preventDefault()
-  const el = document.getElementById(id)
-  if (!el) return
-  const y = el.getBoundingClientRect().top + window.scrollY - 80
-  window.scrollTo({ top: y, behavior: 'smooth' })
-}
-
-import { Producto } from '../context/CarritoContext'
+/* =========================================
+   LINKS TIENDA
+========================================= */
+const LINKS_TIENDA = [
+  { label: 'Notebooks', id: 'notebooks', icon: Laptop },
+  { label: 'Monitores', id: 'monitores', icon: Monitor },
+  { label: 'PCs Armadas', id: 'pc', icon: Cpu },
+  { label: 'Componentes', id: 'componentes', icon: Cpu },
+  { label: 'Periféricos', id: 'perifericos', icon: Keyboard },
+  { label: 'Almacenamiento', id: 'almacenamiento', icon: HardDrive },
+  { label: 'Gabinetes y Fuentes', id: 'gabinetes', icon: Cpu },
+  { label: 'Redes y Conectividad', id: 'redes', icon: Router },
+  { label: 'Cables y Adaptadores', id: 'cables', icon: Cable },
+]
 
 type SeccionJSON = {
   id: string
   productos: Producto[]
 }
+
 const formatARS = (n: number) =>
-  n.toLocaleString('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 })
+  n.toLocaleString('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    maximumFractionDigits: 0,
+  })
+
+function scrollToId(id: string) {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const y = el.getBoundingClientRect().top + window.scrollY - 90
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth',
+  })
+}
 
 export default function Header() {
+  const router = useRouter()
+  const pathname = usePathname()
+
   const { carrito, setCarritoOpen, setModal } = useCarrito()
+
   const cantidadCarrito = carrito.reduce((s, i) => s + i.cantidad, 0)
+
   const [menuOpen, setMenuOpen] = useState(false)
+  const [tiendaOpen, setTiendaOpen] = useState(true)
+
   const [busqueda, setBusqueda] = useState('')
   const [resultados, setResultados] = useState<Producto[]>([])
   const [todosLosProductos, setTodosLosProductos] = useState<Producto[]>([])
   const [dropdownOpen, setDropdownOpen] = useState(false)
+
   const inputRef = useRef<HTMLInputElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  // Cargar productos al montar
+  /* ===============================
+     CARGA PRODUCTOS
+  =============================== */
   useEffect(() => {
     fetch('/api/productos')
-      .then(r => r.json())
-      .then(data => {
+      .then((r) => r.json())
+      .then((data) => {
         const todos = data.secciones.flatMap((s: SeccionJSON) => s.productos)
         setTodosLosProductos(todos)
       })
   }, [])
 
-  // Buscar mientras escribe
+  /* ===============================
+     BUSCADOR
+  =============================== */
   useEffect(() => {
     if (busqueda.length < 3) {
       setResultados([])
       setDropdownOpen(false)
       return
     }
-    const filtrados = todosLosProductos.filter(p =>
-      p.titulo.toLowerCase().includes(busqueda.toLowerCase())
-    ).slice(0, 8)
+
+    const filtrados = todosLosProductos
+      .filter((p) =>
+        p.titulo.toLowerCase().includes(busqueda.toLowerCase())
+      )
+      .slice(0, 8)
+
     setResultados(filtrados)
     setDropdownOpen(true)
   }, [busqueda, todosLosProductos])
 
-  // Cerrar dropdown al hacer clic afuera
+  /* ===============================
+     CLICK AFUERA
+  =============================== */
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -91,206 +158,412 @@ export default function Header() {
         setDropdownOpen(false)
       }
     }
+
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+
+    return () =>
+      document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  /* ===============================
+     BLOQUEAR SCROLL MENU
+  =============================== */
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+  }, [menuOpen])
+
   const abrirDesdeSearch = (p: Producto) => {
-    setModal({ ...p, categoria: p.categoria || '', etiqueta: p.etiqueta || '', descripcion: p.descripcion || p.titulo })
+    setModal({
+      ...p,
+      categoria: p.categoria || '',
+      etiqueta: p.etiqueta || '',
+      descripcion: p.descripcion || p.titulo,
+    })
+
     setBusqueda('')
     setDropdownOpen(false)
   }
 
+  /* =================================
+     NAVEGACION HOME / TIENDA
+  ================================= */
+  const irA = (id: string) => {
+  setMenuOpen(false)
+
+  const idsHome = ['inicio', 'quienes', 'contacto']
+  const estoyEnHome = pathname === '/'
+  const estoyEnTienda = pathname === '/tienda'
+
+  /* HOME */
+  if (idsHome.includes(id)) {
+    if (estoyEnHome) {
+      scrollToId(id)
+    } else {
+      router.push(`/#${id}`)
+    }
+    return
+  }
+
+  /* TIENDA */
+  if (estoyEnTienda) {
+    scrollToId(id)
+  } else {
+    router.push(`/tienda#${id}`)
+  }
+}
+
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 50,
-      background: C.grisOscuro,
-      boxShadow: '0 5px 18px rgba(0,0,0,0.25)',
-    }}>
-
-      {/* FILA 1 — Redes | Logo | Carrito */}
-      <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0.5rem 1.25rem', maxWidth: 1200, margin: '0 auto',
-      }}>
-
-        {/* Instagram */}
-        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-          <a href="https://www.instagram.com/tecnoeg" target="_blank" rel="noopener noreferrer"
-            style={{ color: C.white, display: 'flex', alignItems: 'center', gap: '0.3rem',
-              fontSize: '0.78rem', textDecoration: 'none', fontWeight: 600 }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-
-        {/* Logo */}
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <Image src="/logo.png" alt="TECNO EG" width={210} height={84} priority
-            style={{ objectFit: 'contain', height: 'auto', maxHeight: 84 }} />
-        </div>
-
-        {/* Carrito */}
-        <button onClick={() => setCarritoOpen(true)} style={{
-          position: 'relative', background: 'transparent', border: 'none',
-          color: C.white, cursor: 'pointer', padding: '0.4rem',
-          display: 'flex', alignItems: 'center',
-        }}>
-          <IconCarrito size={40} />
-          {cantidadCarrito > 0 && (
-            <span style={{
-              position: 'absolute', top: -2, right: -2,
-              background: C.naranja, color: C.white,
-              borderRadius: '50%', width: 18, height: 18,
-              fontSize: '0.7rem', fontWeight: 700,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>{cantidadCarrito}</span>
-          )}
-        </button>
-      </div>
-
-      {/* FILA 2 — Buscador */}
-      <div style={{
-        padding: '0.4rem 1.25rem', maxWidth: 1200, margin: '0 auto',
-        borderTop: `1px solid rgba(255,255,255,0.1)`,
-      }}>
-        <div style={{ position: 'relative', maxWidth: 480, margin: '0 auto' }}>
-          <span style={{
-            position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)',
-            color: C.grisOscuro, pointerEvents: 'none', fontSize: '0.9rem',
-          }}>🔍</span>
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Buscar productos..."
-            value={busqueda}
-            onChange={e => setBusqueda(e.target.value)}
+    <>
+      <header
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 50,
+          background: C.grisOscuro,
+          boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
+        }}
+      >
+        {/* FILA SUPERIOR */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0.55rem 1rem',
+            maxWidth: 1200,
+            margin: '0 auto',
+            gap: '1rem',
+          }}
+        >
+          <button
+            onClick={() => setMenuOpen(true)}
             style={{
-              width: '100%', padding: '0.45rem 0.75rem 0.45rem 2.2rem',
-              borderRadius: 20, border: 'none', outline: 'none',
-              background: 'rgba(230,230,230,0.89)', color: C.grisOscuro,
-              fontSize: '0.95rem',
+              background: 'transparent',
+              border: 'none',
+              color: C.white,
+              cursor: 'pointer',
+              padding: 0,
+              display: 'flex',
+              alignItems: 'center',
             }}
-          />
+          >
+            <Menu size={34} />
+          </button>
 
-          {/* Dropdown resultados */}
-          {dropdownOpen && resultados.length > 0 && (
-            <div ref={dropdownRef} style={{
-              position: 'absolute', top: '110%', left: 0, right: 0,
-              background: C.white, borderRadius: 12, zIndex: 200,
-              boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
-              overflow: 'hidden',
-            }}>
-              {resultados.map(p => (
-                <div
-                  key={p.id_producto}
-                  onClick={() => abrirDesdeSearch(p)}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: '0.75rem',
-                    padding: '0.6rem 0.75rem', cursor: 'pointer',
-                    borderBottom: `1px solid ${C.crema}`,
-                    transition: 'background 0.15s',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.background = C.crema)}
-                  onMouseLeave={e => (e.currentTarget.style.background = C.white)}
-                >
-                  {/* Foto */}
-                  <div style={{ position: 'relative', width: 44, height: 44,
-                    borderRadius: 8, overflow: 'hidden', flexShrink: 0,
-                    filter: p.stock === 0 ? 'grayscale(80%)' : 'none',
-                  }}>
-                    <Image src={p.imagen} alt={p.titulo} fill
-                      sizes="44px" style={{ objectFit: 'cover' }} />
-                  </div>
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/logo.png"
+              alt="TECNO EG"
+              width={210}
+              height={84}
+              priority
+              style={{
+                objectFit: 'contain',
+                height: 'auto',
+                maxHeight: 82,
+              }}
+            />
+          </div>
 
-                  {/* Info */}
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <p style={{ margin: 0, fontSize: '0.82rem', fontWeight: 600,
-                      color: C.vino, whiteSpace: 'nowrap', overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                    }}>{p.titulo}</p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.15rem' }}>
-                      <span style={{ fontSize: '0.8rem', fontWeight: 800, color: C.naranja }}>
-                        {formatARS(p.precio)}
-                      </span>
-                      <span style={{
-                        fontSize: '0.65rem', fontWeight: 700, padding: '0.1rem 0.4rem',
-                        borderRadius: 6, background: p.stock === 0 ? '#cc0000' : '#2d9c4a',
-                        color: C.white,
-                      }}>
-                        {p.stock === 0 ? 'Sin stock' : 'Disponible'}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          <button
+            onClick={() => setCarritoOpen(true)}
+            style={{
+              position: 'relative',
+              background: 'transparent',
+              border: 'none',
+              color: C.white,
+              cursor: 'pointer',
+              padding: '0.3rem',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <IconCarrito size={38} />
 
-          {/* Sin resultados */}
-          {dropdownOpen && busqueda.length >= 3 && resultados.length === 0 && (
-            <div ref={dropdownRef} style={{
-              position: 'absolute', top: '110%', left: 0, right: 0,
-              background: C.white, borderRadius: 12, zIndex: 200,
-              boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
-              padding: '1rem', textAlign: 'center',
-              color: C.grisOscuro, fontSize: '0.85rem',
-            }}>
-              No se encontraron productos para "{busqueda}"
-            </div>
-          )}
+            {cantidadCarrito > 0 && (
+              <span
+                style={{
+                  position: 'absolute',
+                  top: -2,
+                  right: -2,
+                  background: C.naranja,
+                  color: C.white,
+                  borderRadius: '50%',
+                  width: 18,
+                  height: 18,
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {cantidadCarrito}
+              </span>
+            )}
+          </button>
+        </div>
+
+        {/* BUSCADOR */}
+        <div
+          style={{
+            padding: '0 1rem 0.7rem',
+            maxWidth: 1200,
+            margin: '0 auto',
+          }}
+        >
+          <div
+            style={{
+              position: 'relative',
+              maxWidth: 500,
+              margin: '0 auto',
+            }}
+          >
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Buscar productos..."
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '0.7rem 1rem',
+                borderRadius: 999,
+                border: 'none',
+                outline: 'none',
+                background: '#ffffff',
+                color: C.negro,
+                fontSize: '0.95rem',
+              }}
+            />
+
+            {dropdownOpen && resultados.length > 0 && (
+  <div
+    ref={dropdownRef}
+    style={{
+      position: 'absolute',
+      top: '110%',
+      left: 0,
+      right: 0,
+      background: '#fff',
+      borderRadius: 14,
+      overflow: 'hidden',
+      zIndex: 200,
+      boxShadow: '0 14px 24px rgba(0,0,0,0.18)',
+      maxHeight: 420,
+      overflowY: 'auto',
+    }}
+  >
+    {resultados.map((p) => (
+      <div
+        key={p.id_producto}
+        onClick={() => abrirDesdeSearch(p)}
+        style={{
+          padding: '0.75rem',
+          cursor: 'pointer',
+          borderBottom: '1px solid #eee',
+          display: 'flex',
+          gap: '0.75rem',
+          alignItems: 'center',
+        }}
+      >
+        <img
+          src={p.imagen}
+          alt={p.titulo}
+          style={{
+            width: 56,
+            height: 56,
+            objectFit: 'contain',
+            borderRadius: 10,
+            background: '#fafafa',
+            flexShrink: 0,
+          }}
+        />
+
+        <div style={{ flex: 1 }}>
+          <div
+            style={{
+              fontSize: '0.85rem',
+              fontWeight: 700,
+              color: C.vino,
+              lineHeight: 1.25,
+            }}
+          >
+            {p.titulo}
+          </div>
+
+          <div
+            style={{
+              fontSize: '0.82rem',
+              color: C.naranja,
+              marginTop: 4,
+              fontWeight: 800,
+            }}
+          >
+            {formatARS(p.precio)}
+          </div>
         </div>
       </div>
-
-      {/* FILA 3 — Navegación */}
-<nav style={{
-  borderTop: `1px solid rgba(255,255,255,0.1)`,
-  padding: '0 1.25rem', maxWidth: 1200, margin: '0 auto',
-}}>
-  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.3rem 0' }}>
-    
-    {/* Hamburguesa */}
-    <button onClick={() => setMenuOpen(!menuOpen)} style={{
-      background: 'transparent', border: 'none', color: C.vino,
-      cursor: 'pointer', fontSize: '1.2rem', padding: '0.25rem 0.5rem',
-    }} aria-expanded={menuOpen}>
-      {menuOpen ? '✕' : '☰'}
-    </button>
-
-    {/* Links — solo visibles si menuOpen */}
-    {menuOpen && (
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
-        {NAV_LINKS.map(link => (
-          <a key={link.id} href={`#${link.id}`}
-            onClick={(e) => {
-              handleNavClick(e, link.id)
-            
-            }}
-            style={{
-              color: C.vino, textDecoration: 'none',
-              fontSize: '0.8rem', fontWeight: 600,
-              padding: '0.25rem 0.6rem', borderRadius: 12,
-              transition: 'all 0.2s', letterSpacing: '0.04em',
-              textTransform: 'uppercase',
-            }}
-            onMouseEnter={e => {
-              (e.target as HTMLElement).style.background = C.naranja
-              ;(e.target as HTMLElement).style.color = C.white
-            }}
-            onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = 'transparent'
-              ;(e.target as HTMLElement).style.color = C.vino
-            }}
-          >{link.label}</a>
-        ))}
-      </div>
-    )}
+    ))}
   </div>
-</nav>
-    </header>
+)}
+          </div>
+        </div>
+      </header>
+
+      {/* OVERLAY */}
+      {menuOpen && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.45)',
+            zIndex: 90,
+            backdropFilter: 'blur(3px)',
+          }}
+        />
+      )}
+
+      {/* SIDEBAR */}
+      <aside
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: menuOpen ? 0 : -340,
+          width: 320,
+          maxWidth: '88vw',
+          height: '100vh',
+          background: '#ffffff',
+          zIndex: 100,
+          transition: 'all 0.28s ease',
+          boxShadow: '8px 0 28px rgba(0,0,0,0.18)',
+          overflowY: 'auto',
+        }}
+      >
+        <div
+          style={{
+            background: C.vino,
+            color: '#fff',
+            padding: '1rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div>
+            <div style={{ fontWeight: 800, fontSize: '1rem' }}>
+              TECNO EG
+            </div>
+            <div style={{ fontSize: '0.78rem', opacity: 0.9 }}>
+              Navegación
+            </div>
+          </div>
+
+          <button
+            onClick={() => setMenuOpen(false)}
+            style={{
+              border: 'none',
+              background: 'transparent',
+              color: '#fff',
+              cursor: 'pointer',
+            }}
+          >
+            <X size={26} />
+          </button>
+        </div>
+
+        <div style={{ padding: '0.8rem' }}>
+          {/* LINKS PRINCIPALES */}
+          {LINKS_PRINCIPALES.map((item) => {
+            const Icon = item.icon
+
+            return (
+              <button
+                key={item.label}
+                onClick={() => irA(item.id)}
+                style={btnMenu}
+              >
+                <Icon size={18} />
+                {item.label}
+              </button>
+            )
+          })}
+
+          {/* ACORDEON */}
+          <button
+            onClick={() => setTiendaOpen(!tiendaOpen)}
+            style={{
+              ...btnMenu,
+              fontWeight: 800,
+              marginTop: '0.35rem',
+            }}
+          >
+            <ShoppingBag size={18} />
+            Tienda de Componentes
+
+            <span style={{ marginLeft: 'auto' }}>
+              {tiendaOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            </span>
+          </button>
+
+          {tiendaOpen && (
+            <div style={{ paddingLeft: '0.45rem' }}>
+              {LINKS_TIENDA.map((item) => {
+                const Icon = item.icon
+
+                return (
+                  <button
+                    key={item.label}
+                    onClick={() => irA(item.id)}
+                    style={{
+                      ...btnMenu,
+                      fontSize: '0.9rem',
+                      padding: '0.7rem 0.75rem',
+                    }}
+                  >
+                    <Icon size={17} />
+                    {item.label}
+                  </button>
+                )
+              })}
+            </div>
+          )}
+
+          {/* ENVÍOS ABAJO DE TODO */}
+          <button
+            onClick={() => irA('envios')}
+            style={{
+              ...btnMenu,
+              marginTop: '0.6rem',
+            }}
+          >
+            <Truck size={18} />
+            Envíos
+          </button>
+        </div>
+      </aside>
+    </>
   )
+}
+
+const btnMenu: React.CSSProperties = {
+  width: '100%',
+  border: 'none',
+  background: 'transparent',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.75rem',
+  padding: '0.85rem 0.75rem',
+  borderRadius: 12,
+  cursor: 'pointer',
+  color: '#111',
+  fontWeight: 700,
+  fontSize: '0.95rem',
 }

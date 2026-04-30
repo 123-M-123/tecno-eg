@@ -1,163 +1,426 @@
 'use client'
 
+import { useState } from 'react'
+import Link from 'next/link'
 import { C } from '@/styles/colores'
-import React, { useState } from 'react';
-import { Wrench, ShoppingCart, Headset, ChevronDown, ChevronUp } from 'lucide-react';
-
-const condiciones = [
-  { icono: '🗓', titulo: 'Entregas', detalle: 'CONSULTAR' },
-  { icono: '📍', titulo: 'Retiro', detalle: 'Barrio de CABALLITO, CABA' },
-  { icono: '💰', titulo: 'Señá', detalle: '50% para reservar' },
-  { icono: '📦', titulo: 'Stock', detalle: 'Consultá por WhatsApp antes de comprar' },
-]
+import {
+  Wrench,
+  ShoppingCart,
+  Headset,
+  ShieldCheck,
+  Cpu,
+  Truck,
+  MessageCircle,
+  Instagram,
+  ChevronDown,
+  ChevronUp,
+  ArrowRight,
+  BadgeCheck,
+  Wifi,
+  Camera,
+} from 'lucide-react'
 
 export default function HeroSection() {
-  return (
-    <section
-      id="inicio"
-      style={{
-        background: C.gris,
-        padding: '3rem 1.5rem 2.5rem',
-        textAlign: 'center',
-        borderBottom: `3px solid ${C.naranjaPale}`,
-      }}
-    >
-     {/* Título */}
-<h1 style={{
-  fontSize: 'clamp(1.4rem, 4vw, 2rem)',
-  fontWeight: 800,
-  color: C.vino,
-  margin: '0 0 0.4rem',
-  letterSpacing: '-0.01em',
-  textAlign: 'center'
-}}>
-  TECNO EG <br /> Tecnologia a otro Nivel
-</h1>
+  const [open, setOpen] = useState(true)
 
-<div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
-  color: C.grisOscuro,
-  fontSize: '1.1rem',
-  margin: '0 0 1.5rem',
-  gap: '1rem',
-}}>
-  {/* Renglón 1 */}
-  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-    <Wrench size={22} color={C.vino} /> 
-    <span>Servicio de Reparación de Computadoras</span>
-  </div>
-  
-  {/* Renglón 2 */}
-  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-    <ShoppingCart size={22} color={C.vino} /> 
-    <span>Tienda de Componentes</span>
-  </div>
-  
-  {/* Renglón 3 */}
-  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-    <Headset size={22} color={C.vino} /> 
-    <span>Asesoramiento Personalizado</span>
-  </div>
-</div>
+  const heroServicios = [
+    { icon: Wrench, text: 'Servicio técnico especializado' },
+    { icon: Cpu, text: 'Armado de PC a medida' },
+    { icon: Headset, text: 'Asesoramiento real' },
+  ]
 
-{/* BOTÓN ACORDEÓN */}
-{(() => {
-  const [isOpen, setIsOpen] = useState(false);
+  const servicios = [
+    {
+      icon: Wrench,
+      titulo: 'Reparación PC / Notebook',
+      texto: 'Diagnóstico, limpieza, formateo y reparación general.',
+    },
+    {
+      icon: Cpu,
+      titulo: 'Armado de Equipos',
+      texto: 'PC gamer, oficina y uso profesional.',
+    },
+    {
+      icon: Wifi,
+      titulo: 'Redes y Conectividad',
+      texto: 'WiFi, routers, cableado e instalación.',
+    },
+    {
+      icon: Camera,
+      titulo: 'Cámaras y Seguridad',
+      texto: 'Instalación y configuración profesional.',
+    },
+  ]
+
+  const ventajas = [
+    'Más de 35 años de trayectoria',
+    'Atención personalizada',
+    'Precios competitivos',
+    'Soluciones reales',
+  ]
+
   return (
-    <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
+    <>
+      {/* HERO */}
+      <section
+        id="inicio"
         style={{
-          backgroundColor: 'transparent',
-          border: `1px solid ${C.vino}`,
-          color: C.vino,
-          padding: '8px 16px',
-          borderRadius: '20px',
-          cursor: 'pointer',
-          fontWeight: '600',
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '8px',
-          transition: 'all 0.3s ease'
+          background: C.gris,
+          padding: '3.2rem 1.2rem 3rem',
+          textAlign: 'center',
+          borderBottom: `3px solid ${C.naranjaPale}`,
         }}
       >
-        ¿QUIÉNES SOMOS? 
-        {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-      </button>
+        <div style={{ maxWidth: 950, margin: '0 auto' }}>
+          <h1
+            style={{
+              margin: 0,
+              color: C.vino,
+              fontWeight: 900,
+              fontSize: 'clamp(2rem,6vw,3.5rem)',
+              lineHeight: 1.05,
+            }}
+          >
+            TECNO EG
+          </h1>
 
-      {/* TEXTO QUE SE OCULTA/MUESTRA */}
-      {isOpen && (
-        <p style={{
-          color: C.grisOscuro,
-          fontSize: '1rem',
-          marginTop: '1.5rem',
-          padding: '0 10%',
-          lineHeight: '1.6',
-          textAlign: 'center',
-          animation: 'fadeIn 0.5s ease'
-        }}>
-          Somos una Empresa de Servicios Especializados en Reparación y Mantenimiento de todo tipo de Máquinas de escritorio y portátiles, expertos en configuración de redes e instalación de Cámaras de Seguridad. <br /><br />
-          Ofrecemos Venta de Componentes para PC y Armado a medida. Con más de 35 años de trayectoria. En constante aprendizaje de nuevas tecnologías para ofrecer el mejor Servicio a Nuestros Clientes.
-        </p>
-      )}
-    </div>
-  );
-})()}
+          <p
+            style={{
+              margin: '.45rem 0 0',
+              color: C.grisOscuro,
+              fontWeight: 800,
+              fontSize: 'clamp(1rem,2vw,1.2rem)',
+            }}
+          >
+            Tecnología a otro Nivel
+          </p>
 
-      {/* Condiciones — 4 íconos */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-        gap: '1rem',
-        maxWidth: 720,
-        margin: '0 auto',
-      }}>
-        {condiciones.map((c) => (
-          <div key={c.titulo} style={{
-            background: C.grisOscuro+75,
-            border: `1.5px solid ${C.crema}`,
-            borderRadius: 14,
-            padding: '1.1rem 0.75rem',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-          }}>
-            <div style={{ fontSize: '1.75rem', marginBottom: '0.4rem' }}>{c.icono}</div>
-            <div style={{
-              fontSize: '0.75rem', fontWeight: 700, color: C.white,
-              textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.25rem',
-            }}>
-              {c.titulo}
+          <p
+            style={{
+              margin: '1rem auto 0',
+              maxWidth: 760,
+              color: '#111',
+              lineHeight: 1.65,
+            }}
+          >
+            Más de 35 años brindando soluciones reales en informática,
+            reparación de equipos, armado de PC, redes y venta de tecnología.
+          </p>
+
+          {/* BOTONES */}
+          <div
+            style={{
+              marginTop: '1.8rem',
+              display: 'flex',
+              gap: '.8rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            <a
+              href="https://wa.me/5491158081432"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={btnGreen}
+            >
+              <MessageCircle size={18} />
+              WhatsApp
+            </a>
+
+            <Link href="/tienda" style={btnOrange}>
+              Ir a la Tienda
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+
+        {/* MINI SERVICIOS */}
+        <div
+          style={{
+            marginTop: '2.2rem',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))',
+            gap: '.9rem',
+            maxWidth: 980,
+            marginInline: 'auto',
+          }}
+        >
+          {heroServicios.map((item, i) => {
+            const Icon = item.icon
+
+            return (
+              <div
+                key={i}
+                style={{
+                  background: '#fff',
+                  borderRadius: 18,
+                  padding: '1rem',
+                  boxShadow: '0 10px 24px rgba(0,0,0,.07)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '.7rem',
+                }}
+              >
+                <Icon size={22} color={C.vino} />
+                <span style={{ fontWeight: 700 }}>{item.text}</span>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* QUIENES SOMOS */}
+      <section
+        id="quienes"
+        style={{
+          background: '#ffffff',
+          padding: '4rem 1.2rem',
+        }}
+      >
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <button
+            onClick={() => setOpen(!open)}
+            style={{
+              margin: '0 auto',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '.55rem',
+              border: `2px solid ${C.vino}`,
+              background: '#fff',
+              color: C.vino,
+              padding: '.85rem 1.3rem',
+              borderRadius: 999,
+              fontWeight: 800,
+              cursor: 'pointer',
+            }}
+          >
+            QUIÉNES SOMOS
+            {open ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </button>
+
+          {open && (
+            <div
+              style={{
+                marginTop: '1.5rem',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))',
+                gap: '1rem',
+              }}
+            >
+              <div style={box}>
+                <h3 style={title}>Nuestra Historia</h3>
+                <p style={text}>
+                  Empresa dedicada a brindar soluciones tecnológicas reales.
+                  Trayectoria, experiencia y atención personalizada.
+                </p>
+              </div>
+
+              <div style={box}>
+                <h3 style={title}>Qué Hacemos</h3>
+                <p style={text}>
+                  Servicio técnico, upgrades, redes, cámaras,
+                  armado de PC y venta de componentes seleccionados.
+                </p>
+              </div>
             </div>
-            <div style={{ fontSize: '0.85rem', color: C.grisOscuro, lineHeight: 1.4 }}>
-              {c.detalle}
+          )}
+        </div>
+      </section>
+
+      {/* SERVICIOS RESTAURADOS */}
+      <section
+        style={{
+          background: '#fff',
+          padding: '0 1.2rem 4rem',
+        }}
+      >
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <h2
+            style={{
+              textAlign: 'center',
+              color: C.vino,
+              marginBottom: '2rem',
+              fontSize: '2rem',
+            }}
+          >
+            Servicios Especializados
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))',
+              gap: '1rem',
+            }}
+          >
+            {servicios.map((item) => {
+              const Icon = item.icon
+
+              return (
+                <div key={item.titulo} style={box}>
+                  <div
+                    style={{
+                      width: 52,
+                      height: 52,
+                      borderRadius: 14,
+                      background: C.gris,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '1rem',
+                    }}
+                  >
+                    <Icon size={24} color={C.vino} />
+                  </div>
+
+                  <h3 style={title}>{item.titulo}</h3>
+                  <p style={text}>{item.texto}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACTO */}
+      <section
+        id="contacto"
+        style={{
+          background: C.gris,
+          padding: '4rem 1.2rem',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1100,
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
+            gap: '1rem',
+          }}
+        >
+          <div style={boxWhite}>
+            <h2 style={title}>Contacto</h2>
+
+            <div
+              style={{
+                display: 'flex',
+                gap: '.7rem',
+                flexWrap: 'wrap',
+                marginTop: '1rem',
+              }}
+            >
+              <a
+                href="https://wa.me/5491158081432"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={btnGreen}
+              >
+                <MessageCircle size={18} />
+                WhatsApp
+              </a>
+
+              <a
+                href="https://instagram.com/tecnoeg"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={btnDark}
+              >
+                <Instagram size={18} />
+                Instagram
+              </a>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* WhatsApp CTA */}
-      <a
-        href="https://wa.me/5491158081432 "
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-          marginTop: '2rem',
-          background: '#25D366', color: C.white,
-          padding: '0.65rem 1.5rem', borderRadius: 24,
-          textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem',
-          boxShadow: '0 4px 14px rgba(37,211,102,0.35)',
-        }}
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.428a.75.75 0 0 0 .915.915l5.571-1.476A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 0 1-4.953-1.354l-.355-.211-3.667.971.988-3.607-.231-.371A9.725 9.725 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-        </svg>
-        Consultas 
-      </a>
-    </section>
+          <div style={boxWhite}>
+            <h2 style={title}>¿Por qué elegirnos?</h2>
+
+            <div
+              style={{
+                display: 'grid',
+                gap: '.75rem',
+                marginTop: '1rem',
+              }}
+            >
+              {ventajas.map((item) => (
+                <div
+                  key={item}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '.55rem',
+                  }}
+                >
+                  <BadgeCheck size={18} color={C.naranja} />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
+}
+
+const box = {
+  background: '#fafafa',
+  border: '1px solid #ececec',
+  borderRadius: 18,
+  padding: '1.4rem',
+}
+
+const boxWhite = {
+  background: '#fff',
+  borderRadius: 20,
+  padding: '1.5rem',
+  boxShadow: '0 12px 28px rgba(0,0,0,.06)',
+}
+
+const title = {
+  marginTop: 0,
+  color: '#4b1f1f',
+}
+
+const text = {
+  margin: 0,
+  color: '#333',
+  lineHeight: 1.7,
+}
+
+const btnGreen = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '.55rem',
+  background: '#25D366',
+  color: '#fff',
+  padding: '.85rem 1.2rem',
+  borderRadius: 999,
+  textDecoration: 'none',
+  fontWeight: 800,
+}
+
+const btnOrange = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '.55rem',
+  background: '#e67e22',
+  color: '#fff',
+  padding: '.85rem 1.2rem',
+  borderRadius: 999,
+  textDecoration: 'none',
+  fontWeight: 800,
+}
+
+const btnDark = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '.55rem',
+  background: '#111',
+  color: '#fff',
+  padding: '.85rem 1.2rem',
+  borderRadius: 999,
+  textDecoration: 'none',
+  fontWeight: 800,
 }
