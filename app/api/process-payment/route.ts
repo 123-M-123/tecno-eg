@@ -36,12 +36,15 @@ export async function POST(request: NextRequest) {
       issuer_id: datosParaMP.issuer_id,
       payment_method_id: datosParaMP.payment_method_id,
       transaction_amount: Number(datosParaMP.transaction_amount),
-      installments: Number(datosParaMP.installments),
+      installments: Number(datosParaMP.installments) || 1, // Si falla, que al menos sea 1
       description: datosParaMP.description || "Compra en TECNO EG",
       external_reference: emailLimpio,
       payer: {
-        email: datosParaMP.payer?.email,
-        identification: datosParaMP.payer?.identification,
+        email: datosParaMP.payer?.email || 'test_user_123@testuser.com', // Mail distinto al vendedor
+        identification: {
+          type: datosParaMP.payer?.identification?.type || "DNI",
+          number: datosParaMP.payer?.identification?.number || "12345678"
+        }
       }
     };
 
