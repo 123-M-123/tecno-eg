@@ -89,9 +89,6 @@ function CheckoutContent() {
   const titulo    = searchParams.get('titulo') || 'Compra en TECNO EG';
   const precio    = Number(searchParams.get('precio') || 0);
   const descripcion = `Pedido: ${titulo}`;
-  
-  // MODIFICACIÓN 1: Extraemos el mail de la URL
-  const vendedorEmail = searchParams.get('vendedorEmail') || 'mail_no_identificado@gmail.com';
 
   const [metodo,      setMetodo]      = useState<Metodo>('alias');
   const [error,       setError]       = useState('');
@@ -183,8 +180,7 @@ function CheckoutContent() {
             onSubmit: async ({ formData }: any) => {
               const r = await fetch('/api/process-payment', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                // MODIFICACIÓN 2: Aquí inyectamos el mail
-                body: JSON.stringify({ ...formData, vendedorEmail }),
+                body: JSON.stringify(formData),
               });
               const p = await r.json();
               if      (p.status === 'approved')                        window.location.href = '/success';
@@ -233,8 +229,7 @@ function CheckoutContent() {
               if (selectedPaymentMethod?.type === 'wallet_purchase') return;
               const r = await fetch('/api/process-payment', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                // MODIFICACIÓN 3: Aquí inyectamos el mail
-                body: JSON.stringify({ ...formData, vendedorEmail }),
+                body: JSON.stringify(formData),
               });
               const p = await r.json();
               if      (p.status === 'approved')                        window.location.href = '/success';
@@ -395,6 +390,41 @@ function CheckoutContent() {
             >
               {enviando ? 'Enviando...' : 'Confirmar pedido →'}
             </button>
+          </div>
+        )}
+
+        {/* ── Confirmación comprobante ── */}
+        {metodo === 'alias' && enviado && (
+          <div style={{ background: K.greenBg, borderRadius: 16, padding: '2rem', textAlign: 'center', border: `1px solid ${K.green}` }}>
+            <p style={{ fontSize: '2.5rem', margin: '0 0 0.5rem' }}>✅</p>
+            <h2 style={{ fontWeight: 800, color: K.green, marginBottom: '0.5rem' }}>¡Comprobante recibido!</h2>
+            <p style={{ color: K.sub, fontSize: '0.88rem' }}>
+              Verificamos tu pago y te confirmamos el pedido a la brevedad.
+            </p>
+          </div>
+        )}
+
+        {/* ── Panel Tarjeta / Efectivo ── */}
+        {metodo === 'tarjeta' && (
+          <div style={{ background: panelColor, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Tarjeta de crédito, débito o efectivo (Pago Fácil / Rapipago) — procesado por MercadoPago de forma segura.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando formulario...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-tarjeta" />
+          </div>
+        )}
+
+        {/* ── Panel Cuenta MP ── */}
+        {metodo === 'mp' && (
+          <div style={{ background: panelColor, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Iniciá sesión en MercadoPago para pagar con tu saldo disponible o tarjetas guardadas.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-mp" />
           </div>
         )}
 
