@@ -4,6 +4,17 @@
       "id": "notebooks",
       "nombre": "Notebooks",
       "productos": [
+
+         {
+          "id_producto": "notebook-lenovo-v15-g4-abp-business-black-amd-ryzen-7-7730u-15-6-fhd-8gb-ram-256gb-ssd-m-2-free-dos-teclado-ingles-83cr001wus",
+          "titulo": "PRODUCTO DE PRUEBA",
+          "precio": 5,
+          "categoria": "notebooks",
+          "etiqueta": "Disponible",
+          "descripcion": "Notebook Lenovo V15 G4 ABP business black AMD Ryzen 7 7730U 15.6&quot; FHD 8GB RAM 256GB SSD M.2 Free DOS teclado inglés (83CR001WUS)",
+          "imagen": "https://acdn-us.mitiendanube.com/stores/006/990/490/products/image_125861-fc75360d837a5bfa1917748765440667-480-0.webp",
+          "stock": 1
+        },
         {
           "id_producto": "notebook-lenovo-v15-g4-abp-business-black-amd-ryzen-7-7730u-15-6-fhd-8gb-ram-256gb-ssd-m-2-free-dos-teclado-ingles-83cr001wus",
           "titulo": "Notebook Lenovo V15 G4 ABP business black AMD Ryzen 7 7730U 15.6&quot; FHD 8GB RAM 256GB SSD M.2 Free DOS teclado inglés (83CR001WUS)",

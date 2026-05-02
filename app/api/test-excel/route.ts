@@ -7,7 +7,6 @@ export async function GET() {
   const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 
   try {
-    // 1. Obtener Token
     const resToken = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -20,26 +19,25 @@ export async function GET() {
     });
     const dataToken = await resToken.json();
 
-    if (!dataToken.access_token) {
-        return NextResponse.json({ error: "Error de Google Auth", detalle: dataToken }, { status: 400 });
-    }
-
-    // 2. Escribir fila de prueba
-    const range = 'webhoock MP!A:F';
+    // FORZAMOS LA CELDA A2
     const resSheet = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(range)}:append?valueInputOption=RAW`,
+      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent('webhoock MP!A2:F2')}?valueInputOption=RAW`,
       {
-        method: 'POST',
+        method: 'PUT', // PUT sobreescribe, no agrega
         headers: {
           Authorization: `Bearer ${dataToken.access_token}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ values: [["TEST_FINAL", new Date().toLocaleString(), "Venta de $1", "1", "OK", "test@test.com"]] }),
+        body: JSON.stringify({ values: [["EXITO_A2", "FECHA_TEST", "PRODUCTO", "100", "OK", "test@test.com"]] }),
       }
     );
 
     const dataSheet = await resSheet.json();
-    return NextResponse.json({ mensaje: "Si ves esto, la planilla DEBE tener una fila nueva", dataSheet });
+    return NextResponse.json({ 
+      nota: "Si esto da OK, tiene que aparecer en A2 SI O SI",
+      ID_PLANILLA_USADO: SHEET_ID,
+      dataSheet 
+    });
 
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
