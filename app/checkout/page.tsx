@@ -85,13 +85,10 @@ function OpcionBtn({
 function CheckoutContent() {
   const searchParams = useSearchParams();
 
-  // ✅ Datos vienen de searchParams — sin useCartStore ni useCarrito
   const titulo    = searchParams.get('titulo') || 'Compra en TECNO EG';
   const precio    = Number(searchParams.get('precio') || 0);
+  const vendedor  = searchParams.get('vendedor') || 'mguiyemo@gmail.com'; // Captura el mail de la URL
   const descripcion = `Pedido: ${titulo}`;
-  
-  // MODIFICACIÓN 1: Extraemos el mail de la URL
-  const vendedorEmail = searchParams.get('vendedorEmail') || 'mail_no_identificado@gmail.com';
 
   const [metodo,      setMetodo]      = useState<Metodo>('alias');
   const [error,       setError]       = useState('');
@@ -102,7 +99,6 @@ function CheckoutContent() {
   const [qrUrl,       setQrUrl]       = useState<string | null>(null);
   const [pagado,      setPagado]      = useState(false);
 
-  // ── Precios según método ──────────────────────────────────────────
   const precioFinal =
     metodo === 'alias'   ? precio :
     metodo === 'qr'      ? precio * 1.053 :
@@ -118,7 +114,6 @@ function CheckoutContent() {
     metodo === 'tarjeta' ? '#fff8de' :
     metodo === 'mp'      ? '#d7edff' : K.surface;
 
-  // ── QR: generar ──────────────────────────────────────────────────
   useEffect(() => {
     if (metodo !== 'qr') return;
     const generarQR = async () => {
@@ -126,7 +121,7 @@ function CheckoutContent() {
         const res  = await fetch('/api/create-qr', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ titulo, precio }),
+          body: JSON.stringify({ titulo, precio, vendedorEmail: vendedor }),
         });
         const data = await res.json();
         if (data.qr) setQrUrl(data.qr);
@@ -137,7 +132,6 @@ function CheckoutContent() {
     generarQR();
   }, [metodo]);
 
-  // ── QR: polling pago ─────────────────────────────────────────────
   useEffect(() => {
     if (!qrUrl) return;
     const interval = setInterval(async () => {
@@ -150,7 +144,6 @@ function CheckoutContent() {
     return () => clearInterval(interval);
   }, [qrUrl]);
 
-  // ── Brick Tarjeta / Efectivo ──────────────────────────────────────
   useEffect(() => {
     if (metodo !== 'tarjeta') return;
     const container = document.getElementById('brick-tarjeta');
@@ -160,10 +153,10 @@ function CheckoutContent() {
       try {
         const res  = await fetch('/api/create-preference', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
+          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion, vendedorEmail: vendedor }),
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.error);
+        if (!res.ok) throw new Error(data.error || 'Error al crear preferencia');
 
         if (!window.MercadoPago) {
           await new Promise<void>(resolve => {
@@ -183,8 +176,7 @@ function CheckoutContent() {
             onSubmit: async ({ formData }: any) => {
               const r = await fetch('/api/process-payment', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                // MODIFICACIÓN 2: Aquí inyectamos el mail
-                body: JSON.stringify({ ...formData, vendedorEmail }),
+                body: JSON.stringify({ ...formData, vendedorEmail: vendedor }),
               });
               const p = await r.json();
               if      (p.status === 'approved')                        window.location.href = '/success';
@@ -199,7 +191,6 @@ function CheckoutContent() {
     init();
   }, [metodo]);
 
-  // ── Brick Cuenta MP ───────────────────────────────────────────────
   useEffect(() => {
     if (metodo !== 'mp') return;
     const container = document.getElementById('brick-mp');
@@ -209,10 +200,10 @@ function CheckoutContent() {
       try {
         const res  = await fetch('/api/create-preference', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion }),
+          body: JSON.stringify({ title: titulo, price: precio, quantity: 1, description: descripcion, vendedorEmail: vendedor }),
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.error);
+        if (!res.ok) throw new Error(data.error || 'Error al crear preferencia');
 
         if (!window.MercadoPago) {
           await new Promise<void>(resolve => {
@@ -233,8 +224,7 @@ function CheckoutContent() {
               if (selectedPaymentMethod?.type === 'wallet_purchase') return;
               const r = await fetch('/api/process-payment', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                // MODIFICACIÓN 3: Aquí inyectamos el mail
-                body: JSON.stringify({ ...formData, vendedorEmail }),
+                body: JSON.stringify({ ...formData, vendedorEmail: vendedor }),
               });
               const p = await r.json();
               if      (p.status === 'approved')                        window.location.href = '/success';
@@ -249,7 +239,6 @@ function CheckoutContent() {
     init();
   }, [metodo]);
 
-  // ── Enviar comprobante ────────────────────────────────────────────
   const handleEnviarComprobante = async () => {
     if (!comprobante) return;
     setEnviando(true);
@@ -257,6 +246,7 @@ function CheckoutContent() {
     fd.append('archivo', comprobante);
     fd.append('titulo',  titulo);
     fd.append('precio',  String(precio));
+    fd.append('vendedorEmail', vendedor); // También enviamos el vendedor aquí
     try {
       const res = await fetch('/api/upload-comprobante', { method: 'POST', body: fd });
       if (res.ok) setEnviado(true);
@@ -265,7 +255,6 @@ function CheckoutContent() {
     finally   { setEnviando(false); }
   };
 
-  // ── Render ────────────────────────────────────────────────────────
   return (
     <div style={{ minHeight: '100vh', background: K.bg, padding: '2rem 1rem' }}>
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
@@ -395,6 +384,41 @@ function CheckoutContent() {
             >
               {enviando ? 'Enviando...' : 'Confirmar pedido →'}
             </button>
+          </div>
+        )}
+
+        {/* ── Confirmación comprobante ── */}
+        {metodo === 'alias' && enviado && (
+          <div style={{ background: K.greenBg, borderRadius: 16, padding: '2rem', textAlign: 'center', border: `1px solid ${K.green}` }}>
+            <p style={{ fontSize: '2.5rem', margin: '0 0 0.5rem' }}>✅</p>
+            <h2 style={{ fontWeight: 800, color: K.green, marginBottom: '0.5rem' }}>¡Comprobante recibido!</h2>
+            <p style={{ color: K.sub, fontSize: '0.88rem' }}>
+              Verificamos tu pago y te confirmamos el pedido a la brevedad.
+            </p>
+          </div>
+        )}
+
+        {/* ── Panel Tarjeta / Efectivo ── */}
+        {metodo === 'tarjeta' && (
+          <div style={{ background: panelColor, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Tarjeta de crédito, débito o efectivo (Pago Fácil / Rapipago) — procesado por MercadoPago de forma segura.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando formulario...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-tarjeta" />
+          </div>
+        )}
+
+        {/* ── Panel Cuenta MP ── */}
+        {metodo === 'mp' && (
+          <div style={{ background: panelColor, borderRadius: 16, padding: '1.5rem', border: `1px solid ${K.border}`, boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
+            <p style={{ fontSize: '0.78rem', color: K.muted, marginBottom: '1rem' }}>
+              Iniciá sesión en MercadoPago para pagar con tu saldo disponible o tarjetas guardadas.
+            </p>
+            {loading && <p style={{ color: K.muted, fontSize: '0.85rem' }}>Cargando...</p>}
+            {error   && <p style={{ color: 'red',   fontSize: '0.82rem' }}>{error}</p>}
+            <div id="brick-mp" />
           </div>
         )}
 
