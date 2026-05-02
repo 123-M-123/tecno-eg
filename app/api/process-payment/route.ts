@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// --- CONFIGURACIÓN DE GOOGLE (Funciones de ayuda) ---
+// --- 1. FUNCIONES DE AYUDA PARA GOOGLE SHEETS ---
 
 async function getAccessToken(): Promise<string> {
   const client_id = process.env.GOOGLE_CLIENT_ID || '';
@@ -25,7 +25,7 @@ async function getAccessToken(): Promise<string> {
 
 async function agregarEnSheet(token: string, fila: any[]) {
   const SHEET_ID = process.env.GOOGLE_SHEET_ID || '';
-  const range = 'webhoock MP!A:F'; // Asegúrate que el nombre de la pestaña sea idéntico
+  const range = 'webhoock MP!A:F'; // Asegúrate de que la pestaña se llame así
   
   const res = await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(range)}:append?valueInputOption=RAW`,
@@ -41,18 +41,21 @@ async function agregarEnSheet(token: string, fila: any[]) {
   return res.json();
 }
 
-// --- HANDLER PRINCIPAL (POST) ---
+// --- 2. HANDLER PRINCIPAL (POST) ---
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.json();
     
-    // --- LOG ESTRATÉGICO 1: Ver qué llega del frontend ---
-    console.log(">>>> [FRONTEND] Mail del Vendedor recibido:", formData.vendedorEmail);
+    // --- LIMPIEZA DE DATOS ---
+    // Sacamos vendedorEmail del objeto para que MP no se queje (Error 400)
+    const { vendedorEmail, ...datosParaMP } = formData;
 
-    const vendedorEmail = formData.vendedorEmail || "mail_no_identificado@gmail.com";
+    console.log(">>>> [FRONTEND] Mail del Vendedor recibido:", vendedorEmail);
 
-    // Llamada a Mercado Pago
+    const emailLimpio = vendedorEmail || "mguiyemo@gmail.com";
+
+    // --- LLAMADA A MERCADO PAGO ---
     const response = await fetch('https://api.mercadopago.com/v1/payments', {
       method: 'POST',
       headers: {
@@ -61,42 +64,44 @@ export async function POST(request: NextRequest) {
         'X-Idempotency-Key': crypto.randomUUID(),
       },
       body: JSON.stringify({ 
-        ...formData, 
-        external_reference: vendedorEmail, // Aquí inyectamos el mail para recuperarlo luego
+        ...datosParaMP,              // Solo enviamos lo que MP reconoce
+        external_reference: emailLimpio, // Ponemos el mail aquí (MP lo acepta perfecto)
         differential_pricing_id: undefined 
       }),
     });
 
     const data = await response.json();
 
-    // --- LOG ESTRATÉGICO 2: Ver respuesta de Mercado Pago ---
+    // --- LOGS PARA DEBUG ---
     console.log(">>>> [MERCADO PAGO] Estado del pago:", data.status);
     console.log(">>>> [MERCADO PAGO] ID de pago:", data.id);
-    console.log(">>>> [MERCADO PAGO] External Reference devuelto:", data.external_reference);
 
     if (!response.ok) {
-      console.error("❌ Error en MP:", data);
+      console.error("❌ Error en MP:", data.message || data);
       return NextResponse.json(data, { status: response.status });
     }
 
-    // Si el pago fue aprobado, escribimos en el Excel inmediatamente
+    // --- ESCRITURA EN GOOGLE SHEETS ---
+    // Solo si el pago fue aprobado
     if (data.status === 'approved') {
       try {
-        console.log("⏳ Iniciando escritura en Google Sheets...");
+        console.log("⏳ Intentando escribir en Google Sheets para:", emailLimpio);
         const token = await getAccessToken();
         const fecha = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' });
         
+        // El orden de las columnas:
+        // A: Vendedor | B: Fecha | C: Producto | D: Precio | E: Estado | F: Comprador
         const fila = [
-          vendedorEmail,            // COLUMNA A
-          fecha,                    // COLUMNA B
+          emailLimpio,                    // COLUMNA A
+          fecha,                          // COLUMNA B
           data.description || 'Venta Online', // COLUMNA C
-          data.transaction_amount,  // COLUMNA D
-          'APROBADO',               // COLUMNA E
-          data.payer?.email || ''   // COLUMNA F
+          data.transaction_amount,        // COLUMNA D
+          'APROBADO',                     // COLUMNA E
+          data.payer?.email || ''         // COLUMNA F
         ];
         
         await agregarEnSheet(token, fila);
-        console.log('✅ EXCEL: Fila agregada correctamente para', vendedorEmail);
+        console.log('✅ EXCEL: Fila agregada con éxito');
       } catch (sheetError) {
         console.error('❌ EXCEL ERROR:', sheetError);
       }
@@ -105,7 +110,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(data);
 
   } catch (error) {
-    console.error('❌ ERROR CRÍTICO EN ROUTE:', error);
+    console.error('❌ ERROR CRÍTICO EN EL SERVIDOR:', error);
     return NextResponse.json(
       { error: 'Error interno en el servidor' },
       { status: 500 }
