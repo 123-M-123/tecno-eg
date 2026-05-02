@@ -25,9 +25,9 @@ async function getAccessToken(): Promise<string> {
 
 async function agregarEnSheet(token: string, fila: any[]) {
   const SHEET_ID = process.env.GOOGLE_SHEET_ID || '';
-  const range = 'webhoock MP!A:F'; // Asegúrate de que la pestaña se llame así
+  const range = 'webhoock MP!A:F';
   
-  const res = await fetch(
+  await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(range)}:append?valueInputOption=RAW`,
     {
       method: 'POST',
@@ -38,7 +38,6 @@ async function agregarEnSheet(token: string, fila: any[]) {
       body: JSON.stringify({ values: [fila] }),
     }
   );
-  return res.json();
 }
 
 // --- 2. HANDLER PRINCIPAL (POST) ---
@@ -47,57 +46,61 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.json();
     
-    // --- LIMPIEZA DE DATOS ---
-    // Sacamos vendedorEmail del objeto para que MP no se queje (Error 400)
+    // Separamos el vendedorEmail para que no ensucie el objeto de MP
     const { vendedorEmail, ...datosParaMP } = formData;
-
-    console.log(">>>> [FRONTEND] Mail del Vendedor recibido:", vendedorEmail);
-
     const emailLimpio = vendedorEmail || "mguiyemo@gmail.com";
 
-    // --- LLAMADA A MERCADO PAGO ---
+    console.log(">>>> [FRONTEND] Mail del Vendedor recibido:", emailLimpio);
+
+    // --- CONSTRUCCIÓN DEL OBJETO LIMPIO PARA MP ---
+    const payloadMP = {
+      ...datosParaMP,
+      // IMPORTANTE: Forzamos que el monto sea un Número. A veces llega como String y MP tira Error 500.
+      transaction_amount: Number(datosParaMP.transaction_amount),
+      external_reference: emailLimpio,
+    };
+
+    // Quitamos campos que puedan dar ruido si vienen vacíos
+    if (payloadMP.differential_pricing_id === undefined) {
+      delete (payloadMP as any).differential_pricing_id;
+    }
+
+    console.log(">>>> [DEBUG] Enviando monto:", payloadMP.transaction_amount);
+
     const response = await fetch('https://api.mercadopago.com/v1/payments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${process.env.MP_ACCESS_TOKEN}`,
-        'X-Idempotency-Key': crypto.randomUUID(),
+        // Generamos un ID de seguridad único para esta transacción
+        'X-Idempotency-Key': Math.random().toString(36).substring(7),
       },
-      body: JSON.stringify({ 
-        ...datosParaMP,              // Solo enviamos lo que MP reconoce
-        external_reference: emailLimpio, // Ponemos el mail aquí (MP lo acepta perfecto)
-        differential_pricing_id: undefined 
-      }),
+      body: JSON.stringify(payloadMP),
     });
 
     const data = await response.json();
 
-    // --- LOGS PARA DEBUG ---
-    console.log(">>>> [MERCADO PAGO] Estado del pago:", data.status);
-    console.log(">>>> [MERCADO PAGO] ID de pago:", data.id);
+    console.log(">>>> [MERCADO PAGO] Estado final:", data.status);
 
     if (!response.ok) {
-      console.error("❌ Error en MP:", data.message || data);
+      // Si MP tira error, lo logueamos completo para ver la causa
+      console.error("❌ Error de MP detallado:", JSON.stringify(data));
       return NextResponse.json(data, { status: response.status });
     }
 
-    // --- ESCRITURA EN GOOGLE SHEETS ---
-    // Solo si el pago fue aprobado
+    // --- SI ES APROBADO, ESCRIBIMOS EN GOOGLE SHEETS ---
     if (data.status === 'approved') {
       try {
-        console.log("⏳ Intentando escribir en Google Sheets para:", emailLimpio);
         const token = await getAccessToken();
         const fecha = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' });
         
-        // El orden de las columnas:
-        // A: Vendedor | B: Fecha | C: Producto | D: Precio | E: Estado | F: Comprador
         const fila = [
-          emailLimpio,                    // COLUMNA A
-          fecha,                          // COLUMNA B
-          data.description || 'Venta Online', // COLUMNA C
-          data.transaction_amount,        // COLUMNA D
-          'APROBADO',                     // COLUMNA E
-          data.payer?.email || ''         // COLUMNA F
+          emailLimpio,              // Columna A
+          fecha,                    // Columna B
+          data.description || 'Venta Online', 
+          data.transaction_amount,  
+          'APROBADO',               
+          data.payer?.email || ''   
         ];
         
         await agregarEnSheet(token, fila);
@@ -110,10 +113,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(data);
 
   } catch (error) {
-    console.error('❌ ERROR CRÍTICO EN EL SERVIDOR:', error);
-    return NextResponse.json(
-      { error: 'Error interno en el servidor' },
-      { status: 500 }
-    );
+    console.error('❌ ERROR CRÍTICO:', error);
+    return NextResponse.json({ error: 'Error interno' }, { status: 500 });
   }
 }
