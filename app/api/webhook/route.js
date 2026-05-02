@@ -23,7 +23,8 @@ async function getAccessToken() {
 }
 
 async function agregarEnSheet(token, fila) {
-  const range = 'webhoock MP!A:F'
+  // Aumentamos el rango a G por si agregamos más columnas en el futuro
+  const range = 'webhoock MP!A:G' 
   await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(range)}:append?valueInputOption=RAW`,
     {
@@ -41,7 +42,6 @@ export async function POST(request) {
   try {
     const body = await request.json()
 
-    // MP envía varios tipos, solo procesamos 'payment'
     if (body.type !== 'payment') {
       return NextResponse.json({ status: 'ignored' }, { status: 200 })
     }
@@ -51,14 +51,13 @@ export async function POST(request) {
       return NextResponse.json({ status: 'no payment id' }, { status: 200 })
     }
 
-    // Consultar detalle del pago a MP
     const mpRes = await fetch(
       `https://api.mercadopago.com/v1/payments/${paymentId}`,
       { headers: { Authorization: `Bearer ${ACCESS_TOKEN}` } }
     )
-    const pago = await mpRes.json()
+    const pago = await mpRes.json();
+console.log("EXTERNAL REFERENCE DESDE MP:", pago.external_reference);
 
-    // Solo registrar pagos aprobados
     if (pago.status !== 'approved') {
       return NextResponse.json({ status: 'not approved' }, { status: 200 })
     }
@@ -67,19 +66,24 @@ export async function POST(request) {
       timeZone: 'America/Argentina/Buenos_Aires'
     })
 
+    // --- NUEVO: EXTRAEMOS EL MAIL DEL VENDEDOR QUE GUARDAMOS EN EXTERNAL_REFERENCE ---
+    const emailVendedor = pago.external_reference || 'Sin Identificar';
+
+    // REORGANIZAMOS LA FILA:
+    // Col A: Mail Vendedor | Col B: Fecha | Col C: Producto | Col D: Precio | Col E: Estado | Col F: Mail Comprador
     const fila = [
-      fecha,
-      pago.description          || 'Compra Tienda Online',
-      pago.transaction_amount   || '',
-      'PAGADO',
-      '',  // sin comprobante en pagos MP
-      pago.payer?.email         || '',
+      emailVendedor,             // COLUMNA A (La que necesitás para el panel)
+      fecha,                     // COLUMNA B
+      pago.description || 'Compra Online', // COLUMNA C
+      pago.transaction_amount || 0,        // COLUMNA D
+      'PAGADO',                  // COLUMNA E
+      pago.payer?.email || '',   // COLUMNA F (Mail del que compró)
     ]
 
     const token = await getAccessToken()
     await agregarEnSheet(token, fila)
 
-    console.log('Pago registrado en Sheet:', paymentId)
+    console.log('Pago registrado para el vendedor:', emailVendedor)
     return NextResponse.json({ status: 'ok' }, { status: 200 })
 
   } catch (error) {
