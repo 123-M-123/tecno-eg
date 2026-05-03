@@ -16,32 +16,39 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://tecno-eg.vercel.app';
 
-    // Soporta tanto carrito nuevo (items array) como llamada vieja (producto único)
+    // 1. CAPTURAMOS EL MAIL (Para que la Columna A no diga "Sin Identificar")
+    const vendedorEmail = body.vendedorEmail || "mguiyemo@gmail.com";
+
+    // 2. MANTENEMOS TU LÓGICA DE CARRITO (No rompemos nada)
     let items: ItemCarrito[];
 
     if (body.items && Array.isArray(body.items)) {
-      // Carrito nuevo → array de productos
+      // Formato Carrito (Array)
       items = body.items.map((i: ItemCarrito) => ({
         id:          i.id,
         title:       i.title,
-        quantity:    i.quantity,
-        unit_price:  i.unit_price,
+        quantity:    Number(i.quantity),
+        unit_price:  Number(i.unit_price),
         currency_id: 'ARS',
       }));
     } else {
-      // Formato viejo → producto único (compatibilidad)
+      // Formato Producto Único (Compatibilidad)
       items = [{
         id:          '1',
         title:       body.title,
-        quantity:    body.quantity,
-        unit_price:  body.price,
+        quantity:    Number(body.quantity || 1),
+        unit_price:  Number(body.price || 0),
         currency_id: 'ARS',
         description: body.description,
       }];
     }
 
+    // 3. CONSTRUIMOS LA PREFERENCIA CON EL EXTERNAL_REFERENCE
     const preference = {
       items,
+      // ESTA LÍNEA ES LA QUE ARREGLA TU EXCEL:
+      external_reference: vendedorEmail, 
+      
       back_urls: {
         success: `${baseUrl}/success`,
         failure: `${baseUrl}/failure`,
