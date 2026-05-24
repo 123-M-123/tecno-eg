@@ -5,8 +5,10 @@ export const revalidate = 3600; // Se actualiza cada 1 hora
 
 /**
  * 🛡️ HELPER: Limpieza de caracteres para XML
+ * Meta rechaza el XML si tiene símbolos como &, <, > sueltos.
  */
 function escapeXml(unsafe: string) {
+  if (!unsafe) return "";
   return unsafe.replace(/[<>&"']/g, (c) => {
     switch (c) {
       case '<': return '&lt;';
@@ -23,22 +25,25 @@ export async function GET() {
   try {
     const baseUrl = 'https://tecno-eg.vercel.app';
     
-    // 1. Aplastamos las secciones para tener una lista única de productos
+    // 1. Unificamos todos los productos de todas las secciones en un solo array
     const allProducts = productosData.secciones.flatMap(seccion => seccion.productos);
 
-    // 2. Construcción del encabezado XML RSS 2.0
-    let xml = `<?xml version="1.0"?>
+    // 2. Encabezado del Feed RSS 2.0 con el namespace de Google (g:)
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
-    <title>Tecno-EG - Catálogo de Tecnología</title>
+    <title>Tecno-EG - Catálogo Oficial</title>
     <link>${baseUrl}</link>
-    <description>Notebooks, Monitores y Componentes de PC de alta gama</description>`;
+    <description>Venta de Notebooks, Monitores y Componentes</description>`;
 
-    // 3. Mapeo de productos al formato de Meta
+    // 3. Generación de cada ítem
     allProducts.forEach((p) => {
       const title = escapeXml(p.titulo);
       const description = escapeXml(p.descripcion || p.titulo);
       const availability = p.stock > 0 ? 'in stock' : 'out of stock';
+      
+      // Formateamos el precio (Meta prefiere '1250.00 ARS')
+      const precioFormateado = `${p.precio}.00 ARS`;
 
       xml += `
     <item>
@@ -50,13 +55,13 @@ export async function GET() {
       <g:brand>Tecno-EG</g:brand>
       <g:condition>new</g:condition>
       <g:availability>${availability}</g:availability>
-      <g:price>${p.precio} ARS</g:price>
+      <g:price>${precioFormateado}</g:price>
       <g:google_product_category>Electronics &gt; Computers</g:google_product_category>
       <g:shipping>
         <g:country>AR</g:country>
         <g:service>Standard</g:service>
-        <g:price>0 ARS</g:price>
-      </shipping>
+        <g:price>0.00 ARS</g:price>
+      </g:shipping>
     </item>`;
     });
 
@@ -64,14 +69,15 @@ export async function GET() {
   </channel>
 </rss>`;
 
+    // 4. Retornamos con el Content-Type correcto para que el navegador lo vea como XML
     return new NextResponse(xml, {
       headers: {
-        'Content-Type': 'application/xml',
+        'Content-Type': 'application/xml; charset=utf-8',
         'Cache-Control': 's-maxage=3600, stale-while-revalidate',
       },
     });
   } catch (error: any) {
-    console.error("Error generando catálogo XML:", error.message);
-    return NextResponse.json({ error: 'Error generating catalog' }, { status: 500 });
+    console.error("🔥 Error en Catálogo Meta:", error.message);
+    return NextResponse.json({ error: 'Fallo al generar el XML' }, { status: 500 });
   }
 }
