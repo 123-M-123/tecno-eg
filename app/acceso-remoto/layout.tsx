@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Acceso Remoto Particular | Solución Técnica Inmediata',
     description: '¿Problemas con tu PC o Red? Tecno EG lo soluciona de forma remota. ¡Contactanos!',
-    url: 'https://tecno-eg.com.ar/acceso-remoto',
+    url: 'https://tecno-eg.vercel.app/acceso-remoto', // Usá la URL de vercel por ahora si no tenés el dominio .com.ar activo
     siteName: 'Tecno EG',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://tecno-eg.com.ar/acceso-remoto',
+    canonical: 'https://tecno-eg.vercel.app/acceso-remoto',
   }
 };
 
