@@ -1,307 +1,78 @@
 'use client'
 
 import Image from 'next/image'
-import { useCarrito } from '../context/CarritoContext'
-import { C } from '@/styles/colores'
-import { getOriginalPrice } from '@/lib/pricing'
-
-const formatARS = (n: number) =>
-  n.toLocaleString('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 })
-
-const IconCarrito = ({ size = 15 }: { size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="9" cy="21" r="1" />
-    <circle cx="20" cy="21" r="1" />
-    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-  </svg>
-)
+import { useCartStore } from '@/store/useCartStore'
+import { useConfigStore } from '@/store/useConfigStore'
+import { X, ShoppingCart } from 'lucide-react'
 
 export default function ModalImagen() {
-  const { modal, setModal, agregarAlCarrito } = useCarrito()
-  if (!modal) return null
+  const { modalOpen, activeProduct, activeIndex, productList, closeModal, navigateModal, addItem } = useCartStore()
+  const { config } = useConfigStore()
 
-  const lista = modal._lista || []
-  const indice = modal._indice ?? -1
-  const tieneFlechas = lista.length > 1 && indice >= 0
+  if (!modalOpen || !activeProduct) return null
 
-  const ir = (nuevoIndice: number) => {
-    if (nuevoIndice < 0 || nuevoIndice >= lista.length) return
-    setModal({ ...lista[nuevoIndice], _lista: lista, _indice: nuevoIndice })
-  }
-
-  const precioFinal = modal.precio
-  const precioOriginal = getOriginalPrice(modal.precio)
+  const hasNext = activeIndex < productList.length - 1
+  const hasPrev = activeIndex > 0
+  const formatARS = (n: number) => n.toLocaleString('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 })
+  
+  const precioFinal = activeProduct.precio
+  const precioLista = Math.round(precioFinal / 0.9)
 
   return (
-    <div
-      onClick={() => setModal(null)}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        background: 'rgba(20,18,14,0.88)',
-        zIndex: 100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '1rem',
-      }}
-    >
-      <div
-        onClick={e => e.stopPropagation()}
-       style={{
-  background: C.white,
-  borderRadius: 16,
-  overflow: 'hidden',
-  width: '100%',
-  maxWidth: 480,
-  boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
-  position: 'relative',
-}}
-className="modal-producto"
-      >
-        {/* Flechas navegación */}
-        {tieneFlechas && (
-          <>
-            <button
-              onClick={() => ir(indice - 1)}
-              disabled={indice === 0}
-              style={{
-                position: 'absolute',
-                left: 8,
-                top: '35%',
-                zIndex: 10,
-                background: indice === 0 ? 'rgba(0,0,0,0.2)' : C.vino,
-                border: 'none',
-                borderRadius: '50%',
-                width: 48,
-                height: 48,
-                color: C.white,
-                fontSize: '2.6rem',
-                lineHeight: '1',
-                paddingBottom: '10px',
-                cursor: indice === 0 ? 'default' : 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 700,
-              }}
-            >
-              ‹
-            </button>
+    <div onClick={closeModal} style={overlayStyle}>
+      <div onClick={e => e.stopPropagation()} style={modalStyle}>
+        
+        {/* Navegación */}
+        {hasPrev && <button onClick={() => navigateModal('prev')} style={{...arrowBtn, left: 10}}>‹</button>}
+        {hasNext && <button onClick={() => navigateModal('next')} style={{...arrowBtn, right: 10}}>›</button>}
 
-            <button
-              onClick={() => ir(indice + 1)}
-              disabled={indice === lista.length - 1}
-              style={{
-                position: 'absolute',
-                right: 8,
-                top: '35%',
-                zIndex: 10,
-                background: indice === lista.length - 1 ? 'rgba(0,0,0,0.2)' : C.vino,
-                border: 'none',
-                borderRadius: '50%',
-                width: 48,
-                height: 48,
-                color: C.white,
-                fontSize: '2.6rem',
-                lineHeight: '1',
-                paddingBottom: '10px',
-                cursor: indice === lista.length - 1 ? 'default' : 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 700,
-              }}
-            >
-              ›
-            </button>
-          </>
-        )}
+        <button onClick={closeModal} style={closeBtn}><X size={20}/></button>
 
-        {/* Imagen */}
         <div style={{ position: 'relative', aspectRatio: '1', width: '100%' }}>
-          <Image
-            src={modal.imagen}
-            alt={modal.titulo}
-            fill
-            sizes="480px"
-            style={{ objectFit: 'cover' }}
-          />
-
-          <button
-            onClick={() => setModal(null)}
-            style={{
-              position: 'absolute',
-              top: 10,
-              right: 10,
-              background: 'rgba(0,0,0,0.5)',
-              border: 'none',
-              borderRadius: '50%',
-              width: 32,
-              height: 32,
-              color: C.white,
-              fontSize: '1rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            ✕
-          </button>
-
-          {tieneFlechas && (
-            <span
-              style={{
-                position: 'absolute',
-                bottom: 8,
-                right: 8,
-                background: 'rgba(0,0,0,0.5)',
-                color: C.white,
-                fontSize: '0.7rem',
-                padding: '0.2rem 0.5rem',
-                borderRadius: 10,
-              }}
-            >
-              {indice + 1} / {lista.length}
-            </span>
-          )}
+          <Image src={activeProduct.imagen} alt={activeProduct.nombre} fill style={{ objectFit: 'contain', padding: '20px' }} />
+          {productList.length > 1 && <span style={counterTag}>{activeIndex + 1} / {productList.length}</span>}
         </div>
 
-        {/* Info */}
-        <div style={{ padding: '1.25rem 1.5rem' }}>
-          <h3 style={{ margin: '0 0 0.3rem', fontSize: '1.1rem', fontWeight: 700, color: C.vino }}>
-            {modal.titulo}
+        <div style={{ padding: '1.5rem' }}>
+          <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-medio-1)' }}>
+            {activeProduct.nombre || activeProduct.titulo}
           </h3>
-
-          {/* Stock */}
-          <span
-            translate="no"
-            style={{
-              display: 'inline-block',
-              marginBottom: '0.75rem',
-              background: modal.stock === 0 ? '#cc0000' : '#2d9c4a',
-              color: C.white,
-              fontSize: '0.72rem',
-              fontWeight: 700,
-              padding: '0.2rem 0.6rem',
-              borderRadius: 8,
-            }}
-          >
-            {modal.stock === 0 ? '❌ Sin stock' : '✅ Disponible'}
-          </span>
-
-          {/* PRECIO */}
-          <div style={{ display: 'flex', flexDirection: 'column', marginTop: '0.5rem' }}>
-           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-
-  {/* precio de lista */}
-  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-
-    <span style={{
-      fontSize: '1.1rem',
-      textDecoration: 'line-through',
-      opacity: 0.5,
-      color: C.grisOscuro,
-    }}>
-      {formatARS(precioOriginal)}
-    </span>
-
-    <span style={{
-      fontSize: '0.9rem',
-      opacity: 0.7,
-      color: C.grisOscuro,
-    }}>
-      Precio de lista
-    </span>
-
-  </div>
-
-  {/* precio con descuento */}
-  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-
-    <span style={{
-      fontSize: '1.3rem',
-      fontWeight: 800,
-      color: C.naranja,
-    }}>
-      {formatARS(precioFinal)}
-    </span>
-
-    <span style={{
-      fontSize: '0.85rem',
-      fontWeight: 400,
-      color: C.naranja,
-      opacity: 0.8,
-    }}>
-      (Con desc. 10%)
-    </span>
-
-  </div>
-
-</div>
-          </div>
-
-          {/* Botones */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginTop: '0.75rem',
-            }}
-          >
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <button
-                onClick={() => setModal(null)}
-                style={{
-                  padding: '0.5rem 1rem',
-                  border: `1px solid ${C.gris}`,
-                  borderRadius: 8,
-                  background: C.white,
-                  color: C.grisOscuro,
-                  cursor: 'pointer',
-                  fontSize: '0.85rem',
-                }}
-              >
-                Cerrar
-              </button>
-
-              <button
-                onClick={() => {
-                  agregarAlCarrito(modal)
-                  setModal(null)
-                }}
-                disabled={modal.stock === 0}
-                style={{
-                  padding: '0.5rem 1.25rem',
-                  border: 'none',
-                  borderRadius: 8,
-                  background: modal.stock === 0 ? C.gris : C.naranja,
-                  color: C.white,
-                  cursor: modal.stock === 0 ? 'default' : 'pointer',
-                  fontSize: '0.85rem',
-                  fontWeight: 700,
-                }}
-              >
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <IconCarrito size={15} />
-                  {modal.stock === 0 ? 'Sin stock' : 'Agregar'}
-                </span>
-              </button>
+          
+          <div style={{ margin: '1rem 0' }}>
+            <span style={{ fontSize: '1rem', textDecoration: 'line-through', opacity: 0.5 }}>{formatARS(precioLista)}</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+               <span style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--color-medio-2)' }}>{formatARS(precioFinal)}</span>
+               <span style={descTag}>10% OFF</span>
             </div>
           </div>
+
+          <button 
+            disabled={activeProduct.stock === 0}
+            onClick={() => {
+              addItem({
+                id: activeProduct.id || activeProduct.id_producto,
+                nombre: activeProduct.nombre || activeProduct.titulo,
+                precio: activeProduct.precio,
+                precioTransfer: activeProduct.precio,
+                imagen: activeProduct.imagen,
+                cantidad: 1
+              });
+              closeModal();
+            }}
+            style={{...addBtn, background: activeProduct.stock === 0 ? '#ccc' : 'var(--color-medio-1)'}}
+          >
+            <ShoppingCart size={18} /> {activeProduct.stock === 0 ? 'SIN STOCK' : 'AGREGAR AL CARRITO'}
+          </button>
         </div>
       </div>
     </div>
   )
 }
+
+const overlayStyle: React.CSSProperties = { position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }
+const modalStyle: React.CSSProperties = { background: '#fff', width: '100%', maxWidth: 450, borderRadius: '20px', position: 'relative', overflow: 'hidden' }
+const arrowBtn: React.CSSProperties = { position: 'absolute', top: '40%', zIndex: 10, background: 'var(--color-medio-1)', color: '#fff', border: 'none', width: 40, height: 40, borderRadius: '50%', cursor: 'pointer', fontSize: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '5px' }
+const closeBtn: React.CSSProperties = { position: 'absolute', top: 15, right: 15, zIndex: 11, background: 'rgba(255,255,255,0.8)', border: 'none', borderRadius: '50%', padding: '5px', cursor: 'pointer' }
+const counterTag: React.CSSProperties = { position: 'absolute', bottom: 10, right: 10, background: 'rgba(0,0,0,0.5)', color: '#fff', padding: '2px 8px', borderRadius: '10px', fontSize: '0.7rem' }
+const descTag: React.CSSProperties = { background: 'var(--color-medio-2)', color: '#fff', padding: '2px 8px', borderRadius: '5px', fontSize: '0.7rem', fontWeight: 800 }
+const addBtn: React.CSSProperties = { width: '100%', padding: '1rem', border: 'none', borderRadius: '12px', color: '#fff', fontWeight: 800, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }

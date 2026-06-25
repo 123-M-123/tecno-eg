@@ -268,3 +268,5 @@ export async function savePaymentToMaster(paymentData: any[]) {
     throw error; 
   }
 }
+// Al final de lib/googleSheets.ts agrega esto:
+export const getGoogleSheetsClient = getProductsFromSheets;
