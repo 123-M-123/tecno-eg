@@ -34,8 +34,8 @@ const sheets = google.sheets({ version: 'v4', auth });
  */
 const MASTER_ID = '16NcgTQ5N30wO7gywNh3JLjdMe676z5j4m3kIQ_PxT7w'; 
 const CLIENT_ID = process.env.CLIENT_CONTENT_SHEET_ID; 
-const SOCIOS_AUTORIZADOS = ["tecnoeg@gmail.com", "tiendadtiendas@gmail.com", "gla_142@hotmail.com"];
-const SOCIO_PRINCIPAL = "tecnoeg@gmail.com";
+const SOCIOS_AUTORIZADOS = ["mguiyemo@gmail.com"];
+const SOCIO_PRINCIPAL = "mguiyemo@gmail.com";
 const DESCUENTO_FACTOR = 0.9; // 10% OFF nativo de Tecno-EG
 
 /**
